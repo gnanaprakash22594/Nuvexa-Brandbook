@@ -494,9 +494,10 @@
       .type-big-a { font-size: 80px; }
       
       /* Hero Grid Collapse */
-      .hero-chapters { grid-template-columns: 1fr 1fr; border-right: none; }
-      .hero-chapters__item { border-right: none; border-bottom: 1px solid var(--border); }
-      .hero-chapters__item:nth-child(even) { border-left: 1px solid var(--border); }
+      /* Hero Grid Horizontal Scroll on Mobile */
+      .hero-chapters { display: flex; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; border-right: none; border-left: none; }
+      .hero-chapters::-webkit-scrollbar { display: none; }
+      .hero-chapters__item { flex: 0 0 auto; min-width: 140px; border-right: 1px solid rgba(197,160,89,.15) !important; border-bottom: none !important; border-left: none !important; padding: 24px 32px; }
       
       /* Swatches & Structural elements */
       .swatches { grid-template-columns: 1fr; }
@@ -520,8 +521,6 @@
     }
 
     @media (max-width: 480px) {
-      .hero-chapters { grid-template-columns: 1fr; }
-      .hero-chapters__item:nth-child(even) { border-left: none; }
       .rule-item__visual { height: auto; padding: 32px 16px; }
       .nav-links a { font-size: 13px; }
     }
@@ -901,46 +900,7 @@
     .persona-table tbody td strong { color: var(--gold); font-weight: 600; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
   </style>
 
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- SLIDE 1: VISUAL IDENTITY: TYPE HIERARCHY          -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div class="slide">
-    <div class="ch tl"></div><div class="ch tr"></div>
-    <div class="ch bl"></div><div class="ch br"></div>
-    <div class="slide-inner">
-      <p class="slide-title">Visual Identity: Type Hierarchy</p>
-      <div class="type-hier-grid">
-        <div>
-          <div class="th-h1">Campus<br>Transformation</div>
-          <div class="th-h2">Single-Point Accountability</div>
-          <div class="th-body">Your campus needs one partner, not ten vendors. We design, build, and deliver. End-to-end execution, single contract.</div>
-        </div>
-        <div class="th-annotation">
-          <div class="anno-box" style="margin-bottom: 24px;">
-            Direct, clear, specific.<br>Uses numbers and timelines.<br>No vague buzzwords.
-          </div>
-          <div class="th-ann-item">
-            <div>
-              <p class="label">H1</p>
-              <p>Bold, Uppercase</p>
-            </div>
-          </div>
-          <div class="th-ann-item">
-            <div>
-              <p class="label">H2</p>
-              <p>Medium, Title Case</p>
-            </div>
-          </div>
-          <div class="th-ann-item">
-            <div>
-              <p class="label">Body</p>
-              <p>Regular, highly legible sans-serif</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- (Slide 1 removed per user request) -->
 
   <!-- ══════════════════════════════════════════════════ -->
   <!-- SLIDE 2: THE HORIZON: MISSION & VISION            -->
