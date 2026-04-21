@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuvexa, Brand Book 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────────── */
+    :root {
+      --navy:   #0A2540;
+      --cream:  #F4F4F0;
+      --gold:   #C5A059;
+      --red:    #F24E24;
+      --slate:  #334155;
+      --steel:  #84929F;
+      --border: rgba(10, 37, 64, 0.12);
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--slate);
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    /* ─── TYPOGRAPHY HELPERS ─────────────────────────────────────── */
+    .f-manrope { font-family: 'Manrope', sans-serif; }
+    h1,h2,h3,h4 { font-family: 'Manrope', sans-serif; color: var(--navy); letter-spacing: -0.02em; line-height: 1.15; }
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+    }
+
+    /* ─── LAYOUT ─────────────────────────────────────────────────── */
+    .wrap  { max-width: 1320px; margin-inline: auto; padding-inline: 56px; }
+    .wrap--narrow { max-width: 960px; margin-inline: auto; padding-inline: 56px; }
+
+    /* ─── NAV ────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; inset-block-start: 0; inset-inline: 0; z-index: 99;
+      background: rgba(244,244,240,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo { height: 28px; }
+    .nav-links { display: flex; gap: 36px; }
+    .nav-links a {
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--slate);
+      transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--red); }
+
+    /* ─── HERO ───────────────────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 6px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(197,160,89,.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(197,160,89,.05) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+    /* Red accent line top */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+    }
+    /* Center content area, takes all available space */
+    .hero-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 56px 48px;
+      position: relative; z-index: 2;
+    }
+    .hero-eyebrow { color: var(--gold); margin-bottom: 32px; font-size: 33px; letter-spacing: 0.1em; }
+    .hero h1 {
+      font-size: clamp(44px, 5.5vw, 72px);
+      font-weight: 800;
+      color: var(--cream);
+      max-width: 22ch;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      font-size: 17px;
+      color: rgba(244,244,240,.55);
+      max-width: 44ch;
+      line-height: 1.7;
+    }
+    .hero-logo {
+      height: 114px;
+      margin-bottom: 56px;
+      display: block;
+    }
+    /* Chapter index strip at bottom of cover */
+    .hero-chapters {
+      position: relative; z-index: 2;
+      border-top: 1px solid rgba(197,160,89,.25);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .hero-chapters__item {
+      padding: 20px 28px;
+      border-right: 1px solid rgba(197,160,89,.15);
+    }
+    .hero-chapters__item:last-child { border-right: none; }
+    .hero-chapters__num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .hero-chapters__title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.3;
+    }
+
+    /* ─── SECTION BASE ───────────────────────────────────────────── */
+    .section { padding-block: 120px; border-bottom: 1px solid var(--border); }
+    .section--dark { background: var(--navy); }
+    .section-header { margin-bottom: 72px; }
+    .section-header h2 { font-size: clamp(36px, 4vw, 56px); font-weight: 800; margin-top: 16px; }
+    .section-header p  { font-size: 18px; color: var(--steel); max-width: 56ch; margin-top: 16px; }
+    .section-header--light h2,
+    .section-header--light .eyebrow { color: var(--cream); }
+    .section-header--light .eyebrow { color: var(--gold); }
+    .section-header--light p { color: rgba(244,244,240,.6); }
+
+    /* ─── STRATEGY CARDS ─────────────────────────────────────────── */
+    .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--navy);
+      padding: 48px 40px;
+      transition: transform .3s, box-shadow .3s, border-top-color .3s;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(10,37,64,.08); border-top-color: var(--gold); }
+    .card .card-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px; }
+    .card h3 { font-size: 22px; margin-bottom: 16px; }
+    .card p  { font-size: 15px; line-height: 1.75; }
+
+    /* ─── LOGO BOXES ──────────────────────────────────────────────────── */
+    .logo-grid  { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 56px; }
+    .logo-box {
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Fine grid overlay, 40px cells */
+    .logo-box__grid {
+      position: absolute; inset: 0;
+      background-size: 40px 40px;
+      z-index: 1;
+    }
+    .logo-box__grid--light {
+      background-image:
+        linear-gradient(to right, rgba(244,244,240,.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(244,244,240,.10) 1px, transparent 1px);
+    }
+    .logo-box__grid--dark {
+      background-image:
+        linear-gradient(to right, rgba(10,37,64,.09) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(10,37,64,.09) 1px, transparent 1px);
+    }
+    .logo-box--navy  { background: var(--navy); }
+    .logo-box--cream { background: var(--cream); border: 1px solid var(--border); }
+
+    /* Corner anchor squares, like the reference images */
+    .logo-box__corner {
+      position: absolute; z-index: 4;
+      width: 10px; height: 10px;
+    }
+    .logo-box--navy  .logo-box__corner { background: rgba(244,244,240,.35); }
+    .logo-box--cream .logo-box__corner { background: rgba(10,37,64,.25); }
+    .logo-box__corner.tl { top: 32px;  left: 32px; }
+    .logo-box__corner.tr { top: 32px;  right: 32px; }
+    .logo-box__corner.bl { bottom: 32px; left: 32px; }
+    .logo-box__corner.br { bottom: 32px; right: 32px; }
+    /* Mid-edge anchor squares */
+    .logo-box__corner.tm { top: 32px;  left: 50%; transform: translateX(-50%); }
+    .logo-box__corner.bm { bottom: 32px; left: 50%; transform: translateX(-50%); }
+
+    /* Thin guide lines framing the logo area */
+    .logo-box__guide-h,
+    .logo-box__guide-v {
+      position: absolute; z-index: 3; pointer-events: none;
+    }
+    .logo-box__guide-h {
+      left: 32px; right: 32px; height: 1px;
+    }
+    .logo-box__guide-v {
+      top: 32px; bottom: 32px; width: 1px;
+    }
+    .logo-box--navy  .logo-box__guide-h,
+    .logo-box--navy  .logo-box__guide-v { background: rgba(244,244,240,.18); }
+    .logo-box--cream .logo-box__guide-h,
+    .logo-box--cream .logo-box__guide-v { background: rgba(10,37,64,.15); }
+    .logo-box__guide-h.top    { top: 32px; }
+    .logo-box__guide-h.bottom { bottom: 32px; }
+    .logo-box__guide-v.left   { left: 32px; }
+    .logo-box__guide-v.right  { right: 32px; }
+    .logo-box__guide-v.mid    { left: 50%; }
+
+    /* Logo image centered */
+    .logo-box img.logo-img {
+      position: relative; z-index: 2;
+      width: 60%; max-height: 40%;
+      object-fit: contain;
+    }
+    .logo-box img.mark-img {
+      position: relative; z-index: 2;
+      width: 40%; max-height: 44%;
+      object-fit: contain;
+    }
+
+    /* Label tag */
+    .logo-box__tag {
+      position: absolute; z-index: 5;
+      bottom: 20px; left: 32px;
+      font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+      padding: 5px 14px;
+    }
+    .logo-box--navy  .logo-box__tag { background: var(--cream); color: var(--navy); }
+    .logo-box--cream .logo-box__tag { background: var(--navy); color: var(--cream); }
+
+    /* ─── CLEAR SPACE ──────────────────────────────────────────────── */
+    .cs-wrap {
+      background: var(--cream);
+      background-image:
+        linear-gradient(to right, rgba(10,37,64,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(10,37,64,.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+      border: 1px solid var(--border);
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      position: relative;
+    }
+    /* The constrained logo area with ruler borders */
+    .cs-box {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Spacing zone, the 1N clear area around the logo */
+    .cs-zone {
+      position: relative;
+      border: 1px solid rgba(10,37,64,.2);
+      padding: 40px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Corner anchor squares (navy/blue like reference) */
+    .cs-anchor {
+      position: absolute;
+      width: 14px; height: 14px;
+      background: #4A6FA5;
+      z-index: 4;
+    }
+    .cs-anchor.tl { top: -7px;  left: -7px; }
+    .cs-anchor.tr { top: -7px;  right: -7px; }
+    .cs-anchor.ml { top: 50%;   left: -7px;  transform: translateY(-50%); }
+    .cs-anchor.mr { top: 50%;   right: -7px; transform: translateY(-50%); }
+    .cs-anchor.bl { bottom: -7px; left: -7px; }
+    .cs-anchor.br { bottom: -7px; right: -7px; }
+
+    /* Ruler extension lines beyond zone */
+    .cs-zone::before {
+      content: '';
+      position: absolute;
+      inset: -40px -56px;
+      border: 1px dashed rgba(10,37,64,.12);
+      pointer-events: none;
+    }
+
+    /* Dimension arrows → top horizontal span */
+    .cs-dim {
+      position: absolute;
+      font-family: 'Inter', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: .04em;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .cs-dim::before,
+    .cs-dim::after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 10px;
+      background: var(--navy);
+    }
+    /* Arrow line decoration for dimensions */
+    .cs-dim-line {
+      position: absolute;
+      background: rgba(10,37,64,.35);
+    }
+    .cs-dim-line.h { height: 1px; }
+    .cs-dim-line.v { width: 1px; }
+
+    /* Tick marks at zone edges */
+    .cs-tick {
+      position: absolute;
+      background: rgba(10,37,64,.4);
+    }
+    .cs-tick.h { height: 1px; width: 20px; }
+    .cs-tick.v { width: 1px;  height: 20px; }
+
+    .cs-label {
+      position: absolute;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(10,37,64,.65);
+      white-space: nowrap;
+      letter-spacing: .04em;
+    }
+    /* The logo inside clearspace */
+    .cs-logo { width: 320px; object-fit: contain; position: relative; z-index: 2; }
+
+    /* ─── COLOR PALETTE ──────────────────────────────────────────── */
+    .palette-section { margin-bottom: 64px; }
+    .palette-section h3 { font-size: 20px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+    .swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .swatch { background: #fff; border: 1px solid var(--border); overflow: hidden; }
+    .swatch__color { height: 180px; width: 100%; }
+    .swatch__info  { padding: 24px 28px; }
+    .swatch__info h4 { font-size: 16px; margin-bottom: 10px; }
+    .swatch__info .hex { font-family: monospace; font-size: 14px; color: var(--steel); letter-spacing: .05em; }
+    .swatch__info .role { font-size: 13px; color: var(--slate); margin-top: 10px; line-height: 1.6; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────────────────────── */
+    .type-showcase {
+      background: #fff;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 0;
+      margin-bottom: 32px;
+    }
+    .type-showcase__meta { padding: 56px; border-right: 1px solid var(--border); }
+    .type-showcase__demo { padding: 56px; }
+    .type-big-a { font-size: 120px; line-height: 1; color: var(--navy); margin-bottom: 32px; font-weight: 800; }
+    .type-name  { font-size: 28px; margin-bottom: 12px; }
+    .type-role  { font-size: 14px; color: var(--slate); margin-bottom: 16px; line-height: 1.7; }
+    .type-spec  { font-family: monospace; font-size: 13px; color: var(--steel); }
+
+    .scale-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border); }
+    .scale-table th, .scale-table td { padding: 20px 24px; border-bottom: 1px solid var(--border); text-align: left; }
+    .scale-table th { background: var(--cream); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--steel); }
+    .scale-table td { font-size: 14px; }
+    .scale-table tr:last-child td { border-bottom: none; }
+    .scale-table .sample-manrope { font-family: 'Manrope', sans-serif; color: var(--navy); font-weight: 800; }
+    .scale-table .sample-inter   { font-family: 'Inter', sans-serif; color: var(--slate); }
+
+    /* ─── RULES (Dos & Don'ts) ───────────────────────────────────── */
+    .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .rule-block { overflow: hidden; }
+    .rule-block h3 { font-size: 22px; margin-bottom: 24px; }
+    .rule-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .rule-item__visual {
+      height: 200px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 32px;
+    }
+    .rule-item__visual img { max-height: 100%; object-fit: contain; }
+    .rule-item__body { padding: 28px 32px; }
+    .rule-item__label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .rule-item__label.do   { color: var(--gold); }
+    .rule-item__label.dont { color: var(--red);  }
+    .rule-item__body p { font-size: 15px; line-height: 1.7; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding-block: 80px 64px;
+      text-align: center;
+    }
+    footer img { height: 36px; margin: 0 auto 24px auto; }
+    footer p { font-size: 13px; color: rgba(132,146,159,.8); }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────── -->
+<nav>
+  <div class="wrap nav-inner">
+    <nav class="nav-links" style="margin-left: auto; width: 100%; justify-content: center;">
+      <a href="#strategy">Strategy</a>
+      <a href="#logo">Logo System</a>
+      <a href="#colors">Colors</a>
+      <a href="#type">Typography</a>
+      <a href="#rules">Guidelines</a>
+    </nav>
+  </div>
+</nav>
+
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="hero-center">
+    <img class="hero-logo" src="logo-on-navy.png" alt="Nuvexa" />
+    <span class="eyebrow hero-eyebrow">Brand Book &nbsp;·&nbsp; 2026</span>
+    <h1>Campus Transformation Partner</h1>
+    <p>Standards, rules, and systems for executing the Nuvexa brand across every touchpoint.</p>
+  </div>
+  <div class="hero-chapters">
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">01</p>
+      <p class="hero-chapters__title">Brand Strategy</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">02</p>
+      <p class="hero-chapters__title">Logo System</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">03</p>
+      <p class="hero-chapters__title">Color Palette</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">04</p>
+      <p class="hero-chapters__title">Typography</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">05</p>
+      <p class="hero-chapters__title">Guidelines</p>
+    </div>
+  </div>
+</header>
+
+
+<!-- ── 01. BRAND STRATEGY ────────────────────────────────── -->
+<section id="strategy" style="padding: 0; border-bottom: none;">
+
+  <!-- shared slide styles injected here via a style tag -->
+  <style>
+    /* ── SLIDE SHELL ── */
+    .slide {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 48px 72px;
+      border-bottom: 1px solid rgba(197,160,89,.2);
+    }
+    /* Blueprint grid overlay */
+    .slide::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(242,78,36,.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(242,78,36,.10) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+    }
+    /* Corner crosshairs */
+    .slide::after {
+      content: '';
+      position: absolute;
+      inset: 24px;
+      border: 1px solid rgba(242,78,36,.15);
+      pointer-events: none;
+    }
+    /* Crosshair corner pips */
+    .slide .ch { position: absolute; z-index: 2; width: 18px; height: 18px; }
+    .slide .ch::before, .slide .ch::after { content:''; position:absolute; background: rgba(242,78,36,.5); }
+    .slide .ch::before { width:1px; height:18px; left:50%; top:0; }
+    .slide .ch::after  { height:1px; width:18px; top:50%; left:0; }
+    .slide .ch.tl { top:12px; left:12px; }
+    .slide .ch.tr { top:12px; right:12px; }
+    .slide .ch.bl { bottom:12px; left:12px; }
+    .slide .ch.br { bottom:12px; right:12px; }
+
+    .slide-inner { position: relative; z-index: 3; }
+
+    /* Slide title */
+    .slide-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--cream);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 48px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid rgba(197,160,89,.4);
+    }
+
+    /* Annotation bracket box */
+    .anno-box {
+      border: 1.5px solid rgba(242,78,36,.5);
+      padding: 16px 20px;
+      font-size: 14px;
+      color: rgba(244,244,240,.75);
+      line-height: 1.65;
+    }
+
+    /* ── SLIDE 1: TYPE HIERARCHY ── */
+    .type-hier-grid {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 48px;
+      align-items: start;
+    }
+    .th-h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(60px, 8vw, 96px);
+      font-weight: 800;
+      color: var(--cream);
+      text-transform: uppercase;
+      letter-spacing: -.01em;
+      line-height: 1;
+      border-left: 4px solid var(--red);
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .th-h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: var(--cream);
+      border-left: 4px solid var(--red);
+      padding-left: 20px;
+      margin-bottom: 16px;
+      letter-spacing: -.01em;
+    }
+    .th-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: rgba(244,244,240,.85);
+      border-left: 4px solid var(--red);
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+    .th-annotation {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 24px;
+    }
+    .th-ann-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border-left: 2px solid rgba(242,78,36,.4);
+      padding-left: 12px;
+    }
+    .th-ann-item p { font-size: 12px; color: rgba(244,244,240,.65); line-height: 1.5; }
+    .th-ann-item .label { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 3px; }
+
+    /* ── SLIDE 2: MISSION & VISION ── */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .mv-card {
+      padding: 36px;
+      position: relative;
+    }
+    .mv-card--mission {
+      background: rgba(10,37,64,.6);
+      border: 2px solid var(--red);
+    }
+    .mv-card--mission::before,
+    .mv-card--mission::after {
+      content: '';
+      position: absolute;
+      width: 12px; height: 12px;
+      border-color: var(--red);
+      border-style: solid;
+    }
+    .mv-card--mission::before { top: -6px; left: -6px; border-width: 2px 0 0 2px; }
+    .mv-card--mission::after  { bottom: -6px; right: -6px; border-width: 0 2px 2px 0; }
+    .mv-card--vision {
+      background: var(--cream);
+    }
+    .mv-card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 20px;
+    }
+    .mv-card--mission h3 { color: var(--cream); }
+    .mv-card--vision  h3 { color: var(--navy); }
+    .mv-card p { font-size: 20px; line-height: 1.65; font-family: 'Inter', sans-serif; }
+    .mv-card--mission p { color: rgba(244,244,240,.9); }
+    .mv-card--vision  p { color: var(--navy); }
+
+    /* Timeline arrows */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1.5px solid rgba(242,78,36,.4);
+      padding: 20px 24px;
+    }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .timeline-item:not(:last-child)::after {
+      content: '→';
+      color: var(--red);
+      font-size: 24px;
+      font-weight: 700;
+      margin-left: auto;
+    }
+    .timeline-arrow-icon {
+      width: 56px; height: 56px;
+      border: 2px solid var(--red);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px; color: var(--red);
+    }
+    .timeline-item p { font-size: 13px; font-weight: 700; color: var(--cream); text-transform: uppercase; letter-spacing: .05em; line-height: 1.4; }
+    .timeline-item span { font-size: 11px; color: var(--gold); font-weight: 600; display: block; margin-top: 4px; }
+
+    /* ── SLIDE 3: MESSAGING ARCHITECTURE ── */
+    .arch-wrap { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .arch-primary {
+      width: 100%;
+      max-width: 780px;
+      background: rgba(242,78,36,.12);
+      border: 2px solid var(--red);
+      box-shadow: 0 0 40px rgba(242,78,36,.25), inset 0 0 30px rgba(242,78,36,.08);
+      padding: 36px 48px;
+      text-align: center;
+      position: relative;
+    }
+    .arch-primary::before,
+    .arch-primary::after {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      width: 2px;
+      height: 24px;
+      background: var(--red);
+    }
+    .arch-primary::before { left: 30%; }
+    .arch-primary::after  { right: 30%; }
+    .arch-primary h3 {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .arch-primary p { font-size: 22px; color: rgba(244,244,240,.9); line-height: 1.5; font-family: 'Inter', sans-serif; }
+
+    .arch-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: 780px;
+      width: 100%;
+      margin-top: 0;
+    }
+    .arch-pillar {
+      background: var(--cream);
+      padding: 32px 36px;
+      text-align: center;
+      position: relative;
+    }
+    /* Pillar legs */
+    .arch-pillar::before {
+      content: '';
+      position: absolute;
+      top: -24px; left: 50%;
+      width: 2px; height: 24px;
+      background: var(--red);
+      transform: translateX(-50%);
+    }
+    /* Bottom decoration */
+    .arch-pillar::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0; right: 0;
+      height: 8px;
+      background: var(--navy);
+      border: 1.5px solid rgba(197,160,89,.4);
+    }
+    .arch-pillar h4 {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .arch-pillar p { font-size: 15px; color: var(--slate); line-height: 1.65; font-family: 'Inter', sans-serif; }
+
+    /* ── SLIDE 4: BRAND PERSONALITY ── */
+    .personality-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .personality-text h2 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 32px;
+    }
+    .personality-text p {
+      font-size: 18px;
+      color: rgba(244,244,240,.75);
+      line-height: 1.7;
+    }
+
+    /* Diamond radar chart */
+    .radar-wrap { position: relative; width: 100%; aspect-ratio: 1; max-width: 440px; }
+    .radar-wrap svg { width: 100%; height: 100%; }
+
+    /* ── SLIDE 5: PERSONA MATRIX ── */
+    .persona-table { width: 100%; border-collapse: collapse; }
+    .persona-table thead tr {
+      background: var(--cream);
+    }
+    .persona-table thead th {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--navy);
+      padding: 20px 28px;
+      text-align: left;
+      border-right: 2px solid rgba(242,78,36,.3);
+    }
+    .persona-table thead th:last-child { border-right: none; }
+    .persona-table tbody tr {
+      border-bottom: 1px solid rgba(197,160,89,.2);
+    }
+    .persona-table tbody tr:nth-child(even) {
+      background: rgba(244,244,240,.04);
+    }
+    .persona-table tbody td {
+      padding: 24px 28px;
+      font-size: 15px;
+      color: rgba(244,244,240,.85);
+      line-height: 1.6;
+      border-right: 1px solid rgba(242,78,36,.15);
+      font-family: 'Inter', sans-serif;
+      vertical-align: top;
+    }
+    .persona-table tbody td:last-child { border-right: none; }
+    .persona-table tbody td strong { color: var(--gold); font-weight: 600; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+  </style>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SLIDE 1: VISUAL IDENTITY: TYPE HIERARCHY          -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="ch tl"></div><div class="ch tr"></div>
+    <div class="ch bl"></div><div class="ch br"></div>
+    <div class="slide-inner">
+      <p class="slide-title">Visual Identity: Type Hierarchy</p>
+      <div class="type-hier-grid">
+        <div>
+          <div class="th-h1">Campus<br>Transformation</div>
+          <div class="th-h2">Single-Point Accountability</div>
+          <div class="th-body">Your campus needs one partner, not ten vendors. We design, build, and deliver. End-to-end execution, single contract.</div>
+        </div>
+        <div class="th-annotation">
+          <div class="anno-box" style="margin-bottom: 24px;">
+            Direct, clear, specific.<br>Uses numbers and timelines.<br>No vague buzzwords.
+          </div>
+          <div class="th-ann-item">
+            <div>
+              <p class="label">H1</p>
+              <p>Bold, Uppercase</p>
+            </div>
+          </div>
+          <div class="th-ann-item">
+            <div>
+              <p class="label">H2</p>
+              <p>Medium, Title Case</p>
+            </div>
+          </div>
+          <div class="th-ann-item">
+            <div>
+              <p class="label">Body</p>
+              <p>Regular, highly legible sans-serif</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SLIDE 2: THE HORIZON: MISSION & VISION            -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="ch tl"></div><div class="ch tr"></div>
+    <div class="ch bl"></div><div class="ch br"></div>
+    <div class="slide-inner">
+      <p class="slide-title">The Horizon: Mission &amp; Vision</p>
+      <div class="mv-grid">
+        <div class="mv-card mv-card--mission">
+          <h3>The Mission</h3>
+          <p>We design, build, and deliver fully transformed campuses. One partner. Single-point accountability. End-to-end execution.</p>
+        </div>
+        <div class="mv-card mv-card--vision">
+          <h3>The Vision, 2031</h3>
+          <p>500+ campuses transformed. The 'Nuvexa Standard' becomes the national benchmark for educational infrastructure.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-arrow-icon">→</div>
+          <div>
+            <p>Year 1,2:<br>First 50 campuses<span>Foundation Phase</span></p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-arrow-icon">→</div>
+          <div>
+            <p>Year 3,5:<br>Expanding verticals<span>Growth Phase</span></p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-arrow-icon">⬡</div>
+          <div>
+            <p>Year 5,10:<br>National Scale<span>Standard Phase</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SLIDE 3: MESSAGING ARCHITECTURE                   -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="ch tl"></div><div class="ch tr"></div>
+    <div class="ch bl"></div><div class="ch br"></div>
+    <div class="slide-inner">
+      <p class="slide-title">Messaging Architecture</p>
+      <div class="arch-wrap">
+        <div class="arch-primary">
+          <h3>Primary Message:</h3>
+          <p>Full-stack campus transformation.<br>One partner. End-to-end execution.</p>
+        </div>
+        <div class="arch-pillars" style="margin-top: 24px;">
+          <div class="arch-pillar">
+            <h4>Execution:</h4>
+            <p>We build it. If we miss the deadline, we stand fully accountable.</p>
+          </div>
+          <div class="arch-pillar">
+            <h4>Expertise:</h4>
+            <p>Decades of construction heritage. Builder DNA brought to education.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SLIDE 4: BRAND PERSONALITY: THE CREATOR-HERO      -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="ch tl"></div><div class="ch tr"></div>
+    <div class="ch bl"></div><div class="ch br"></div>
+    <div class="slide-inner">
+      <p class="slide-title">Brand Personality: The Creator-Hero</p>
+      <div class="personality-grid">
+        <div class="personality-text">
+          <h2>Core Blend: The Creator builds things that endure. The Hero stands behind every promise.</h2>
+          <p>This dual archetype gives Nuvexa both the joy of creation and the structural courage to guarantee outcomes, with financial accountability baked in.</p>
+        </div>
+        <!-- SVG Radar / Diamond Chart -->
+        <div class="radar-wrap">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grid lines -->
+            <line x1="200" y1="40" x2="200" y2="360" stroke="rgba(242,78,36,.2)" stroke-width="1"/>
+            <line x1="40"  y1="200" x2="360" y2="200" stroke="rgba(242,78,36,.2)" stroke-width="1"/>
+            <!-- Outer diamond guide -->
+            <polygon points="200,40 360,200 200,360 40,200"
+              fill="none" stroke="rgba(242,78,36,.2)" stroke-width="1"/>
+            <!-- Mid diamond guide -->
+            <polygon points="200,90 310,200 200,310 90,200"
+              fill="none" stroke="rgba(242,78,36,.15)" stroke-width="1"/>
+            <!-- Inner diamond guide -->
+            <polygon points="200,140 260,200 200,260 140,200"
+              fill="none" stroke="rgba(242,78,36,.1)" stroke-width="1"/>
+            <!-- Data diamond: Competence HIGH, Sincerity MODERATE-HIGH, Excitement MODERATE, Sophistication MODERATE-HIGH -->
+            <!-- top=HIGH(~60px from center), right=MOD-HIGH(~90px), bottom=MODERATE(~100px), left=MOD-HIGH(~90px) -->
+            <polygon points="200,80 320,200 200,290 100,200"
+              fill="rgba(242,78,36,.3)" stroke="var(--red)" stroke-width="2"/>
+            <!-- Data points -->
+            <circle cx="200" cy="80"  r="6" fill="var(--red)"/>
+            <circle cx="320" cy="200" r="6" fill="var(--red)"/>
+            <circle cx="200" cy="290" r="6" fill="var(--red)"/>
+            <circle cx="100" cy="200" r="6" fill="var(--red)"/>
+            <!-- Axis arrows -->
+            <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(242,78,36,.5)"/></marker></defs>
+            <line x1="200" y1="200" x2="200" y2="32"  stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="200" y1="200" x2="368" y2="200" stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="200" y1="200" x2="200" y2="368" stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="200" y1="200" x2="32"  y2="200" stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <!-- Labels -->
+            <text x="200" y="22" text-anchor="middle" fill="var(--cream)" font-family="Manrope" font-size="13" font-weight="700">COMPETENCE</text>
+            <text x="380" y="196" text-anchor="start"  fill="var(--cream)" font-family="Manrope" font-size="13" font-weight="700">SINCERITY</text>
+            <text x="200" y="392" text-anchor="middle" fill="var(--cream)" font-family="Manrope" font-size="13" font-weight="700">EXCITEMENT</text>
+            <text x="20"  y="196" text-anchor="end"    fill="var(--cream)" font-family="Manrope" font-size="13" font-weight="700">SOPHISTICATION</text>
+            <!-- Value labels -->
+            <text x="200" y="72" text-anchor="middle" fill="var(--gold)" font-family="Inter" font-size="11" font-weight="700">HIGH</text>
+            <text x="324" y="188" text-anchor="start" fill="var(--gold)" font-family="Inter" font-size="11" font-weight="700">MOD-HIGH</text>
+            <text x="200" y="308" text-anchor="middle" fill="var(--gold)" font-family="Inter" font-size="11" font-weight="700">MODERATE</text>
+            <text x="96"  y="188" text-anchor="end"   fill="var(--gold)" font-family="Inter" font-size="11" font-weight="700">MOD-HIGH</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SLIDE 5: DEPLOYING THE BRAND: PERSONA STORY MATRIX-->
+  <!-- ══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="ch tl"></div><div class="ch tr"></div>
+    <div class="ch bl"></div><div class="ch br"></div>
+    <div class="slide-inner">
+      <p class="slide-title">Deploying the Brand: Persona Story Matrix</p>
+      <table class="persona-table">
+        <thead>
+          <tr>
+            <th>Persona</th>
+            <th>Opening Hook</th>
+            <th>Narrative Arc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Legacy Builder</strong>VC, 55+. Focus on reputation and institutional standing.</td>
+            <td>You've spent 30 years building a reputation. Should the infrastructure not match?</td>
+            <td>Legacy → Recognition → Proven Track Record.</td>
+          </tr>
+          <tr>
+            <td><strong>Guardian Operator</strong>Trustee, 40,55. Focus on compliance &amp; speed.</td>
+            <td>CBSE audit is 4 months away with 147 compliance gaps. One partner closes all of them.</td>
+            <td>Fear → Urgency → End-to-End Solution.</td>
+          </tr>
+          <tr>
+            <td><strong>Scale Machine</strong>Founder, 30,45. Focus on rapid expansion.</td>
+            <td>Imagine 5 new centers fully built and operational, one contract, one partner.</td>
+            <td>Ambition → Speed → Scale Enabled.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- ── 02. LOGO SYSTEM ──────────────────────────────────── -->
+<section class="section" id="logo">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">02 &nbsp;/&nbsp; Logo System</span>
+      <h2>The Signature</h2>
+      <p>The Nuvexa wordmark is set in a custom-weight bold typeface. The arrow superscript on the 'N' is the brand's symbol of forward momentum, campus transformation pointing upward and outward.</p>
+    </div>
+
+    <!-- Primary Wordmark -->
+    <div class="logo-grid">
+      <div class="logo-box logo-box--navy">
+        <div class="logo-box__grid logo-box__grid--light"></div>
+        <!-- Corner anchors -->
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner tm"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__corner bm"></div>
+        <!-- Guide lines -->
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <div class="logo-box__guide-v mid"></div>
+        <img class="logo-img" src="logo-on-navy.png" alt="Nuvexa Primary Logo" />
+        <span class="logo-box__tag">Primary Logo</span>
+      </div>
+      <div class="logo-box logo-box--cream">
+        <div class="logo-box__grid logo-box__grid--dark"></div>
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner tm"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__corner bm"></div>
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <div class="logo-box__guide-v mid"></div>
+        <img class="logo-img" src="logo-on-cream.png" alt="Nuvexa Inverse Logo" />
+        <span class="logo-box__tag">Primary Logo, Inverse</span>
+      </div>
+    </div>
+
+    <!-- Logomark -->
+    <div class="logo-grid">
+      <div class="logo-box logo-box--navy">
+        <div class="logo-box__grid logo-box__grid--light"></div>
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <img class="mark-img" src="logomark-on-navy.png" alt="Nuvexa Logomark" />
+        <span class="logo-box__tag">Logomark</span>
+      </div>
+      <div class="logo-box logo-box--cream">
+        <div class="logo-box__grid logo-box__grid--dark"></div>
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <img class="mark-img" src="logomark-on-cream.png" alt="Nuvexa Logomark Inverse" />
+        <span class="logo-box__tag">Logomark, Inverse</span>
+      </div>
+    </div>
+
+    <!-- Clear Space -->
+    <div class="section-header" style="margin-top: 80px; margin-bottom: 40px;">
+      <span class="eyebrow">Logo Clear Space</span>
+      <h2>Room to Breathe</h2>
+      <p>The minimum clear space around the wordmark is defined as <strong style="color:var(--navy);">1N</strong>, the cap-height of the ‘N’ letterform. No text, graphic, or edge may enter this zone.</p>
+    </div>
+
+    <!-- Pixel-perfect clearspace diagram -->
+    <div class="cs-wrap">
+      <div class="cs-box">
+        <!-- Outer dimension labels -->
+        <span class="cs-label" style="top:-28px; left:0;">1N</span>
+        <span class="cs-label" style="top:-28px; right:0;">1N</span>
+        <span class="cs-label" style="bottom:-28px; left:0;">1N</span>
+        <span class="cs-label" style="bottom:-28px; right:0;">1N</span>
+        <span class="cs-label" style="top:50%; transform:translateY(-50%); left:-36px;">1N</span>
+        <span class="cs-label" style="top:50%; transform:translateY(-50%); right:-36px;">1N</span>
+        <!-- Horizontal span arrows top -->
+        <div class="cs-dim-line h" style="top:-16px; left:0; right:0;"></div>
+        <div class="cs-dim-line h" style="bottom:-16px; left:0; right:0;"></div>
+        <div class="cs-dim-line v" style="left:-20px; top:0; bottom:0;"></div>
+        <div class="cs-dim-line v" style="right:-20px; top:0; bottom:0;"></div>
+        <!-- Tick marks at corners of dim lines -->
+        <div class="cs-tick h" style="top:-16px; left:-10px;"></div>
+        <div class="cs-tick h" style="top:-16px; right:-10px;"></div>
+        <div class="cs-tick h" style="bottom:-16px; left:-10px;"></div>
+        <div class="cs-tick h" style="bottom:-16px; right:-10px;"></div>
+        <div class="cs-tick v" style="left:-20px; top:-10px;"></div>
+        <div class="cs-tick v" style="left:-20px; bottom:-10px;"></div>
+        <div class="cs-tick v" style="right:-20px; top:-10px;"></div>
+        <div class="cs-tick v" style="right:-20px; bottom:-10px;"></div>
+
+        <!-- The clearspace zone with corner anchors -->
+        <div class="cs-zone">
+          <div class="cs-anchor tl"></div>
+          <div class="cs-anchor tr"></div>
+          <div class="cs-anchor ml"></div>
+          <div class="cs-anchor mr"></div>
+          <div class="cs-anchor bl"></div>
+          <div class="cs-anchor br"></div>
+          <img class="cs-logo" src="logo-on-cream.png" alt="Nuvexa clear space" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 03. COLOR PALETTE ────────────────────────────────── -->
+<section class="section" id="colors">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">03 &nbsp;/&nbsp; Color Palette</span>
+      <h2>The Materials</h2>
+      <p>A 6-color system that balances institutional trust with builder energy. Every color has a specific structural role, nothing is decorative without purpose.</p>
+    </div>
+
+    <!-- Primary -->
+    <div class="palette-section">
+      <h3>Primary Structure</h3>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#0A2540;"></div>
+          <div class="swatch__info">
+            <h4>Deep Navy Blue</h4>
+            <p class="hex">#0A2540 &nbsp;·&nbsp; RGB 10 37 64</p>
+            <p class="role">Primary brand color. Used for logos, headline text, structural blocks, and dominant backgrounds. Communicates institutional trust and boardroom-grade professionalism.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#F4F4F0; border-bottom: 1px solid rgba(10,37,64,.08);"></div>
+          <div class="swatch__info">
+            <h4>Campus Cream</h4>
+            <p class="hex">#F4F4F0 &nbsp;·&nbsp; RGB 244 244 240</p>
+            <p class="role">The primary canvas. A warm off-white that pairs with Navy for the core logo system. Warmer and more approachable than stark white, reflects the human side of campus transformation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accents -->
+    <div class="palette-section">
+      <h3>Accent Colors</h3>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#C5A059;"></div>
+          <div class="swatch__info">
+            <h4>Prestige Gold</h4>
+            <p class="hex">#C5A059 &nbsp;·&nbsp; RGB 197 160 89</p>
+            <p class="role">Premium signals. Used for award badges, section borders, hover states, and highlighting the guarantee clause. Bridges the gap between institutional formality and aspirational energy.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#F24E24;"></div>
+          <div class="swatch__info">
+            <h4>Builder Orange-Red</h4>
+            <p class="hex">#F24E24 &nbsp;·&nbsp; RGB 242 78 36</p>
+            <p class="role">Action and urgency. Reserved exclusively for primary CTAs ("Book an Assessment"), structural commitments, critical alerts, and Do/Don't guidance. Never used decoratively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Utility -->
+    <div class="palette-section">
+      <h3>Utility Tones</h3>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#334155;"></div>
+          <div class="swatch__info">
+            <h4>Blueprint Slate</h4>
+            <p class="hex">#334155 &nbsp;·&nbsp; RGB 51 65 85</p>
+            <p class="role">Secondary text on cream backgrounds. Softer than pure black for extended reading in proposals and cost sheets.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#84929F;"></div>
+          <div class="swatch__info">
+            <h4>Steel Gray</h4>
+            <p class="hex">#84929F &nbsp;·&nbsp; RGB 132 146 159</p>
+            <p class="role">Borders, dividers, table rules, labels, and meta information. Creates structure without visual weight.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 04. TYPOGRAPHY ───────────────────────────────────── -->
+<section class="section" id="type">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">04 &nbsp;/&nbsp; Typography</span>
+      <h2>Builder Precision</h2>
+      <p>Two typefaces. One for authority and display. One for data and sustained reading. Nothing decorative, nothing vague.</p>
+    </div>
+
+    <!-- Manrope -->
+    <div class="type-showcase">
+      <div class="type-showcase__meta">
+        <div class="type-big-a f-manrope">Aa</div>
+        <h3 class="type-name">Manrope</h3>
+        <p class="type-role"><strong>Primary, Display &amp; Headings.</strong> A geometric sans-serif with architectural precision and strong personality. Its bold weight carries the Nuvexa hero statements with authority.</p>
+        <p class="type-spec">Weights used: ExtraBold (800) · Bold (700) · SemiBold (600)</p>
+      </div>
+      <div class="type-showcase__demo">
+        <h1 style="font-size: 56px; margin-bottom: 24px; line-height: 1.05;">One Partner.<br>End-to-End.</h1>
+        <h2 style="font-size: 40px; margin-bottom: 20px; font-weight: 700;">Campus Transformation</h2>
+        <h3 style="font-size: 24px; font-weight: 600; color: var(--steel); margin-bottom: 20px;">Single point of accountability.</h3>
+        <p style="font-size: 14px; font-family: 'Manrope', sans-serif; color: var(--steel); text-transform: uppercase; letter-spacing: .12em; font-weight: 600;">Eyebrow / Label / Kicker</p>
+      </div>
+    </div>
+
+    <!-- Inter -->
+    <div class="type-showcase">
+      <div class="type-showcase__meta">
+        <div class="type-big-a" style="font-family: 'Inter', sans-serif; font-weight: 400;">Aa</div>
+        <h3 class="type-name" style="font-family: 'Inter', sans-serif;">Inter</h3>
+        <p class="type-role"><strong>Secondary, Body &amp; Data.</strong> The industry standard for screen legibility. Ensures detailed proposals, line-item cost sheets, and Gantt chart labels are effortlessly scannable.</p>
+        <p class="type-spec">Weights used: Regular (400) · Medium (500) · SemiBold (600)</p>
+      </div>
+      <div class="type-showcase__demo">
+        <p style="font-size: 18px; line-height: 1.75; margin-bottom: 20px;">Your campus does not need another vendor. It needs a transformation partner who shows up with a blueprint, a team, and an ironclad guarantee.</p>
+        <p style="font-size: 15px; line-height: 1.7; color: var(--slate); margin-bottom: 20px;">Nuvexa delivers fully transformed campuses, design, build, furnishing, tech, and compliance, under one contract, with one point of accountability.</p>
+        <p style="font-size: 13px; color: var(--steel); font-family: monospace;">Functional / Tables / Labels / Metadata</p>
+      </div>
+    </div>
+
+    <!-- Scale Table -->
+    <table class="scale-table" style="margin-top: 40px;">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Typeface</th>
+          <th>Size</th>
+          <th>Weight</th>
+          <th>Tracking</th>
+          <th>Sample</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Display / H1</td>
+          <td>Manrope</td>
+          <td>56,96px</td>
+          <td>ExtraBold 800</td>
+          <td>−2%</td>
+          <td class="sample-manrope" style="font-size: 28px;">Transformation</td>
+        </tr>
+        <tr>
+          <td>Heading / H2</td>
+          <td>Manrope</td>
+          <td>40px</td>
+          <td>Bold 700</td>
+          <td>−1%</td>
+          <td class="sample-manrope" style="font-size: 22px;">Campus Partner</td>
+        </tr>
+        <tr>
+          <td>Subheading / H3</td>
+          <td>Manrope</td>
+          <td>24px</td>
+          <td>SemiBold 600</td>
+          <td>0</td>
+          <td class="sample-manrope" style="font-size: 18px; font-weight: 600;">Single Accountability</td>
+        </tr>
+        <tr>
+          <td>Body Copy</td>
+          <td>Inter</td>
+          <td>16px</td>
+          <td>Regular 400</td>
+          <td>0</td>
+          <td class="sample-inter" style="font-size: 15px;">Line-by-line cost sheets, no hidden fees.</td>
+        </tr>
+        <tr>
+          <td>Data / Tables</td>
+          <td>Inter</td>
+          <td>14px</td>
+          <td>Medium 500</td>
+          <td>0</td>
+          <td class="sample-inter" style="font-size: 13px;">₹ 48,00,000 · Phase 1 · 22 Days</td>
+        </tr>
+        <tr>
+          <td>Eyebrow / Label</td>
+          <td>Inter</td>
+          <td>11,12px</td>
+          <td>SemiBold 600</td>
+          <td>+12%</td>
+          <td style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--steel);">NUVEXA / BRAND 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- ── 05. GUIDELINES ───────────────────────────────────── -->
+<section class="section" id="rules">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">05 &nbsp;/&nbsp; Brand Guidelines</span>
+      <h2>Do's &amp; Don'ts</h2>
+      <p>The Nuvexa brand earns trust through consistency. Every application of the identity must respect these rules without exception.</p>
+    </div>
+
+    <div class="rules-grid">
+
+      <!-- COL 1 -->
+      <div class="rule-block">
+        <h3>Logo Usage</h3>
+
+        <div class="rule-item">
+          <div class="rule-item__visual" style="background: var(--navy);">
+            <img src="logo-on-navy.png" alt="Correct" style="width: 220px;" />
+          </div>
+          <div class="rule-item__body">
+            <p class="rule-item__label do">✓ &nbsp;Do</p>
+            <p>Use Campus Cream wordmark on Deep Navy Blue backgrounds. This is the primary logo combination and must be used in all formal contexts.</p>
+          </div>
+        </div>
+
+        <div class="rule-item">
+          <div class="rule-item__visual" style="background: var(--cream); border-bottom: 1px solid var(--border);">
+            <img src="logo-on-cream.png" alt="Inverse correct" style="width: 220px;" />
+          </div>
+          <div class="rule-item__body">
+            <p class="rule-item__label do">✓ &nbsp;Do</p>
+            <p>Use the Deep Navy Blue wordmark on Campus Cream for the inverse application, letterheads, presentations, and light-background documents.</p>
+          </div>
+        </div>
+
+        <div class="rule-item">
+          <div class="rule-item__visual" style="background: var(--gold);">
+            <img src="logo-on-navy.png" alt="Wrong bg" style="width: 220px; opacity: .5;" />
+          </div>
+          <div class="rule-item__body">
+            <p class="rule-item__label dont">✗ &nbsp;Don't</p>
+            <p>Never place the logo on Gold, Red, or any unapproved background color. Always use Navy or Cream as the logo background.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 2 -->
+      <div class="rule-block">
+        <h3>Voice &amp; Tone</h3>
+
+        <div class="rule-item">
+          <div class="rule-item__visual" style="background: rgba(197,160,89,.1); flex-direction: column; gap: 12px; text-align: center;">
+            <p style="font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800; color: var(--navy);">"3 campuses. 194 days total.<br>All delivered on schedule."</p>
+          </div>
+          <div class="rule-item__body">
+            <p class="rule-item__label do">✓ &nbsp;Do</p>
+            <p>Write with specific numbers. Use concrete outcomes. Let the data carry the credibility. Short sentences. No adjectives that can't be measured.</p>
+          </div>
+        </div>
+
+        <div class="rule-item">
+          <div class="rule-item__visual" style="background: rgba(242,78,36,.05); flex-direction: column; text-align: center;">
+            <p style="font-family: 'Manrope', sans-serif; font-size: 18px; color: var(--steel);">"We are passionate leaders<br>driving holistic ecosystems."</p>
+          </div>
+          <div class="rule-item__body">
+            <p class="rule-item__label dont">✗ &nbsp;Don't</p>
+            <p>Never use vague buzzwords: passionate, holistic, ecosystem, synergy, visionary. They signal the exact consultant-speak Nuvexa is positioned against.</p>
+          </div>
+        </div>
+
+        <div class="rule-item">
+          <div class="rule-item__visual" style="background: rgba(197,160,89,.1);">
+            <p style="font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); text-align: center; max-width: 32ch;">If we miss your deadline,<br>we take full accountability, in writing.</p>
+          </div>
+          <div class="rule-item__body">
+            <p class="rule-item__label do">✓ &nbsp;Do</p>
+            <p>Lead with accountability. Reference the ironclad guarantee often. It is the single most differentiating claim Nuvexa has, own it confidently.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Additional Rules List -->
+    <div style="margin-top: 64px; background: var(--navy); padding: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div>
+        <p class="eyebrow" style="color: var(--gold); margin-bottom: 24px;">Permanent Logo Rules</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never stretch or distort the wordmark</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never add drop shadows or glow effects</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never recolor the mark in Gold or Red</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never place on photographic backgrounds without a solid color block underneath</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never use obsolete logo versions, always use current approved files</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Minimum digital size: 120px wide / Print: 30mm wide</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color: var(--red); margin-bottom: 24px;">Color Usage Rules</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Navy + Cream is the primary color pair, always lead with it</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Gold is a secondary accent, use sparingly for premium signals</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Red/#F24E24 is reserved for actions and urgency only</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never pair Red and Gold on the same component</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never use the palette colors at reduced opacity as tints, use the utility grays instead</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> All body text must meet WCAG AA contrast on its background</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 06. MESSAGING SYSTEM ─────────────────────────────── -->
+<section class="section section--dark" id="messaging">
+  <div class="wrap">
+    <div class="section-header section-header--light">
+      <span class="eyebrow">06 &nbsp;/&nbsp; Messaging System</span>
+      <h2>Core Narrative</h2>
+      <p>The structured messaging framework. No marketing fluff. Just clear, engineered promises and outcomes.</p>
+    </div>
+
+    <!-- Scoped styles for the engineered sections -->
+    <style>
+      .eng-grid { display: grid; grid-template-columns: 240px 1fr; gap: 48px; margin-bottom: 40px; align-items: start; border-top: 1px solid rgba(197,160,89,.2); padding-top: 32px; }
+      .eng-label { font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .12em; }
+      .eng-primary { font-family: 'Manrope', sans-serif; font-size: 32px; font-weight: 800; color: var(--cream); line-height: 1.2; letter-spacing: -0.01em; }
+      .eng-body { font-family: 'Inter', sans-serif; font-size: 18px; color: rgba(244,244,240,.75); line-height: 1.6; max-width: 65ch; }
+      
+      .eng-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; margin-bottom: 0; padding-left: 0; }
+      .eng-list li { position: relative; padding-left: 24px; color: var(--cream); font-size: 16px; }
+      .eng-list li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-weight: 700; font-family: monospace; }
+      
+      /* Voice Cards */
+      .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 64px; }
+      .voice-card { background: rgba(10,37,64,.4); border: 1px solid rgba(244,244,240,.1); padding: 32px; }
+      .voice-card h4 { color: var(--red); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; font-weight: 700; }
+      .voice-card p { color: var(--cream); font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 600; line-height: 1.5; }
+      
+      .do-dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 64px;}
+      .do-box { border-left: 3px solid var(--gold); padding-left: 24px; }
+      .dont-box { border-left: 3px solid var(--red); padding-left: 24px; }
+      .box-label { font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; letter-spacing: .1em; }
+      .do-box .box-label { color: var(--gold); }
+      .dont-box .box-label { color: var(--red); }
+      
+      /* Context table */
+      .eng-table { width: 100%; border-collapse: collapse; margin-bottom: 48px; }
+      .eng-table th, .eng-table td { padding: 24px 0; border-bottom: 1px solid rgba(197,160,89,.2); text-align: left; vertical-align: top; }
+      .eng-table th { font-family: 'Manrope', sans-serif; font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; width: 240px; }
+      .eng-table td { font-family: 'Inter', sans-serif; font-size: 16px; color: rgba(244,244,240,.8); line-height: 1.6; }
+
+      /* Vocab Grid */
+      .vocab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+      .vocab-box { border: 1px solid rgba(197,160,89,.2); padding: 32px; }
+      .vocab-box h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 24px; color: var(--steel); }
+      .vocab-item { font-family: monospace; font-size: 16px; color: var(--cream); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+      .vocab-item.use::before { content: '✓'; color: var(--gold); }
+      .vocab-item.avoid::before { content: '✗'; color: var(--red); }
+
+      /* Layout & Spacing */
+      .sys-demo { background: rgba(10,37,64,.6); border: 1px solid rgba(242,78,36,.2); padding: 48px; position: relative; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; }
+      .grid-overlay { display: flex; width: 100%; height: 160px; gap: 16px; }
+      .grid-col { flex: 1; background: rgba(242,78,36,.05); border-left: 1px dashed rgba(242,78,36,.3); border-right: 1px dashed rgba(242,78,36,.3); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; font-family: monospace; font-size: 10px; color: var(--red); }
+      
+      .space-row { display: flex; align-items: center; gap: 32px; margin-bottom: 24px; }
+      .space-box { background: var(--gold); }
+      .space-val { font-family: monospace; font-size: 14px; color: var(--cream); width: 60px; }
+      
+      /* Story */
+      .story-card { margin-bottom: 64px; }
+      .story-card p { font-size: 22px; font-family: 'Manrope', sans-serif; color: var(--cream); line-height: 1.5; font-weight: 500; border-left: 2px solid var(--red); padding-left: 32px; max-width: 60ch; }
+      .story-card h4 { margin-bottom: 16px; font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: .12em; }
+    </style>
+
+    <div class="eng-grid">
+      <div class="eng-label">Primary Message</div>
+      <div class="eng-primary">Full-stack campus transformation. One partner. Guaranteed timelines.</div>
+    </div>
+
+    <div class="eng-grid">
+      <div class="eng-label">Supporting, Execution</div>
+      <div class="eng-body">We do not hand you a plan and walk away. We build it. If we miss the deadline, we stand fully accountable.</div>
+    </div>
+
+    <div class="eng-grid">
+      <div class="eng-label">Supporting, Expertise</div>
+      <div class="eng-body">Born from Sachin Gupta Buildcon, Nuvexa brings decades of construction expertise into education infrastructure.</div>
+    </div>
+
+    <div class="eng-grid">
+      <div class="eng-label">Supporting, Outcome</div>
+      <div class="eng-body">A campus that is safe, compliant, modern, and built to attract the next generation of students and parents.</div>
+    </div>
+
+    <div class="eng-grid">
+      <div class="eng-label">Proof Points</div>
+      <div>
+        <ul class="eng-list">
+          <li>Ironclad contractual timeline guarantee</li>
+          <li>Single invoice, single project manager, single point of accountability</li>
+          <li>NEP 2020, NAAC, NIRF, and CBSE compliance built into every project</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="eng-grid">
+      <div class="eng-label">CTA Framework</div>
+      <div>
+        <ul class="eng-list">
+          <li>Book a Campus Assessment</li>
+          <li>Get Your Transformation Blueprint</li>
+          <li>See Our Timeline Guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 07. VOICE & TONE GUIDELINES ──────────────────────── -->
+<section class="section section--dark" id="voice" style="border-top: 1px solid rgba(197,160,89,.2);">
+  <div class="wrap">
+    <div class="section-header section-header--light">
+      <span class="eyebrow">07 &nbsp;/&nbsp; Voice &amp; Tone</span>
+      <h2>Voice Characteristics</h2>
+      <p>How the brand speaks. Avoid fluff; lean on structure and quantifiable outcomes.</p>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <h4>Authoritative</h4>
+        <p>“We have transformed 50+ campuses. Here is exactly how we will transform yours.”</p>
+      </div>
+      <div class="voice-card">
+        <h4>Direct</h4>
+        <p>“Your campus has 147 compliance gaps. We will close every one of them on schedule.”</p>
+      </div>
+      <div class="voice-card">
+        <h4>Warm</h4>
+        <p>“We know this is a big decision. Let us walk you through it step by step.”</p>
+      </div>
+      <div class="voice-card">
+        <h4>Precise</h4>
+        <p>“INR 2.3 Cr. 58 days. 23 compliance items closed. One invoice.”</p>
+      </div>
+    </div>
+
+    <div class="section-header section-header--light" style="margin-top: 80px; margin-bottom: 40px;">
+      <span class="eyebrow">Guardrails</span>
+      <h2>Voice Guardrails</h2>
+    </div>
+
+    <div class="do-dont-grid">
+      <div class="do-box">
+        <div class="box-label">✔ Do</div>
+        <div class="eng-body" style="margin-bottom: 12px; color: var(--cream);">“We transformed 3 campuses in under 65 days.”</div>
+        <div class="eng-body" style="color: var(--cream);">“This project will cost INR 1.8 Cr. Here is the breakdown.”</div>
+      </div>
+      <div class="dont-box">
+        <div class="box-label">✘ Don't</div>
+        <div class="eng-body" style="margin-bottom: 12px; color: rgba(244,244,240,.5);">“We deliver innovative, cost-effective solutions.”</div>
+        <div class="eng-body" style="color: rgba(244,244,240,.5);">“We provide comprehensive infrastructure services.”</div>
+      </div>
+    </div>
+
+    <div class="section-header section-header--light" style="margin-top: 80px; margin-bottom: 40px;">
+      <span class="eyebrow">Context</span>
+      <h2>Tone by Context</h2>
+    </div>
+
+    <table class="eng-table">
+      <tbody>
+        <tr>
+          <th>Sales / Proposal</th>
+          <td>“Nuvexa is a full-stack campus transformation partner. This proposal outlines scope, timeline, and cost.”</td>
+        </tr>
+        <tr>
+          <th>Social / LinkedIn</th>
+          <td>“Most campuses take 18 months and 2x budget to upgrade. There is a faster way.”</td>
+        </tr>
+        <tr>
+          <th>Cold Outreach</th>
+          <td>“Your CBSE audit is 4 months away. We close every compliance gap before the deadline. Worth a call?”</td>
+        </tr>
+        <tr>
+          <th>Crisis Communication</th>
+          <td>“We are 3 days behind on electrical work. Here is exactly how we are recovering.”</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-header section-header--light" style="margin-top: 80px; margin-bottom: 40px;">
+      <span class="eyebrow">Lexicon</span>
+      <h2>Vocabulary Rules</h2>
+    </div>
+
+    <div class="vocab-grid">
+      <div class="vocab-box" style="border-top-color: var(--gold);">
+        <h4>Use</h4>
+        <div class="vocab-item use">Transform</div>
+        <div class="vocab-item use">Partner</div>
+        <div class="vocab-item use">Guarantee</div>
+        <div class="vocab-item use">Blueprint</div>
+        <div class="vocab-item use">Delivered</div>
+      </div>
+      <div class="vocab-box" style="border-top-color: var(--red);">
+        <h4>Avoid</h4>
+        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Renovate</div>
+        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Vendor</div>
+        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Affordable</div>
+        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Fast</div>
+        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Solutions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 08. LAYOUT & GRID SYSTEM ─────────────────────────── -->
+<section class="section section--dark" id="layout" style="border-top: 1px solid rgba(197,160,89,.2);">
+  <div class="wrap">
+    <div class="section-header section-header--light">
+      <span class="eyebrow">08 &nbsp;/&nbsp; Layout &amp; Grid</span>
+      <h2>Structural Alignment</h2>
+      <p>A strict 12-column grid system governs all Nuvexa layouts. Content must align to the grid at all times. Left alignment is default. No random spacing.</p>
+    </div>
+
+    <div class="sys-demo">
+      <div class="grid-overlay">
+        <div class="grid-col">1</div><div class="grid-col">2</div><div class="grid-col">3</div><div class="grid-col">4</div>
+        <div class="grid-col">5</div><div class="grid-col">6</div><div class="grid-col">7</div><div class="grid-col">8</div>
+        <div class="grid-col">9</div><div class="grid-col">10</div><div class="grid-col">11</div><div class="grid-col">12</div>
+      </div>
+      <!-- overlay lines simulating content -->
+      <div style="position: absolute; left: 48px; right: 48px; top: 48px; bottom: 48px; pointer-events: none; display: flex; flex-direction: column; gap: 16px;">
+         <div style="height: 32px; background: var(--navy); border: 2px solid rgba(244,244,240,.6); width: 66.666%; padding-left: 16px; display: flex; align-items: center;"><span style="color: var(--cream); font-family: monospace; font-size: 11px;">H1 - 8 COLUMNS</span></div>
+         <div style="height: 64px; background: rgba(244,244,240,.1); width: 50%; padding-left: 16px; padding-top: 12px;"><span style="color: rgba(244,244,240,.6); font-family: monospace; font-size: 11px;">BODY COPY - 6 COLUMNS</span></div>
+      </div>
+    </div>
+
+    <div class="eng-grid" style="border-top: none; padding-top: 0;">
+      <div class="eng-label">Grid Rules</div>
+      <div class="eng-body">
+        <ul class="eng-list" style="margin-top: 0;">
+          <li><strong>12-column grid:</strong> Consistent margins on both sides and fixed gutter spacing.</li>
+          <li><strong>Left alignment is default:</strong> Maintain consistent vertical rhythm.</li>
+          <li><strong>Headline span:</strong> 6,8 columns.</li>
+          <li><strong>Body text span:</strong> 4,6 columns. Avoid full-width paragraphs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 09. SPACING SYSTEM ───────────────────────────────── -->
+<section class="section section--dark" id="spacing" style="border-top: 1px solid rgba(197,160,89,.2);">
+  <div class="wrap">
+    <div class="section-header section-header--light">
+      <span class="eyebrow">09 &nbsp;/&nbsp; Spacing System</span>
+      <h2>Engineered Rhythm</h2>
+      <p>No arbitrary spacing values. All margins and padding strictly adhere to a systematic scale.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px;">
+      <div>
+        <div class="space-row"><div class="space-val">8px</div><div class="space-box" style="width: 8px; height: 16px;"></div></div>
+        <div class="space-row"><div class="space-val">16px</div><div class="space-box" style="width: 16px; height: 16px;"></div></div>
+        <div class="space-row"><div class="space-val">32px</div><div class="space-box" style="width: 32px; height: 16px;"></div></div>
+        <div class="space-row"><div class="space-val">64px</div><div class="space-box" style="width: 64px; height: 16px; background: var(--red);"></div></div>
+        <div class="space-row"><div class="space-val">128px</div><div class="space-box" style="width: 128px; height: 16px; background: var(--red);"></div></div>
+      </div>
+      <div>
+        <div class="eng-label" style="margin-bottom: 16px;">Rules &amp; Usage Guidance</div>
+        <ul class="eng-list" style="margin-top: 0;">
+          <li><strong>Component Spacing:</strong> 16px or 32px. Used for internal padding within cards and spacing between related UI elements.</li>
+          <li><strong>Section Spacing:</strong> 64px or 128px. Defines the macro rhythm of the page layout.</li>
+          <li><strong>Strict Adherence:</strong> Never use spacing outside of this defined scale. Maintain consistent rhythm across all pages. No arbitrary values.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 10. BRAND STORY ──────────────────────────────────── -->
+<section class="section section--dark" id="story" style="border-top: 1px solid rgba(197,160,89,.2);">
+  <div class="wrap">
+    <div class="section-header section-header--light" style="margin-bottom: 80px;">
+      <span class="eyebrow">10 &nbsp;/&nbsp; Brand Story</span>
+      <h2>The Core Narrative</h2>
+      <p>This is the fundamental story of why Nuvexa exists. Use this narrative arc to structure pitches, proposals, and presentations.</p>
+    </div>
+
+    <div class="story-card">
+      <h4>The Problem</h4>
+      <p>Educational institutions struggle with outdated infrastructure, vendor fragmentation, cost overruns, and timelines that stretch endlessly.</p>
+    </div>
+
+    <div class="story-card">
+      <h4>The Insight</h4>
+      <p>Institutions do not need more vendors. They need one partner who takes complete ownership.</p>
+    </div>
+
+    <div class="story-card">
+      <h4>The Solution</h4>
+      <p>Nuvexa designs, builds, and delivers fully transformed campuses under single-point accountability, with guaranteed timelines backed by structural commitments.</p>
+    </div>
+
+    <div class="story-card">
+      <h4>The Outcome</h4>
+      <p>A campus that is safe, compliant, modern, and built to attract students, improve rankings, and elevate institutional reputation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 11. CLOSING PROMISE ──────────────────────────────── -->
+<section class="section section--dark" style="padding: 120px 40px; border-top: none; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+  <style>
+    .promise-box {
+      position: relative;
+      max-width: 1000px;
+      width: 100%;
+      border: 1px solid rgba(242,78,36,0.6);
+      padding: 100px 40px;
+      text-align: center;
+      margin: 80px 0;
+    }
+    
+    /* Engineer Guide Lines */
+    .p-guide { position: absolute; background: rgba(242,78,36,0.6); z-index: 1; pointer-events: none; }
+    
+    /* Inner extending lines */
+    .p-guide.ih { height: 1px; left: -24px; right: -24px; }
+    .p-guide.iv { width: 1px; top: -24px; bottom: -24px; }
+    .p-guide.ih.top { top: -1px; }
+    .p-guide.ih.bot { bottom: -1px; }
+    .p-guide.iv.left { left: -1px; }
+    .p-guide.iv.right { right: -1px; }
+
+    /* Outer structural frame */
+    .p-guide.oh { height: 1px; left: -60px; right: -60px; background: rgba(242,78,36,0.4); }
+    .p-guide.ov { width: 1px; top: -60px; bottom: -60px; background: rgba(242,78,36,0.4); }
+    .p-guide.oh.otop { top: -40px; }
+    .p-guide.oh.obot { bottom: -40px; }
+    .p-guide.ov.oleft { left: -40px; }
+    .p-guide.ov.oright { right: -40px; }
+
+    /* Center markers */
+    .p-guide.ih.mid { top: 50%; left: -40px; right: -40px; }
+    .p-guide.iv.mid-top { left: 50%; top: -60px; height: 100px; }
+    .p-guide.iv.mid-bot { left: 50%; bottom: -60px; height: 100px; }
+
+    /* Target registration marks */
+    .p-target { 
+      position: absolute; 
+      width: 18px; 
+      height: 18px; 
+      border: 1px solid rgba(242,78,36,0.6); 
+      border-radius: 50%; 
+      z-index: 2; 
+      transform: translate(-50%, -50%);
+    }
+    .p-target::before { content:''; position: absolute; width: 28px; height: 1px; background: rgba(242,78,36,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .p-target::after { content:''; position: absolute; width: 1px; height: 28px; background: rgba(242,78,36,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .p-target.tl { top: -40px; left: -40px; }
+    .p-target.tr { top: -40px; right: -40px; }
+    .p-target.bl { bottom: -40px; left: -40px; }
+    .p-target.br { bottom: -40px; right: -40px; }
+
+    /* Eyebrow Label */
+    .promise-label {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--navy);
+      padding: 0 24px;
+      color: var(--red);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .08em;
+      z-index: 5;
+    }
+
+    /* Content */
+    .promise-part { position: relative; z-index: 3; }
+    .promise-part-top {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-weight: 800;
+      color: var(--cream);
+      text-transform: uppercase;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 64px;
+    }
+    .promise-part-bot {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 800;
+      color: var(--red);
+      text-transform: uppercase;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-top: 64px;
+    }
+  </style>
+
+  <div class="promise-box">
+    <!-- Outer structural guides -->
+    <div class="p-guide oh otop"></div>
+    <div class="p-guide oh obot"></div>
+    <div class="p-guide ov oleft"></div>
+    <div class="p-guide ov oright"></div>
+
+    <!-- Inner extending edges -->
+    <div class="p-guide ih top"></div>
+    <div class="p-guide ih bot"></div>
+    <div class="p-guide iv left"></div>
+    <div class="p-guide iv right"></div>
+
+    <!-- Axis alignments -->
+    <div class="p-guide ih mid"></div>
+    <div class="p-guide iv mid-top"></div>
+    <div class="p-guide iv mid-bot"></div>
+
+    <!-- Registration dots -->
+    <div class="p-target tl"></div>
+    <div class="p-target tr"></div>
+    <div class="p-target bl"></div>
+    <div class="p-target br"></div>
+
+    <!-- Text Layer -->
+    <div class="promise-label">The Nuvexa Promise</div>
+    
+    <div class="promise-part promise-part-top">
+      Your campus will be<br>transformed, not renovated.
+    </div>
+    <div class="promise-part promise-part-bot">
+      One partner. One invoice.<br>Contractually guaranteed.
+    </div>
+  </div>
+
+
+<!-- ── FOOTER ────────────────────────────────────────────── -->
+<footer>
+  <div class="wrap">
+    <img src="logo-on-navy.png" alt="Nuvexa" />
+    <p>© 2026 Nuvexa Campus Transformation Partners. All Rights Reserved.<br>
+    Questions about brand application? Contact the brand team before proceeding.</p>
+  </div>
+</footer>
+
+</body>
+</html>
