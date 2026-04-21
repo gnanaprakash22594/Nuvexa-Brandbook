@@ -1808,11 +1808,16 @@
     .p-target.br { bottom: -40px; right: -40px; }
 
     /* Eyebrow Label */
-    .promise-label {
+    .promise-label-container {
       position: absolute;
       top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 5;
+    }
+    .promise-label {
       background: var(--navy);
       padding: 0 24px;
       color: var(--red);
@@ -1820,7 +1825,7 @@
       font-weight: 800;
       font-size: 13px;
       letter-spacing: .08em;
-      z-index: 5;
+      white-space: nowrap;
     }
 
     /* Content */
@@ -1872,7 +1877,9 @@
     <div class="p-target br"></div>
 
     <!-- Text Layer -->
-    <div class="promise-label">The Nuvexa Promise</div>
+    <div class="promise-label-container">
+      <div class="promise-label">The Nuvexa Promise</div>
+    </div>
     
     <div class="promise-part promise-part-top">
       Your campus will be<br>transformed, not renovated.
