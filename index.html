@@ -442,6 +442,64 @@
     }
     footer img { height: 36px; margin: 0 auto 24px auto; }
     footer p { font-size: 13px; color: rgba(132,146,159,.8); }
+
+    /* ─── RESPONSIVE (MOBILE) ────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-chapters { grid-template-columns: repeat(3, 1fr); }
+      .logo-grid { grid-template-columns: 1fr; }
+      .type-showcase { grid-template-columns: 1fr; }
+      .rules-grid { grid-template-columns: 1fr; }
+      .eng-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+      .voice-grid, .do-dont-grid, .vocab-grid { grid-template-columns: 1fr !important; }
+      #spacing > .wrap > div { grid-template-columns: 1fr !important; gap: 32px !important; }
+      #rules > .wrap > div:last-child { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+
+    @media (max-width: 768px) {
+      /* Base Container */
+      .wrap { padding-inline: 20px; }
+      
+      /* Navigation */
+      .nav-links { flex-wrap: wrap; gap: 16px; margin-left: 0 !important; }
+      
+      /* Typography Scaling */
+      .hero { padding: 100px 20px 60px; }
+      .hero h1 { font-size: clamp(48px, 12vw, 64px); line-height: 1.1; margin-top: 16px; }
+      .section-header h2 { font-size: 32px; }
+      .type-big-a { font-size: 80px; }
+      
+      /* Hero Grid Collapse */
+      .hero-chapters { grid-template-columns: 1fr 1fr; border-right: none; }
+      .hero-chapters__item { border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-chapters__item:nth-child(even) { border-left: 1px solid var(--border); }
+      
+      /* Swatches & Structural elements */
+      .swatches { grid-template-columns: 1fr; }
+      .type-showcase__meta, .type-showcase__demo { padding: 32px; }
+      
+      /* Data Tables (horizontal scroll) */
+      .scale-table, .eng-table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+      
+      /* Clearspace Diagram bounds */
+      .cs-box { transform: scale(0.65); transform-origin: top left; margin: 0; }
+      .cs-wrap { overflow-x: auto; padding-bottom: 20px; }
+      
+      /* The Blueprint Closing Slide bounds */
+      .promise-slide { padding: 40px 16px !important; }
+      .promise-box { padding: 60px 20px !important; margin: 40px 0 !important; }
+      .promise-part-top { font-size: 28px !important; margin-bottom: 32px !important; }
+      .promise-part-bot { font-size: 20px !important; margin-top: 32px !important; }
+      /* Hide extreme outer lines to prevent document x-scroll */
+      .p-guide.oh, .p-guide.ov, .p-guide.ih.mid, .p-target { display: none !important; }
+      .p-guide.iv.mid-top, .p-guide.iv.mid-bot { display: none !important; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-chapters { grid-template-columns: 1fr; }
+      .hero-chapters__item:nth-child(even) { border-left: none; }
+      .rule-item__visual { height: auto; padding: 32px 16px; }
+      .nav-links a { font-size: 13px; }
+    }
   </style>
 </head>
 <body>
