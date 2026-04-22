@@ -58,7 +58,7 @@
     }
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
-      height: 72px;
+      height: 144px;
     }
     .nav-logo { height: 28px; }
     .nav-links { display: flex; gap: 36px; }
@@ -90,14 +90,6 @@
       background-size: 80px 80px;
       pointer-events: none;
     }
-    /* Red accent line top */
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--red);
-    }
     /* Center content area, takes all available space */
     .hero-center {
       flex: 1;
@@ -106,7 +98,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 56px 48px;
+      padding: 0 56px 48px;
       position: relative; z-index: 2;
     }
     .hero-eyebrow { color: var(--gold); margin-bottom: 32px; font-size: 33px; letter-spacing: 0.1em; }
