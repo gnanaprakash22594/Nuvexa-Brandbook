@@ -14,7 +14,8 @@
       --navy:   #0A2540;
       --cream:  #F4F4F0;
       --gold:   #C5A059;
-      --red:    #F24E24;
+      --green:  #045E53;
+      --red:    #894029;
       --slate:  #334155;
       --steel:  #84929F;
       --border: rgba(10, 37, 64, 0.12);
@@ -585,8 +586,8 @@
       content: '';
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(242,78,36,.10) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(242,78,36,.10) 1px, transparent 1px);
+        linear-gradient(rgba(137,64,41,.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(137,64,41,.10) 1px, transparent 1px);
       background-size: 64px 64px;
       pointer-events: none;
     }
@@ -595,12 +596,12 @@
       content: '';
       position: absolute;
       inset: 24px;
-      border: 1px solid rgba(242,78,36,.15);
+      border: 1px solid rgba(137,64,41,.15);
       pointer-events: none;
     }
     /* Crosshair corner pips */
     .slide .ch { position: absolute; z-index: 2; width: 18px; height: 18px; }
-    .slide .ch::before, .slide .ch::after { content:''; position:absolute; background: rgba(242,78,36,.5); }
+    .slide .ch::before, .slide .ch::after { content:''; position:absolute; background: rgba(137,64,41,.5); }
     .slide .ch::before { width:1px; height:18px; left:50%; top:0; }
     .slide .ch::after  { height:1px; width:18px; top:50%; left:0; }
     .slide .ch.tl { top:12px; left:12px; }
@@ -625,7 +626,7 @@
 
     /* Annotation bracket box */
     .anno-box {
-      border: 1.5px solid rgba(242,78,36,.5);
+      border: 1.5px solid rgba(137,64,41,.5);
       padding: 16px 20px;
       font-size: 14px;
       color: rgba(244,244,240,.75);
@@ -679,7 +680,7 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      border-left: 2px solid rgba(242,78,36,.4);
+      border-left: 2px solid rgba(137,64,41,.4);
       padding-left: 12px;
     }
     .th-ann-item p { font-size: 12px; color: rgba(244,244,240,.65); line-height: 1.5; }
@@ -731,7 +732,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0;
-      border: 1.5px solid rgba(242,78,36,.4);
+      border: 1.5px solid rgba(137,64,41,.4);
       padding: 20px 24px;
     }
     .timeline-item {
@@ -761,9 +762,9 @@
     .arch-primary {
       width: 100%;
       max-width: 780px;
-      background: rgba(242,78,36,.12);
+      background: rgba(137,64,41,.12);
       border: 2px solid var(--red);
-      box-shadow: 0 0 40px rgba(242,78,36,.25), inset 0 0 30px rgba(242,78,36,.08);
+      box-shadow: 0 0 40px rgba(137,64,41,.25), inset 0 0 30px rgba(137,64,41,.08);
       padding: 36px 48px;
       text-align: center;
       position: relative;
@@ -870,7 +871,7 @@
       color: var(--navy);
       padding: 20px 28px;
       text-align: left;
-      border-right: 2px solid rgba(242,78,36,.3);
+      border-right: 2px solid rgba(137,64,41,.3);
     }
     .persona-table thead th:last-child { border-right: none; }
     .persona-table tbody tr {
@@ -884,7 +885,7 @@
       font-size: 15px;
       color: rgba(244,244,240,.85);
       line-height: 1.6;
-      border-right: 1px solid rgba(242,78,36,.15);
+      border-right: 1px solid rgba(137,64,41,.15);
       font-family: 'Inter', sans-serif;
       vertical-align: top;
     }
@@ -979,32 +980,32 @@
         <div class="radar-wrap">
           <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
             <!-- Grid lines -->
-            <line x1="200" y1="40" x2="200" y2="360" stroke="rgba(242,78,36,.2)" stroke-width="1"/>
-            <line x1="40"  y1="200" x2="360" y2="200" stroke="rgba(242,78,36,.2)" stroke-width="1"/>
+            <line x1="200" y1="40" x2="200" y2="360" stroke="rgba(137,64,41,.2)" stroke-width="1"/>
+            <line x1="40"  y1="200" x2="360" y2="200" stroke="rgba(137,64,41,.2)" stroke-width="1"/>
             <!-- Outer diamond guide -->
             <polygon points="200,40 360,200 200,360 40,200"
-              fill="none" stroke="rgba(242,78,36,.2)" stroke-width="1"/>
+              fill="none" stroke="rgba(137,64,41,.2)" stroke-width="1"/>
             <!-- Mid diamond guide -->
             <polygon points="200,90 310,200 200,310 90,200"
-              fill="none" stroke="rgba(242,78,36,.15)" stroke-width="1"/>
+              fill="none" stroke="rgba(137,64,41,.15)" stroke-width="1"/>
             <!-- Inner diamond guide -->
             <polygon points="200,140 260,200 200,260 140,200"
-              fill="none" stroke="rgba(242,78,36,.1)" stroke-width="1"/>
+              fill="none" stroke="rgba(137,64,41,.1)" stroke-width="1"/>
             <!-- Data diamond: Competence HIGH, Sincerity MODERATE-HIGH, Excitement MODERATE, Sophistication MODERATE-HIGH -->
             <!-- top=HIGH(~60px from center), right=MOD-HIGH(~90px), bottom=MODERATE(~100px), left=MOD-HIGH(~90px) -->
             <polygon points="200,80 320,200 200,290 100,200"
-              fill="rgba(242,78,36,.3)" stroke="var(--red)" stroke-width="2"/>
+              fill="rgba(137,64,41,.3)" stroke="var(--red)" stroke-width="2"/>
             <!-- Data points -->
             <circle cx="200" cy="80"  r="6" fill="var(--red)"/>
             <circle cx="320" cy="200" r="6" fill="var(--red)"/>
             <circle cx="200" cy="290" r="6" fill="var(--red)"/>
             <circle cx="100" cy="200" r="6" fill="var(--red)"/>
             <!-- Axis arrows -->
-            <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(242,78,36,.5)"/></marker></defs>
-            <line x1="200" y1="200" x2="200" y2="32"  stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
-            <line x1="200" y1="200" x2="368" y2="200" stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
-            <line x1="200" y1="200" x2="200" y2="368" stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
-            <line x1="200" y1="200" x2="32"  y2="200" stroke="rgba(242,78,36,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(137,64,41,.5)"/></marker></defs>
+            <line x1="200" y1="200" x2="200" y2="32"  stroke="rgba(137,64,41,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="200" y1="200" x2="368" y2="200" stroke="rgba(137,64,41,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="200" y1="200" x2="200" y2="368" stroke="rgba(137,64,41,.4)" stroke-width="1" marker-end="url(#arr)"/>
+            <line x1="200" y1="200" x2="32"  y2="200" stroke="rgba(137,64,41,.4)" stroke-width="1" marker-end="url(#arr)"/>
             <!-- Labels -->
             <text x="200" y="22" text-anchor="middle" fill="var(--cream)" font-family="Manrope" font-size="13" font-weight="700">COMPETENCE</text>
             <text x="380" y="196" text-anchor="start"  fill="var(--cream)" font-family="Manrope" font-size="13" font-weight="700">SINCERITY</text>
@@ -1089,6 +1090,27 @@
         <div class="logo-box__guide-v mid"></div>
         <img class="logo-img" src="Logo-transparent.png" alt="Nuvexa Primary Logo" />
         <span class="logo-box__tag">Primary Logo</span>
+      </div>
+    </div>
+
+    
+    <!-- Alternate Logo -->
+    <div class="logo-grid" style="grid-template-columns: 1fr;">
+      <div class="logo-box logo-box--navy">
+        <div class="logo-box__grid logo-box__grid--light"></div>
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner tm"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__corner bm"></div>
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <div class="logo-box__guide-v mid"></div>
+        <img class="logo-img" src="logo-cream-transparent.png" alt="Nuvexa Alternate Logo" />
+        <span class="logo-box__tag">Alternate Logo</span>
       </div>
     </div>
 
@@ -1213,7 +1235,7 @@
     <!-- Accents -->
     <div class="palette-section">
       <h3>Accent Colors</h3>
-      <div class="swatches">
+      <div class="swatches" style="grid-template-columns: repeat(3, 1fr);">
         <div class="swatch">
           <div class="swatch__color" style="background:#C5A059;"></div>
           <div class="swatch__info">
@@ -1223,10 +1245,18 @@
           </div>
         </div>
         <div class="swatch">
-          <div class="swatch__color" style="background:#F24E24;"></div>
+          <div class="swatch__color" style="background:#045E53;"></div>
           <div class="swatch__info">
-            <h4>Builder Orange-Red</h4>
-            <p class="hex">#F24E24 &nbsp;·&nbsp; RGB 242 78 36</p>
+            <h4>Campus Green</h4>
+            <p class="hex">#045E53 &nbsp;&middot;&nbsp; RGB 4 94 83</p>
+            <p class="role">Heritage and legacy. Used for secondary accents and depth. Connects the structural elements to the environment of an educational campus.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#894029;"></div>
+          <div class="swatch__info">
+            <h4>Builder Terracotta</h4>
+            <p class="hex">#894029 &nbsp;·&nbsp; RGB 137 64 41</p>
             <p class="role">Action and urgency. Reserved exclusively for primary CTAs ("Book an Assessment"), structural commitments, critical alerts, and Do/Don't guidance. Never used decoratively.</p>
           </div>
         </div>
@@ -1417,7 +1447,7 @@
         </div>
 
         <div class="rule-item">
-          <div class="rule-item__visual" style="background: rgba(242,78,36,.05); flex-direction: column; text-align: center;">
+          <div class="rule-item__visual" style="background: rgba(137,64,41,.05); flex-direction: column; text-align: center;">
             <p style="font-family: 'Manrope', sans-serif; font-size: 18px; color: var(--steel);">"We are passionate leaders<br>driving holistic ecosystems."</p>
           </div>
           <div class="rule-item__body">
@@ -1446,7 +1476,7 @@
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never stretch or distort the wordmark</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never add drop shadows or glow effects</li>
-          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never recolor the mark in Gold or Red</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never recolor the mark in Gold, Terracotta, or Green</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never place on photographic backgrounds without a solid color block underneath</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never use obsolete logo versions, always use current approved files</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Minimum digital size: 120px wide / Print: 30mm wide</li>
@@ -1457,8 +1487,8 @@
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Navy + Cream is the primary color pair, always lead with it</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Gold is a secondary accent, use sparingly for premium signals</li>
-          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Red/#F24E24 is reserved for actions and urgency only</li>
-          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never pair Red and Gold on the same component</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Red/#894029 is reserved for actions and urgency only</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never pair Terracotta and Gold on the same component</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never use the palette colors at reduced opacity as tints, use the utility grays instead</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> All body text must meet WCAG AA contrast on its background</li>
         </ul>
@@ -1515,9 +1545,9 @@
       .vocab-item.avoid::before { content: '✗'; color: var(--red); }
 
       /* Layout & Spacing */
-      .sys-demo { background: rgba(10,37,64,.6); border: 1px solid rgba(242,78,36,.2); padding: 48px; position: relative; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; }
+      .sys-demo { background: rgba(10,37,64,.6); border: 1px solid rgba(137,64,41,.2); padding: 48px; position: relative; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; }
       .grid-overlay { display: flex; width: 100%; height: 160px; gap: 16px; }
-      .grid-col { flex: 1; background: rgba(242,78,36,.05); border-left: 1px dashed rgba(242,78,36,.3); border-right: 1px dashed rgba(242,78,36,.3); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; font-family: monospace; font-size: 10px; color: var(--red); }
+      .grid-col { flex: 1; background: rgba(137,64,41,.05); border-left: 1px dashed rgba(137,64,41,.3); border-right: 1px dashed rgba(137,64,41,.3); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; font-family: monospace; font-size: 10px; color: var(--red); }
       
       .space-row { display: flex; align-items: center; gap: 32px; margin-bottom: 24px; }
       .space-box { background: var(--gold); }
@@ -1775,14 +1805,14 @@
       position: relative;
       max-width: 1000px;
       width: 100%;
-      border: 1px solid rgba(242,78,36,0.6);
+      border: 1px solid rgba(137,64,41,0.6);
       padding: 100px 40px;
       text-align: center;
       margin: 80px 0;
     }
     
     /* Engineer Guide Lines */
-    .p-guide { position: absolute; background: rgba(242,78,36,0.6); z-index: 1; pointer-events: none; }
+    .p-guide { position: absolute; background: rgba(137,64,41,0.6); z-index: 1; pointer-events: none; }
     
     /* Inner extending lines */
     .p-guide.ih { height: 1px; left: -24px; right: -24px; }
@@ -1793,8 +1823,8 @@
     .p-guide.iv.right { right: -1px; }
 
     /* Outer structural frame */
-    .p-guide.oh { height: 1px; left: -60px; right: -60px; background: rgba(242,78,36,0.4); }
-    .p-guide.ov { width: 1px; top: -60px; bottom: -60px; background: rgba(242,78,36,0.4); }
+    .p-guide.oh { height: 1px; left: -60px; right: -60px; background: rgba(137,64,41,0.4); }
+    .p-guide.ov { width: 1px; top: -60px; bottom: -60px; background: rgba(137,64,41,0.4); }
     .p-guide.oh.otop { top: -40px; }
     .p-guide.oh.obot { bottom: -40px; }
     .p-guide.ov.oleft { left: -40px; }
@@ -1810,13 +1840,13 @@
       position: absolute; 
       width: 18px; 
       height: 18px; 
-      border: 1px solid rgba(242,78,36,0.6); 
+      border: 1px solid rgba(137,64,41,0.6); 
       border-radius: 50%; 
       z-index: 2; 
       transform: translate(-50%, -50%);
     }
-    .p-target::before { content:''; position: absolute; width: 28px; height: 1px; background: rgba(242,78,36,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
-    .p-target::after { content:''; position: absolute; width: 1px; height: 28px; background: rgba(242,78,36,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .p-target::before { content:''; position: absolute; width: 28px; height: 1px; background: rgba(137,64,41,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .p-target::after { content:''; position: absolute; width: 1px; height: 28px; background: rgba(137,64,41,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
     .p-target.tl { top: -40px; left: -40px; }
     .p-target.tr { top: -40px; right: -40px; }
     .p-target.bl { bottom: -40px; left: -40px; }
