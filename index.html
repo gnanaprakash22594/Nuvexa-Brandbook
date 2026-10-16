@@ -11,13 +11,14 @@
   <style>
     /* ─── TOKENS ─────────────────────────────────────────────────── */
     :root {
-      --navy:   #0A2540;
-      --cream:  #F4F4F0;
-      --gold:   #C5A059;
-      --green:  #045E53;
-      --red:    #894029;
-      --slate:  #334155;
-      --steel:  #84929F;
+      --navy:       #0A2540;   /* Primary structure & backgrounds */
+      --cream:      #F4F4F0;   /* Primary canvas */
+      --gold:       #C5A059;   /* Prestige accent */
+      --teal:       #045E53;   /* Campus depth & heritage */
+      --red:        #F24E24;   /* Action / CTA / urgency — Builder Orange-Red */
+      --terracotta: #894029;   /* Blueprint / structural / slide accents */
+      --slate:      #334155;   /* Secondary text */
+      --steel:      #84929F;   /* Borders, labels, meta */
       --border: rgba(10, 37, 64, 0.12);
     }
 
@@ -127,7 +128,7 @@
       position: relative; z-index: 2;
       border-top: 1px solid rgba(197,160,89,.25);
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(10, 1fr);
     }
     .hero-chapters__item {
       padding: 20px 28px;
@@ -186,79 +187,118 @@
       justify-content: center;
       overflow: hidden;
     }
-    /* Fine grid overlay, 40px cells */
+    /* Fine grid overlay — 40 × 40 px cells, origin locked to anchor frame */
     .logo-box__grid {
       position: absolute; inset: 0;
       background-size: 40px 40px;
+      background-position: 80px 80px; /* aligns grid to the 80px anchor frame */
       z-index: 1;
     }
     .logo-box__grid--light {
       background-image:
-        linear-gradient(to right, rgba(244,244,240,.10) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(244,244,240,.10) 1px, transparent 1px);
+        linear-gradient(to right,  rgba(244,244,240,.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(244,244,240,.08) 1px, transparent 1px);
     }
     .logo-box__grid--dark {
       background-image:
-        linear-gradient(to right, rgba(10,37,64,.09) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(10,37,64,.09) 1px, transparent 1px);
+        linear-gradient(to right,  rgba(10,37,64,.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(10,37,64,.07) 1px, transparent 1px);
     }
     .logo-box--navy  { background: var(--navy); }
     .logo-box--cream { background: var(--cream); border: 1px solid var(--border); }
 
-    /* Corner anchor squares, like the reference images */
+    /* ── Corner anchor squares ─────────────────────────────────
+       8×8 px squares at exact 80 px inset from each edge.
+       Guide-lines originate from the CENTER of each anchor.
+       ────────────────────────────────────────────────────── */
     .logo-box__corner {
       position: absolute; z-index: 4;
-      width: 10px; height: 10px;
+      width: 8px; height: 8px;
     }
     .logo-box--navy  .logo-box__corner { background: rgba(244,244,240,.35); }
-    .logo-box--cream .logo-box__corner { background: rgba(10,37,64,.25); }
-    .logo-box__corner.tl { top: 32px;  left: 32px; }
-    .logo-box__corner.tr { top: 32px;  right: 32px; }
-    .logo-box__corner.bl { bottom: 32px; left: 32px; }
-    .logo-box__corner.br { bottom: 32px; right: 32px; }
-    /* Mid-edge anchor squares */
-    .logo-box__corner.tm { top: 32px;  left: 50%; transform: translateX(-50%); }
-    .logo-box__corner.bm { bottom: 32px; left: 50%; transform: translateX(-50%); }
+    .logo-box--cream .logo-box__corner { background: rgba(10,37,64,.22); }
+    /* Four corners — 80 px inset (center is at 80, so top/left is 76) */
+    .logo-box__corner.tl { top: 76px;  left: 76px; }
+    .logo-box__corner.tr { top: 76px;  right: 76px; }
+    .logo-box__corner.bl { bottom: 76px; left: 76px; }
+    .logo-box__corner.br { bottom: 76px; right: 76px; }
+    /* Mid-edge anchors — horizontally centered */
+    .logo-box__corner.tm { top: 76px;    left: 50%; transform: translateX(-50%); }
+    .logo-box__corner.bm { bottom: 76px; left: 50%; transform: translateX(-50%); }
 
-    /* Thin guide lines framing the logo area */
+    /* ── Guide lines — connect anchor centres ────────────── */
     .logo-box__guide-h,
     .logo-box__guide-v {
       position: absolute; z-index: 3; pointer-events: none;
     }
     .logo-box__guide-h {
-      left: 32px; right: 32px; height: 1px;
+      /* runs from left-anchor centre to right-anchor centre */
+      left: 80px; right: 80px; height: 1px;
     }
     .logo-box__guide-v {
-      top: 32px; bottom: 32px; width: 1px;
+      top: 80px; bottom: 80px; width: 1px;
     }
     .logo-box--navy  .logo-box__guide-h,
-    .logo-box--navy  .logo-box__guide-v { background: rgba(244,244,240,.18); }
+    .logo-box--navy  .logo-box__guide-v { background: rgba(244,244,240,.15); }
     .logo-box--cream .logo-box__guide-h,
-    .logo-box--cream .logo-box__guide-v { background: rgba(10,37,64,.15); }
-    .logo-box__guide-h.top    { top: 32px; }
-    .logo-box__guide-h.bottom { bottom: 32px; }
-    .logo-box__guide-v.left   { left: 32px; }
-    .logo-box__guide-v.right  { right: 32px; }
+    .logo-box--cream .logo-box__guide-v { background: rgba(10,37,64,.12); }
+    .logo-box__guide-h.top    { top: 80px; }
+    .logo-box__guide-h.bottom { bottom: 80px; }
+    .logo-box__guide-v.left   { left: 80px; }
+    .logo-box__guide-v.right  { right: 80px; }
     .logo-box__guide-v.mid    { left: 50%; }
+    .logo-box__guide-h.mid    { top: 50%; }
 
-    /* Logo image centered */
+    /* ── Center registration cross via pseudo-elements ──────────
+       ::before = horizontal mid guide spanning the anchor frame
+       ::after  = center registration dot (4 × 4 px circle)
+       ────────────────────────────────────────────────────────── */
+    .logo-box::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 80px; right: 80px;
+      height: 1px;
+      z-index: 3; pointer-events: none;
+      transform: translateY(-0.5px);
+    }
+    .logo-box--navy::before  { background: rgba(244,244,240,.12); }
+    .logo-box--cream::before { background: rgba(10,37,64,.08); }
+
+    .logo-box::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4; pointer-events: none;
+    }
+    .logo-box--navy::after  { background: rgba(244,244,240,.3); box-shadow: 0 0 0 1.5px rgba(244,244,240,.15); }
+    .logo-box--cream::after { background: rgba(10,37,64,.2);   box-shadow: 0 0 0 1.5px rgba(10,37,64,.1); }
+
+    /* Logo image — sized to 70% of the safe area between anchor guides */
+    /* Safe area = box(400px) − 2×80px guides = 240px → 70% = 168px → 42% of box */
     .logo-box img.logo-img {
       position: relative; z-index: 2;
-      width: 60%; max-height: 40%;
+      width: 56%;
+      max-width: calc(100% - 200px);   /* never exceed safe area */
+      max-height: calc(100% - 200px);
       object-fit: contain;
     }
     .logo-box img.mark-img {
       position: relative; z-index: 2;
-      width: 40%; max-height: 44%;
+      width: 28%;
+      max-width: calc(100% - 240px);
+      max-height: calc(100% - 240px);
       object-fit: contain;
     }
 
-    /* Label tag */
+    /* Label tag — sits in the lower margin zone, outside the guide frame */
     .logo-box__tag {
       position: absolute; z-index: 5;
-      bottom: 20px; left: 32px;
+      bottom: 24px; left: 80px;
       font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
-      padding: 5px 14px;
+      padding: 6px 14px;
     }
     .logo-box--navy  .logo-box__tag { background: var(--cream); color: var(--navy); }
     .logo-box--cream .logo-box__tag { background: var(--navy); color: var(--cream); }
@@ -285,16 +325,16 @@
       align-items: center;
       justify-content: center;
     }
-    /* Spacing zone, the 1N clear area around the logo */
+    /* Spacing zone — 1N clearspace equal on all four sides (was asymmetric 40px/56px) */
     .cs-zone {
       position: relative;
       border: 1px solid rgba(10,37,64,.2);
-      padding: 40px 56px;
+      padding: 48px;   /* Equal 1N on all sides */
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    /* Corner anchor squares (navy/blue like reference) */
+    /* Corner anchor squares */
     .cs-anchor {
       position: absolute;
       width: 14px; height: 14px;
@@ -308,11 +348,11 @@
     .cs-anchor.bl { bottom: -7px; left: -7px; }
     .cs-anchor.br { bottom: -7px; right: -7px; }
 
-    /* Ruler extension lines beyond zone */
+    /* Ruler extension lines — inset matches the padding (48px) */
     .cs-zone::before {
       content: '';
       position: absolute;
-      inset: -40px -56px;
+      inset: -48px;   /* uniform — was -40px -56px */
       border: 1px dashed rgba(10,37,64,.12);
       pointer-events: none;
     }
@@ -448,7 +488,7 @@
 
     /* ─── RESPONSIVE (MOBILE) ────────────────────────────────────── */
     @media (max-width: 900px) {
-      .hero-chapters { grid-template-columns: repeat(3, 1fr); }
+      .hero-chapters { grid-template-columns: repeat(5, 1fr); }
       .logo-grid { grid-template-columns: 1fr; }
       .type-showcase { grid-template-columns: 1fr; }
       .rules-grid { grid-template-columns: 1fr; }
@@ -526,10 +566,16 @@
   <div class="wrap nav-inner">
     <nav class="nav-links" style="margin-left: auto; width: 100%; justify-content: center;">
       <a href="#strategy">Strategy</a>
-      <a href="#logo">Logo System</a>
+      <a href="#logo">Logo</a>
       <a href="#colors">Colors</a>
       <a href="#type">Typography</a>
       <a href="#rules">Guidelines</a>
+      <a href="#messaging">Messaging</a>
+      <a href="#voice">Voice</a>
+      <a href="#cobranding">Co-Brand</a>
+      <a href="#digital">Digital</a>
+      <a href="#print">Print</a>
+      <a href="#accessibility">Accessibility</a>
     </nav>
   </div>
 </nav>
@@ -563,6 +609,26 @@
     <div class="hero-chapters__item">
       <p class="hero-chapters__num">05</p>
       <p class="hero-chapters__title">Guidelines</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">06</p>
+      <p class="hero-chapters__title">Messaging</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">07</p>
+      <p class="hero-chapters__title">Voice &amp; Tone</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">08</p>
+      <p class="hero-chapters__title">Co-Branding</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">09</p>
+      <p class="hero-chapters__title">Digital &amp; Print</p>
+    </div>
+    <div class="hero-chapters__item">
+      <p class="hero-chapters__num">10</p>
+      <p class="hero-chapters__title">Accessibility</p>
     </div>
   </div>
 </header>
@@ -1062,8 +1128,6 @@
 </section>
 
 
-
-
 <!-- ── 02. LOGO SYSTEM ──────────────────────────────────── -->
 <section class="section" id="logo">
   <div class="wrap">
@@ -1073,8 +1137,12 @@
       <p>The Nuvexa wordmark is set in a custom-weight bold typeface. The arrow superscript on the 'N' is the brand's symbol of forward momentum, campus transformation pointing upward and outward.</p>
     </div>
 
-    <!-- Primary Wordmark -->
-    <div class="logo-grid" style="grid-template-columns: 1fr;">
+    <!-- 1. Complete Logo with TM Mark -->
+    <div class="section-header" style="margin-top: 0; margin-bottom: 32px;">
+      <span class="eyebrow">Complete Logo with TM Mark</span>
+      <p style="margin-top: 8px;">The official primary logo for all formal, legal, and first-use applications. The TM mark must be present on all external-facing materials.</p>
+    </div>
+    <div class="logo-grid">
       <div class="logo-box logo-box--cream">
         <div class="logo-box__grid logo-box__grid--dark"></div>
         <div class="logo-box__corner tl"></div>
@@ -1088,14 +1156,9 @@
         <div class="logo-box__guide-v left"></div>
         <div class="logo-box__guide-v right"></div>
         <div class="logo-box__guide-v mid"></div>
-        <img class="logo-img" src="Logo-transparent.png" alt="Nuvexa Primary Logo" />
-        <span class="logo-box__tag">Primary Logo</span>
+        <img class="logo-img" src="Logo System/Group-logo-with-TM-transparent.png" alt="Nuvexa Complete Logo with TM" />
+        <span class="logo-box__tag">Complete Logo — TM</span>
       </div>
-    </div>
-
-    
-    <!-- Alternate Logo -->
-    <div class="logo-grid" style="grid-template-columns: 1fr;">
       <div class="logo-box logo-box--navy">
         <div class="logo-box__grid logo-box__grid--light"></div>
         <div class="logo-box__corner tl"></div>
@@ -1109,29 +1172,16 @@
         <div class="logo-box__guide-v left"></div>
         <div class="logo-box__guide-v right"></div>
         <div class="logo-box__guide-v mid"></div>
-        <img class="logo-img" src="Logo-Alternate.png" alt="Nuvexa Alternate Logo" />
-        <span class="logo-box__tag">Alternate Logo</span>
+        <img class="logo-img" src="Logo System/Group-logo-with-TM - Campus Cream Version - transparent.png" alt="Nuvexa Complete Logo with TM — Cream on Navy" />
+        <span class="logo-box__tag">Cream on Navy — TM</span>
       </div>
     </div>
 
-    <!-- Logomark -->
-    <div class="logo-grid" style="grid-template-columns: 1fr;">
-      <div class="logo-box logo-box--cream">
-        <div class="logo-box__grid logo-box__grid--dark"></div>
-        <div class="logo-box__corner tl"></div>
-        <div class="logo-box__corner tr"></div>
-        <div class="logo-box__corner bl"></div>
-        <div class="logo-box__corner br"></div>
-        <div class="logo-box__guide-h top"></div>
-        <div class="logo-box__guide-h bottom"></div>
-        <div class="logo-box__guide-v left"></div>
-        <div class="logo-box__guide-v right"></div>
-        <img class="mark-img" src="Logo-mark.png" alt="Nuvexa Logomark" />
-        <span class="logo-box__tag">Logomark</span>
-      </div>
+    <!-- 2. Complete Logo without TM Mark -->
+    <div class="section-header" style="margin-top: 56px; margin-bottom: 32px;">
+      <span class="eyebrow">Complete Logo without TM Mark</span>
+      <p style="margin-top: 8px;">For internal, editorial, and secondary usage where the TM symbol is not required. Retains the full "A Division of SGB Group" lockup.</p>
     </div>
-
-    <!-- Division Lockup -->
     <div class="logo-grid" style="grid-template-columns: 1fr;">
       <div class="logo-box logo-box--cream">
         <div class="logo-box__grid logo-box__grid--dark"></div>
@@ -1146,45 +1196,110 @@
         <div class="logo-box__guide-v left"></div>
         <div class="logo-box__guide-v right"></div>
         <div class="logo-box__guide-v mid"></div>
-        <img class="logo-img" src="Group-logo-transparent.png" alt="Nuvexa Division Lockup" />
-        <span class="logo-box__tag">Division Lockup</span>
+        <img class="logo-img" src="Logo System/Group-logo-transaparent.png" alt="Nuvexa Complete Logo without TM" />
+        <span class="logo-box__tag">Complete Logo — No TM</span>
       </div>
     </div>
 
+    <!-- 3. Logo (without Division of SGB Group) -->
+    <div class="section-header" style="margin-top: 56px; margin-bottom: 32px;">
+      <span class="eyebrow">Logo — Standalone Wordmark</span>
+      <p style="margin-top: 8px;">The standalone NUVEXA wordmark without the "A Division of SGB Group" descriptor. Used where the parent brand relationship is already established.</p>
+    </div>
+    <div class="logo-grid" style="grid-template-columns: 1fr;">
+      <div class="logo-box logo-box--cream">
+        <div class="logo-box__grid logo-box__grid--dark"></div>
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner tm"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__corner bm"></div>
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <div class="logo-box__guide-v mid"></div>
+        <img class="logo-img" src="Logo System/Logo-transparent.png" alt="Nuvexa Standalone Wordmark" />
+        <span class="logo-box__tag">Standalone Wordmark</span>
+      </div>
+    </div>
+
+    <!-- 4. Logomark -->
+    <div class="section-header" style="margin-top: 56px; margin-bottom: 32px;">
+      <span class="eyebrow">Logo Mark</span>
+      <p style="margin-top: 8px;">The NU› symbol extracted from the full wordmark. Used for favicons, app icons, social media avatars, and compact brand applications where the full wordmark cannot fit.</p>
+    </div>
+    <div class="logo-grid" style="grid-template-columns: 1fr;">
+      <div class="logo-box logo-box--cream">
+        <div class="logo-box__grid logo-box__grid--dark"></div>
+        <div class="logo-box__corner tl"></div>
+        <div class="logo-box__corner tr"></div>
+        <div class="logo-box__corner bl"></div>
+        <div class="logo-box__corner br"></div>
+        <div class="logo-box__guide-h top"></div>
+        <div class="logo-box__guide-h bottom"></div>
+        <div class="logo-box__guide-v left"></div>
+        <div class="logo-box__guide-v right"></div>
+        <img class="mark-img" src="Logo System/Logo-mark-transparent.png" alt="Nuvexa Logomark" />
+        <span class="logo-box__tag">Logo Mark</span>
+      </div>
+    </div>
+
+    <!-- 5. Logo Components -->
+    <div class="section-header" style="margin-top: 56px; margin-bottom: 32px;">
+      <span class="eyebrow">Logo Components</span>
+      <p style="margin-top: 8px;">The Nuvexa logo is composed of three distinct elements that work together as a unified identity system. Each component has a structural role and must never be used in isolation outside of the approved logo configurations.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 56px;">
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 48px 32px; text-align: center;">
+        <div style="font-family: 'Manrope', sans-serif; font-size: 64px; font-weight: 800; color: var(--navy); margin-bottom: 24px; line-height: 1;">N<span style="position: relative;"><span style="position: absolute; top: -18px; left: 2px; font-size: 14px; background: var(--navy); color: var(--gold); width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; line-height: 1;">↗</span>U</span></div>
+        <h4 style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin-bottom: 8px;">The Foundation</h4>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.6;">The NU letterforms with the arrow superscript. Represents Nuvexa's builder DNA and upward momentum.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 48px 32px; text-align: center;">
+        <div style="font-family: 'Manrope', sans-serif; font-size: 64px; font-weight: 800; color: var(--gold); margin-bottom: 24px; line-height: 1;">›</div>
+        <h4 style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin-bottom: 8px;">The Chevron</h4>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.6;">The gold chevron within the X letterform. Symbolizes forward direction, transformation, and progress.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--teal); padding: 48px 32px; text-align: center;">
+        <div style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 24px; line-height: 1; letter-spacing: .2em; text-transform: uppercase; padding-top: 22px; padding-bottom: 22px;">A DIVISION OF<br>SGB GROUP</div>
+        <h4 style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin-bottom: 8px;">The Heritage Line</h4>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.6;">Establishes the parent brand relationship with Sachin Gupta Buildcon Group. Required on all formal materials.</p>
+      </div>
+    </div>
 
     <!-- Clear Space -->
     <div class="section-header" style="margin-top: 80px; margin-bottom: 40px;">
       <span class="eyebrow">Logo Clear Space</span>
       <h2>Room to Breathe</h2>
-      <p>The minimum clear space around the wordmark is defined as <strong style="color:var(--navy);">1N</strong>, the cap-height of the ‘N’ letterform. No text, graphic, or edge may enter this zone.</p>
+      <p>The minimum clear space around the wordmark is defined as <strong style="color:var(--navy);">1N</strong>, the cap-height of the 'N' letterform. No text, graphic, or edge may enter this zone.</p>
     </div>
 
-    <!-- Pixel-perfect clearspace diagram -->
+    <!-- Clearspace diagram — dimension labels at midpoints, equal 1N on all sides -->
     <div class="cs-wrap">
       <div class="cs-box">
-        <!-- Outer dimension labels -->
-        <span class="cs-label" style="top:-28px; left:0;">1N</span>
-        <span class="cs-label" style="top:-28px; right:0;">1N</span>
-        <span class="cs-label" style="bottom:-28px; left:0;">1N</span>
-        <span class="cs-label" style="bottom:-28px; right:0;">1N</span>
-        <span class="cs-label" style="top:50%; transform:translateY(-50%); left:-36px;">1N</span>
-        <span class="cs-label" style="top:50%; transform:translateY(-50%); right:-36px;">1N</span>
-        <!-- Horizontal span arrows top -->
-        <div class="cs-dim-line h" style="top:-16px; left:0; right:0;"></div>
-        <div class="cs-dim-line h" style="bottom:-16px; left:0; right:0;"></div>
-        <div class="cs-dim-line v" style="left:-20px; top:0; bottom:0;"></div>
-        <div class="cs-dim-line v" style="right:-20px; top:0; bottom:0;"></div>
-        <!-- Tick marks at corners of dim lines -->
-        <div class="cs-tick h" style="top:-16px; left:-10px;"></div>
-        <div class="cs-tick h" style="top:-16px; right:-10px;"></div>
-        <div class="cs-tick h" style="bottom:-16px; left:-10px;"></div>
-        <div class="cs-tick h" style="bottom:-16px; right:-10px;"></div>
-        <div class="cs-tick v" style="left:-20px; top:-10px;"></div>
-        <div class="cs-tick v" style="left:-20px; bottom:-10px;"></div>
-        <div class="cs-tick v" style="right:-20px; top:-10px;"></div>
-        <div class="cs-tick v" style="right:-20px; bottom:-10px;"></div>
+        <!-- Mid-point dimension labels (correct technical drawing standard) -->
+        <span class="cs-label" style="top:-26px; left:50%; transform:translateX(-50%);">1N</span>
+        <span class="cs-label" style="bottom:-26px; left:50%; transform:translateX(-50%);">1N</span>
+        <span class="cs-label" style="top:50%; transform:translateY(-50%); left:-44px;">1N</span>
+        <span class="cs-label" style="top:50%; transform:translateY(-50%); right:-44px;">1N</span>
+        <!-- Dimension span lines -->
+        <div class="cs-dim-line h" style="top:-14px; left:0; right:0;"></div>
+        <div class="cs-dim-line h" style="bottom:-14px; left:0; right:0;"></div>
+        <div class="cs-dim-line v" style="left:-26px; top:0; bottom:0;"></div>
+        <div class="cs-dim-line v" style="right:-26px; top:0; bottom:0;"></div>
+        <!-- Tick marks at zone boundary intersections -->
+        <div class="cs-tick h" style="top:-14px; left:-10px;"></div>
+        <div class="cs-tick h" style="top:-14px; right:-10px;"></div>
+        <div class="cs-tick h" style="bottom:-14px; left:-10px;"></div>
+        <div class="cs-tick h" style="bottom:-14px; right:-10px;"></div>
+        <div class="cs-tick v" style="left:-26px; top:-10px;"></div>
+        <div class="cs-tick v" style="left:-26px; bottom:-10px;"></div>
+        <div class="cs-tick v" style="right:-26px; top:-10px;"></div>
+        <div class="cs-tick v" style="right:-26px; bottom:-10px;"></div>
 
-        <!-- The clearspace zone with corner anchors -->
+        <!-- The clearspace zone — equal 48px padding on all sides -->
         <div class="cs-zone">
           <div class="cs-anchor tl"></div>
           <div class="cs-anchor tr"></div>
@@ -1192,13 +1307,39 @@
           <div class="cs-anchor mr"></div>
           <div class="cs-anchor bl"></div>
           <div class="cs-anchor br"></div>
-          <img class="cs-logo" src="Logo-transparent.png" alt="Nuvexa clear space" />
+          <img class="cs-logo" src="Logo System/Logo-transparent.png" alt="Nuvexa clear space" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 1N Unit Definition -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px;">
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 40px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">What is 1N?</p>
+        <p style="font-size: 15px; color: var(--slate); line-height: 1.7;">The <strong style="color:var(--navy);">N</strong> unit equals the cap-height of the NU letterform in the logo. At the most common display sizes:</p>
+        <ul style="list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Logo at 200px wide: 1N ≈ 22px</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Logo at 30mm (print min): 1N ≈ 3.5mm</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">→</span> Logo at 120px (digital min): 1N ≈ 13px</li>
+        </ul>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 40px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Minimum Sizes</p>
+        <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 8px;">
+          <div>
+            <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--steel); margin-bottom: 4px;">Full Wordmark</p>
+            <p style="font-size: 14px; color: var(--navy); font-weight: 700;">120px wide (digital) · 30mm wide (print)</p>
+          </div>
+          <div>
+            <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--steel); margin-bottom: 4px;">Logomark (NU symbol)</p>
+            <p style="font-size: 14px; color: var(--navy); font-weight: 700;">24×24px (digital) · 8mm (print)</p>
+            <p style="font-size: 13px; color: var(--slate); margin-top: 4px;">Below 24px the arrow superscript becomes illegible.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- ── 03. COLOR PALETTE ────────────────────────────────── -->
 <section class="section" id="colors">
@@ -1209,10 +1350,10 @@
       <p>A 5-color brand palette that balances institutional trust with builder energy. Every color has a specific structural role — nothing is decorative without purpose.</p>
     </div>
 
-    <!-- Final Brand Palette — ordered: Navy · Gold · Teal · Cream · Terracotta -->
+    <!-- Final Brand Palette — ordered: Navy · Gold · Teal · Cream · Orange-Red · Terracotta -->
     <div class="palette-section">
       <h3>Brand Color Palette</h3>
-      <div class="swatches" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="swatches" style="grid-template-columns: repeat(3, 1fr);">
 
         <!-- 01 Navy -->
         <div class="swatch">
@@ -1220,6 +1361,7 @@
           <div class="swatch__info">
             <h4>Deep Navy</h4>
             <p class="hex">#0A2540 &nbsp;·&nbsp; RGB 10 37 64</p>
+            <p class="hex" style="margin-top:4px;">CMYK 84 42 0 75 &nbsp;·&nbsp; Pantone 289 C</p>
             <p class="role">Primary brand color. Logos, headlines, structural blocks, dominant backgrounds. Institutional trust and boardroom-grade authority.</p>
           </div>
         </div>
@@ -1230,6 +1372,7 @@
           <div class="swatch__info">
             <h4>Prestige Gold</h4>
             <p class="hex">#C5A059 &nbsp;·&nbsp; RGB 197 160 89</p>
+            <p class="hex" style="margin-top:4px;">CMYK 0 19 55 23 &nbsp;·&nbsp; Pantone 7509 C</p>
             <p class="role">Premium accent. Section borders, hover states, award badges, guarantee highlights. Bridges institutional formality with aspirational energy.</p>
           </div>
         </div>
@@ -1240,6 +1383,7 @@
           <div class="swatch__info">
             <h4>Campus Teal</h4>
             <p class="hex">#045E53 &nbsp;·&nbsp; RGB 4 94 83</p>
+            <p class="hex" style="margin-top:4px;">CMYK 96 0 12 63 &nbsp;·&nbsp; Pantone 3292 C</p>
             <p class="role">Heritage and depth. Secondary accent connecting structural identity to the living environment of an educational campus.</p>
           </div>
         </div>
@@ -1250,20 +1394,166 @@
           <div class="swatch__info">
             <h4>Campus Cream</h4>
             <p class="hex">#F4F4F0 &nbsp;·&nbsp; RGB 244 244 240</p>
+            <p class="hex" style="margin-top:4px;">CMYK 0 0 2 4 &nbsp;·&nbsp; Pantone 9180 C</p>
             <p class="role">Primary canvas. Warm off-white paired with Navy for the core identity. More approachable than stark white — reflects the human side of transformation.</p>
           </div>
         </div>
 
-        <!-- 05 Terracotta -->
+        <!-- 05 Builder Orange-Red (CTA) -->
+        <div class="swatch">
+          <div class="swatch__color" style="background:#F24E24;"></div>
+          <div class="swatch__info">
+            <h4>Builder Orange-Red</h4>
+            <p class="hex">#F24E24 &nbsp;·&nbsp; RGB 242 78 36</p>
+            <p class="hex" style="margin-top:4px;">CMYK 0 68 85 5 &nbsp;·&nbsp; Pantone 1655 C</p>
+            <p class="role">Primary CTA and action color. Reserved for buttons, urgency signals, and primary calls to action. Never used decoratively.</p>
+          </div>
+        </div>
+
+        <!-- 06 Terracotta -->
         <div class="swatch">
           <div class="swatch__color" style="background:#894029;"></div>
           <div class="swatch__info">
             <h4>Builder Terracotta</h4>
             <p class="hex">#894029 &nbsp;·&nbsp; RGB 137 64 41</p>
-            <p class="role">Action and urgency. Reserved for primary CTAs, structural commitments, and critical alerts. Never used decoratively.</p>
+            <p class="hex" style="margin-top:4px;">CMYK 0 53 70 46 &nbsp;·&nbsp; Pantone 1615 C</p>
+            <p class="role">Blueprint / structural accent. Used for blueprint overlays, architectural slide grids, and print production accents. Never used for CTAs or UI actions.</p>
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- Color Combination Matrix -->
+    <div class="palette-section" style="margin-top: 64px;">
+      <h3>Color Combination Matrix</h3>
+      <style>
+        .color-matrix { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border); }
+        .color-matrix th, .color-matrix td { padding: 18px 20px; border-bottom: 1px solid var(--border); text-align: left; font-size: 13px; }
+        .color-matrix th { background: var(--cream); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--steel); }
+        .color-matrix tr:last-child td { border-bottom: none; }
+        .cm-pair { display: flex; align-items: center; gap: 10px; }
+        .cm-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+        .cm-status { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 10px; border-radius: 2px; }
+        .cm-status.approved { background: rgba(4,94,83,.1); color: #045E53; }
+        .cm-status.caution  { background: rgba(197,160,89,.15); color: #8a6d2a; }
+        .cm-status.forbidden { background: rgba(242,78,36,.1); color: var(--red); }
+      </style>
+      <table class="color-matrix">
+        <thead>
+          <tr>
+            <th>Background</th>
+            <th>Foreground</th>
+            <th>Use Case</th>
+            <th>Contrast</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#0A2540; border:1px solid rgba(0,0,0,.1);"></div> Deep Navy</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F4F4F0; border:1px solid rgba(0,0,0,.1);"></div> Campus Cream</div></td>
+            <td>Primary identity pair. Hero sections, covers, formal blocks.</td>
+            <td>17.8:1</td>
+            <td><span class="cm-status approved">✓ AAA</span></td>
+          </tr>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F4F4F0; border:1px solid rgba(0,0,0,.1);"></div> Campus Cream</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#0A2540; border:1px solid rgba(0,0,0,.1);"></div> Deep Navy</div></td>
+            <td>Body copy on light backgrounds. Standard reading surface.</td>
+            <td>17.8:1</td>
+            <td><span class="cm-status approved">✓ AAA</span></td>
+          </tr>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#0A2540; border:1px solid rgba(0,0,0,.1);"></div> Deep Navy</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#C5A059; border:1px solid rgba(0,0,0,.1);"></div> Prestige Gold</div></td>
+            <td>Accent labels, eyebrows, highlights on dark sections.</td>
+            <td>5.9:1</td>
+            <td><span class="cm-status approved">✓ AA</span></td>
+          </tr>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F4F4F0; border:1px solid rgba(0,0,0,.1);"></div> Campus Cream</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F24E24; border:1px solid rgba(0,0,0,.1);"></div> Builder Orange-Red</div></td>
+            <td>CTA buttons and action labels on light backgrounds.</td>
+            <td>4.6:1</td>
+            <td><span class="cm-status approved">✓ AA</span></td>
+          </tr>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#0A2540; border:1px solid rgba(0,0,0,.1);"></div> Deep Navy</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F24E24; border:1px solid rgba(0,0,0,.1);"></div> Builder Orange-Red</div></td>
+            <td>CTA buttons on dark hero sections.</td>
+            <td>3.9:1</td>
+            <td><span class="cm-status caution">⚠ AA large</span></td>
+          </tr>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#C5A059; border:1px solid rgba(0,0,0,.1);"></div> Prestige Gold</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#894029; border:1px solid rgba(0,0,0,.1);"></div> Terracotta</div></td>
+            <td>—</td>
+            <td>2.1:1</td>
+            <td><span class="cm-status forbidden">✗ Forbidden</span></td>
+          </tr>
+          <tr>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F24E24; border:1px solid rgba(0,0,0,.1);"></div> Builder Orange-Red</div></td>
+            <td><div class="cm-pair"><div class="cm-dot" style="background:#F4F4F0; border:1px solid rgba(0,0,0,.1);"></div> Campus Cream</div></td>
+            <td>Reversed CTAs on high-urgency components.</td>
+            <td>4.6:1</td>
+            <td><span class="cm-status approved">✓ AA</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── BRAND PATTERN ──────────────────────────────────── -->
+<section class="section" id="pattern">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">Brand Pattern</span>
+      <h2>Visual Texture</h2>
+      <p>The Nuvexa brand pattern is derived from the NU› logomark and the gold chevron motif. It serves as a proprietary visual texture for backgrounds, packaging, stationery, and environmental applications. Never use as a primary focal element — it supports, never dominates.</p>
+    </div>
+
+    <!-- Pattern 1 -->
+    <div style="margin-bottom: 48px;">
+      <div style="background: #fff; border: 1px solid var(--border); overflow: hidden; margin-bottom: 16px;">
+        <img src="Nuvexa Brand Pattern/Brand-pattern-1.png" alt="Nuvexa Brand Pattern — Variant 1" style="width: 100%; height: auto; display: block;" />
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--navy);">Pattern A — Primary</span>
+        <span style="font-size: 13px; color: var(--steel);">Full density. For formal brand collateral, presentation covers, and environmental design.</span>
+      </div>
+    </div>
+
+    <!-- Pattern 2 -->
+    <div style="margin-bottom: 48px;">
+      <div style="background: #fff; border: 1px solid var(--border); overflow: hidden; margin-bottom: 16px;">
+        <img src="Nuvexa Brand Pattern/Brand-pattern-2.png" alt="Nuvexa Brand Pattern — Variant 2" style="width: 100%; height: auto; display: block;" />
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--navy);">Pattern B — Alternate</span>
+        <span style="font-size: 13px; color: var(--steel);">Offset variant. For secondary materials, digital backgrounds, and social media assets.</span>
+      </div>
+    </div>
+
+    <!-- Pattern Usage Rules -->
+    <div style="background: var(--navy); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div>
+        <p class="eyebrow" style="color: var(--gold); margin-bottom: 24px;">Pattern Usage Rules</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> Always use at full resolution — never stretch or distort the pattern</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> Can be used at reduced opacity (10-30%) as a subtle background texture</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> Never recolor the pattern — always use the original Navy + Gold combination</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color: var(--red); margin-bottom: 24px;">Applications</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> Business card reverse, letterhead watermark, proposal cover pages</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> Presentation slide backgrounds (at 10-15% opacity)</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> Environmental graphics: site hoardings, office interiors, signage accents</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -1318,7 +1608,9 @@
           <th>Typeface</th>
           <th>Size</th>
           <th>Weight</th>
+          <th>Line Height</th>
           <th>Tracking</th>
+          <th>Max Width</th>
           <th>Sample</th>
         </tr>
       </thead>
@@ -1326,9 +1618,11 @@
         <tr>
           <td>Display / H1</td>
           <td>Manrope</td>
-          <td>56,96px</td>
+          <td>56–96px</td>
           <td>ExtraBold 800</td>
+          <td>1.05</td>
           <td>−2%</td>
+          <td>22ch</td>
           <td class="sample-manrope" style="font-size: 28px;">Transformation</td>
         </tr>
         <tr>
@@ -1336,7 +1630,9 @@
           <td>Manrope</td>
           <td>40px</td>
           <td>Bold 700</td>
+          <td>1.15</td>
           <td>−1%</td>
+          <td>32ch</td>
           <td class="sample-manrope" style="font-size: 22px;">Campus Partner</td>
         </tr>
         <tr>
@@ -1344,7 +1640,9 @@
           <td>Manrope</td>
           <td>24px</td>
           <td>SemiBold 600</td>
+          <td>1.25</td>
           <td>0</td>
+          <td>44ch</td>
           <td class="sample-manrope" style="font-size: 18px; font-weight: 600;">Single Accountability</td>
         </tr>
         <tr>
@@ -1352,7 +1650,9 @@
           <td>Inter</td>
           <td>16px</td>
           <td>Regular 400</td>
+          <td>1.7</td>
           <td>0</td>
+          <td>66ch</td>
           <td class="sample-inter" style="font-size: 15px;">Line-by-line cost sheets, no hidden fees.</td>
         </tr>
         <tr>
@@ -1360,19 +1660,39 @@
           <td>Inter</td>
           <td>14px</td>
           <td>Medium 500</td>
+          <td>1.5</td>
           <td>0</td>
+          <td>—</td>
           <td class="sample-inter" style="font-size: 13px;">₹ 48,00,000 · Phase 1 · 22 Days</td>
         </tr>
         <tr>
           <td>Eyebrow / Label</td>
           <td>Inter</td>
-          <td>11,12px</td>
+          <td>11–12px</td>
           <td>SemiBold 600</td>
+          <td>1.4</td>
           <td>+12%</td>
+          <td>—</td>
           <td style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--steel);">NUVEXA / BRAND 2026</td>
         </tr>
       </tbody>
     </table>
+
+    <!-- Fallback Font Stack -->
+    <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 40px; margin-top: 32px;">
+      <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 20px;">System Fallback Stack</p>
+      <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 20px;">When Google Fonts fail to load (offline environments, print PDFs, restricted networks), the brand falls back to the nearest system equivalents:</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+        <div>
+          <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--steel); margin-bottom: 10px;">Display — Manrope Fallback</p>
+          <code style="display: block; background: var(--cream); padding: 16px 20px; font-size: 13px; color: var(--navy); line-height: 1.8;">'Manrope', 'DM Sans', 'Nunito',<br>-apple-system, BlinkMacSystemFont,<br>'Segoe UI', sans-serif</code>
+        </div>
+        <div>
+          <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--steel); margin-bottom: 10px;">Body — Inter Fallback</p>
+          <code style="display: block; background: var(--cream); padding: 16px 20px; font-size: 13px; color: var(--navy); line-height: 1.8;">'Inter', 'IBM Plex Sans', 'Helvetica Neue',<br>-apple-system, BlinkMacSystemFont,<br>'Segoe UI', sans-serif</code>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1457,7 +1777,7 @@
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never stretch or distort the wordmark</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never add drop shadows or glow effects</li>
-          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never recolor the mark in Gold, Terracotta, or Green</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never recolor the mark in Gold, Terracotta, or Teal — approved only in Navy and Cream</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never place on photographic backgrounds without a solid color block underneath</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Never use obsolete logo versions, always use current approved files</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">→</span> Minimum digital size: 120px wide / Print: 30mm wide</li>
@@ -1468,7 +1788,7 @@
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Navy + Cream is the primary color pair, always lead with it</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Gold is a secondary accent, use sparingly for premium signals</li>
-          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Red/#894029 is reserved for actions and urgency only</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Builder Orange-Red (#F24E24) is reserved for CTAs and urgency only — Terracotta (#894029) is for blueprint/structural accents only</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never pair Terracotta and Gold on the same component</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> Never use the palette colors at reduced opacity as tints, use the utility grays instead</li>
           <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">→</span> All body text must meet WCAG AA contrast on its background</li>
@@ -1626,106 +1946,93 @@
       </div>
       <div class="dont-box">
         <div class="box-label">✘ Don't</div>
-        <div class="eng-body" style="margin-bottom: 12px; color: rgba(244,244,240,.5);">“We deliver innovative, cost-effective solutions.”</div>
-        <div class="eng-body" style="color: rgba(244,244,240,.5);">“We provide comprehensive infrastructure services.”</div>
+                <div class="eng-body" style="margin-bottom: 12px; color: var(--cream);">&ldquo;We are passionate leaders driving holistic transformation.&rdquo;</div>
+        <div class="eng-body" style="color: var(--cream);">&ldquo;Our synergistic ecosystem empowers campuses.&rdquo;</div>
       </div>
     </div>
 
+    <!-- Vocabulary -->
     <div class="section-header section-header--light" style="margin-top: 80px; margin-bottom: 40px;">
-      <span class="eyebrow">Context</span>
-      <h2>Tone by Context</h2>
+      <span class="eyebrow">Vocabulary</span>
+      <h2>Words We Own</h2>
     </div>
-
-    <table class="eng-table">
-      <tbody>
-        <tr>
-          <th>Sales / Proposal</th>
-          <td>“Nuvexa is a full-stack campus transformation partner. This proposal outlines scope, timeline, and cost.”</td>
-        </tr>
-        <tr>
-          <th>Social / LinkedIn</th>
-          <td>“Most campuses take 18 months and 2x budget to upgrade. There is a faster way.”</td>
-        </tr>
-        <tr>
-          <th>Cold Outreach</th>
-          <td>“Your CBSE audit is 4 months away. We close every compliance gap before the deadline. Worth a call?”</td>
-        </tr>
-        <tr>
-          <th>Crisis Communication</th>
-          <td>“We are 3 days behind on electrical work. Here is exactly how we are recovering.”</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="section-header section-header--light" style="margin-top: 80px; margin-bottom: 40px;">
-      <span class="eyebrow">Lexicon</span>
-      <h2>Vocabulary Rules</h2>
-    </div>
-
     <div class="vocab-grid">
-      <div class="vocab-box" style="border-top-color: var(--gold);">
-        <h4>Use</h4>
-        <div class="vocab-item use">Transform</div>
-        <div class="vocab-item use">Partner</div>
-        <div class="vocab-item use">Guarantee</div>
+      <div class="vocab-box">
+        <h4>&#x2713; Use These</h4>
+        <div class="vocab-item use">Transformation</div>
         <div class="vocab-item use">Blueprint</div>
-        <div class="vocab-item use">Delivered</div>
+        <div class="vocab-item use">Guarantee</div>
+        <div class="vocab-item use">Accountability</div>
+        <div class="vocab-item use">Precision</div>
+        <div class="vocab-item use">Campus Partner</div>
+        <div class="vocab-item use">Single-Point</div>
+        <div class="vocab-item use">Contractual</div>
       </div>
-      <div class="vocab-box" style="border-top-color: var(--red);">
-        <h4>Avoid</h4>
-        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Renovate</div>
-        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Vendor</div>
-        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Affordable</div>
-        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Fast</div>
-        <div class="vocab-item avoid" style="color: rgba(244,244,240,.4);">Solutions</div>
+      <div class="vocab-box">
+        <h4>&#x2717; Never Use</h4>
+        <div class="vocab-item avoid">Passionate</div>
+        <div class="vocab-item avoid">Holistic</div>
+        <div class="vocab-item avoid">Synergy</div>
+        <div class="vocab-item avoid">Ecosystem</div>
+        <div class="vocab-item avoid">Visionary</div>
+        <div class="vocab-item avoid">World-class</div>
+        <div class="vocab-item avoid">Empowering</div>
+        <div class="vocab-item avoid">Innovative</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── 08. LAYOUT & GRID SYSTEM ─────────────────────────── -->
+
+<!-- ── 08. LAYOUT & GRID ─────────────────────────────────── -->
 <section class="section section--dark" id="layout" style="border-top: 1px solid rgba(197,160,89,.2);">
   <div class="wrap">
     <div class="section-header section-header--light">
       <span class="eyebrow">08 &nbsp;/&nbsp; Layout &amp; Grid</span>
-      <h2>Structural Alignment</h2>
-      <p>A strict 12-column grid system governs all Nuvexa layouts. Content must align to the grid at all times. Left alignment is default. No random spacing.</p>
+      <h2>The Blueprint Grid</h2>
+      <p>Every layout follows a structural column grid. No freeform composition. Alignment is precision &mdash; it communicates that Nuvexa delivers to spec.</p>
     </div>
 
     <div class="sys-demo">
       <div class="grid-overlay">
-        <div class="grid-col">1</div><div class="grid-col">2</div><div class="grid-col">3</div><div class="grid-col">4</div>
-        <div class="grid-col">5</div><div class="grid-col">6</div><div class="grid-col">7</div><div class="grid-col">8</div>
-        <div class="grid-col">9</div><div class="grid-col">10</div><div class="grid-col">11</div><div class="grid-col">12</div>
-      </div>
-      <!-- overlay lines simulating content -->
-      <div style="position: absolute; left: 48px; right: 48px; top: 48px; bottom: 48px; pointer-events: none; display: flex; flex-direction: column; gap: 16px;">
-         <div style="height: 32px; background: var(--navy); border: 2px solid rgba(244,244,240,.6); width: 66.666%; padding-left: 16px; display: flex; align-items: center;"><span style="color: var(--cream); font-family: monospace; font-size: 11px;">H1 - 8 COLUMNS</span></div>
-         <div style="height: 64px; background: rgba(244,244,240,.1); width: 50%; padding-left: 16px; padding-top: 12px;"><span style="color: rgba(244,244,240,.6); font-family: monospace; font-size: 11px;">BODY COPY - 6 COLUMNS</span></div>
+        <div class="grid-col">1</div>
+        <div class="grid-col">2</div>
+        <div class="grid-col">3</div>
+        <div class="grid-col">4</div>
+        <div class="grid-col">5</div>
+        <div class="grid-col">6</div>
+        <div class="grid-col">7</div>
+        <div class="grid-col">8</div>
+        <div class="grid-col">9</div>
+        <div class="grid-col">10</div>
+        <div class="grid-col">11</div>
+        <div class="grid-col">12</div>
       </div>
     </div>
 
-    <div class="eng-grid" style="border-top: none; padding-top: 0;">
-      <div class="eng-label">Grid Rules</div>
-      <div class="eng-body">
-        <ul class="eng-list" style="margin-top: 0;">
-          <li><strong>12-column grid:</strong> Consistent margins on both sides and fixed gutter spacing.</li>
-          <li><strong>Left alignment is default:</strong> Maintain consistent vertical rhythm.</li>
-          <li><strong>Headline span:</strong> 6,8 columns.</li>
-          <li><strong>Body text span:</strong> 4,6 columns. Avoid full-width paragraphs.</li>
-        </ul>
-      </div>
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 48px; border-top: 1px solid rgba(197,160,89,.2); padding-top: 32px; margin-bottom: 32px;">
+      <div class="eng-label">Desktop Grid</div>
+      <div class="eng-body">12-column grid &middot; 1320px max-width &middot; 56px gutter &middot; 24px column gap</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 48px; border-top: 1px solid rgba(197,160,89,.2); padding-top: 32px; margin-bottom: 32px;">
+      <div class="eng-label">Tablet Grid</div>
+      <div class="eng-body">8-column grid &middot; 100% width &middot; 32px gutter &middot; 16px column gap</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 48px; border-top: 1px solid rgba(197,160,89,.2); padding-top: 32px;">
+      <div class="eng-label">Mobile Grid</div>
+      <div class="eng-body">4-column grid &middot; 100% width &middot; 20px gutter &middot; 16px column gap</div>
     </div>
   </div>
 </section>
 
-<!-- ── 09. SPACING SYSTEM ───────────────────────────────── -->
+
+<!-- ── 09. SPACING SYSTEM ────────────────────────────────── -->
 <section class="section section--dark" id="spacing" style="border-top: 1px solid rgba(197,160,89,.2);">
   <div class="wrap">
     <div class="section-header section-header--light">
       <span class="eyebrow">09 &nbsp;/&nbsp; Spacing System</span>
-      <h2>Engineered Rhythm</h2>
-      <p>No arbitrary spacing values. All margins and padding strictly adhere to a systematic scale.</p>
+      <h2>The Scale</h2>
+      <p>An 8-point base grid. Every spacing value is a multiple of 8px. No arbitrary values. Consistent rhythm builds subconscious trust.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px;">
@@ -1739,14 +2046,15 @@
       <div>
         <div class="eng-label" style="margin-bottom: 16px;">Rules &amp; Usage Guidance</div>
         <ul class="eng-list" style="margin-top: 0;">
-          <li><strong>Component Spacing:</strong> 16px or 32px. Used for internal padding within cards and spacing between related UI elements.</li>
+          <li><strong>Component Spacing:</strong> 16px or 32px. Internal padding within cards and spacing between related UI elements.</li>
           <li><strong>Section Spacing:</strong> 64px or 128px. Defines the macro rhythm of the page layout.</li>
-          <li><strong>Strict Adherence:</strong> Never use spacing outside of this defined scale. Maintain consistent rhythm across all pages. No arbitrary values.</li>
+          <li><strong>Strict Adherence:</strong> Never use spacing outside this scale. No arbitrary values.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ── 10. BRAND STORY ──────────────────────────────────── -->
 <section class="section section--dark" id="story" style="border-top: 1px solid rgba(197,160,89,.2);">
@@ -1779,134 +2087,58 @@
   </div>
 </section>
 
+
 <!-- ── 11. CLOSING PROMISE ──────────────────────────────── -->
-<section class="section section--dark" style="padding: 120px 40px; border-top: none; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<section class="section section--dark promise-slide" style="padding: 120px 40px; border-top: none; display: flex; align-items: center; justify-content: center; overflow: hidden;">
   <style>
     .promise-box {
-      position: relative;
-      max-width: 1000px;
-      width: 100%;
-      border: 1px solid rgba(137,64,41,0.6);
-      padding: 100px 40px;
-      text-align: center;
-      margin: 80px 0;
+      position: relative; max-width: 1000px; width: 100%;
+      border: 1px solid rgba(137,64,41,0.5); padding: 0;
+      text-align: center; margin: 80px auto;
+      display: flex; flex-direction: column; align-items: center;
     }
-    
-    /* Engineer Guide Lines */
-    .p-guide { position: absolute; background: rgba(137,64,41,0.6); z-index: 1; pointer-events: none; }
-    
-    /* Inner extending lines */
+    .p-guide { position: absolute; background: rgba(137,64,41,0.5); z-index: 1; pointer-events: none; }
     .p-guide.ih { height: 1px; left: -24px; right: -24px; }
     .p-guide.iv { width: 1px; top: -24px; bottom: -24px; }
-    .p-guide.ih.top { top: -1px; }
-    .p-guide.ih.bot { bottom: -1px; }
-    .p-guide.iv.left { left: -1px; }
-    .p-guide.iv.right { right: -1px; }
-
-    /* Outer structural frame */
-    .p-guide.oh { height: 1px; left: -60px; right: -60px; background: rgba(137,64,41,0.4); }
-    .p-guide.ov { width: 1px; top: -60px; bottom: -60px; background: rgba(137,64,41,0.4); }
+    .p-guide.ih.top { top: 0; }
+    .p-guide.ih.bot { bottom: 0; }
+    .p-guide.iv.left { left: 0; }
+    .p-guide.iv.right { right: 0; }
+    .p-guide.oh { height: 1px; left: -60px; right: -60px; background: rgba(137,64,41,0.35); }
+    .p-guide.ov { width: 1px; top: -60px; bottom: -60px; background: rgba(137,64,41,0.35); }
     .p-guide.oh.otop { top: -40px; }
     .p-guide.oh.obot { bottom: -40px; }
     .p-guide.ov.oleft { left: -40px; }
     .p-guide.ov.oright { right: -40px; }
-
-    /* Center markers */
-    .p-guide.ih.mid { top: 50%; left: -40px; right: -40px; }
+    .p-guide.ih.mid { top: 50%; left: -40px; right: -40px; transform: translateY(-50%); }
     .p-guide.iv.mid-top { left: 50%; top: -60px; height: 100px; }
     .p-guide.iv.mid-bot { left: 50%; bottom: -60px; height: 100px; }
-
-    /* Target registration marks */
-    .p-target { 
-      position: absolute; 
-      width: 18px; 
-      height: 18px; 
-      border: 1px solid rgba(137,64,41,0.6); 
-      border-radius: 50%; 
-      z-index: 2; 
-      transform: translate(-50%, -50%);
-    }
-    .p-target::before { content:''; position: absolute; width: 28px; height: 1px; background: rgba(137,64,41,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
-    .p-target::after { content:''; position: absolute; width: 1px; height: 28px; background: rgba(137,64,41,0.6); top: 50%; left: 50%; transform: translate(-50%, -50%); }
-    .p-target.tl { top: -40px; left: -40px; }
-    .p-target.tr { top: -40px; right: -40px; }
-    .p-target.bl { bottom: -40px; left: -40px; }
-    .p-target.br { bottom: -40px; right: -40px; }
-
-    /* Eyebrow Label */
-    .promise-label-container {
-      position: absolute;
-      top: -10px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      z-index: 5;
-    }
-    .promise-label {
-      background: var(--navy);
-      padding: 0 24px;
-      color: var(--red);
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: .08em;
-      white-space: nowrap;
-    }
-
-    /* Content */
-    .promise-part { position: relative; z-index: 3; }
-    .promise-part-top {
-      font-family: 'Manrope', sans-serif;
-      font-size: clamp(36px, 5.5vw, 68px);
-      font-weight: 800;
-      color: var(--cream);
-      text-transform: uppercase;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      margin-bottom: 64px;
-    }
-    .promise-part-bot {
-      font-family: 'Manrope', sans-serif;
-      font-size: clamp(28px, 4vw, 50px);
-      font-weight: 800;
-      color: var(--red);
-      text-transform: uppercase;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      margin-top: 64px;
-    }
+    .p-target { position: absolute; width: 18px; height: 18px; border: 1px solid rgba(137,64,41,0.5); border-radius: 50%; z-index: 2; }
+    .p-target::before { content:''; position: absolute; width: 28px; height: 1px; background: rgba(137,64,41,0.5); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .p-target::after  { content:''; position: absolute; width: 1px; height: 28px; background: rgba(137,64,41,0.5); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .p-target.tl { top: -49px; left: -49px; }
+    .p-target.tr { top: -49px; right: -49px; }
+    .p-target.bl { bottom: -49px; left: -49px; }
+    .p-target.br { bottom: -49px; right: -49px; }
+    .promise-label-container { position: absolute; top: -11px; left: 0; right: 0; display: flex; justify-content: center; z-index: 5; }
+    .promise-label { background: var(--navy); padding: 0 28px; color: var(--red); font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: .08em; white-space: nowrap; line-height: 22px; }
+    .promise-part { position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 48px; }
+    .promise-part-top { font-family: 'Manrope', sans-serif; font-size: clamp(36px, 5.5vw, 68px); font-weight: 800; color: var(--cream); text-transform: uppercase; line-height: 1.1; letter-spacing: -0.01em; }
+    .promise-part-bot { font-family: 'Manrope', sans-serif; font-size: clamp(28px, 4vw, 50px); font-weight: 800; color: var(--red); text-transform: uppercase; line-height: 1.1; letter-spacing: -0.01em; }
   </style>
 
   <div class="promise-box">
-    <!-- Outer structural guides -->
-    <div class="p-guide oh otop"></div>
-    <div class="p-guide oh obot"></div>
-    <div class="p-guide ov oleft"></div>
-    <div class="p-guide ov oright"></div>
-
-    <!-- Inner extending edges -->
-    <div class="p-guide ih top"></div>
-    <div class="p-guide ih bot"></div>
-    <div class="p-guide iv left"></div>
-    <div class="p-guide iv right"></div>
-
-    <!-- Axis alignments -->
+    <div class="p-guide oh otop"></div><div class="p-guide oh obot"></div>
+    <div class="p-guide ov oleft"></div><div class="p-guide ov oright"></div>
+    <div class="p-guide ih top"></div><div class="p-guide ih bot"></div>
+    <div class="p-guide iv left"></div><div class="p-guide iv right"></div>
     <div class="p-guide ih mid"></div>
-    <div class="p-guide iv mid-top"></div>
-    <div class="p-guide iv mid-bot"></div>
-
-    <!-- Registration dots -->
-    <div class="p-target tl"></div>
-    <div class="p-target tr"></div>
-    <div class="p-target bl"></div>
-    <div class="p-target br"></div>
-
-    <!-- Text Layer -->
+    <div class="p-guide iv mid-top"></div><div class="p-guide iv mid-bot"></div>
+    <div class="p-target tl"></div><div class="p-target tr"></div>
+    <div class="p-target bl"></div><div class="p-target br"></div>
     <div class="promise-label-container">
       <div class="promise-label">The Nuvexa Promise</div>
     </div>
-    
     <div class="promise-part promise-part-top">
       Your campus will be<br>transformed, not renovated.
     </div>
@@ -1916,11 +2148,386 @@
   </div>
 </section>
 
+
+<!-- ── C-01. CO-BRANDING GUIDELINES ──────────────────────── -->
+<section class="section" id="cobranding">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-01 &nbsp;/&nbsp; Co-Branding</span>
+      <h2>Partner Identity Rules</h2>
+      <p>When Nuvexa appears alongside partner, client, or parent brand marks, specific rules govern the spatial and visual relationship to protect brand integrity for all parties.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 56px;">
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 48px 40px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 20px;">Lockup Hierarchy</p>
+        <p style="font-size: 15px; color: var(--slate); line-height: 1.75; margin-bottom: 20px;">Nuvexa always appears on the <strong style="color:var(--navy);">left or top</strong>. The partner brand follows to the right or below, separated by a 1px vertical rule in Steel.</p>
+        <div style="display: flex; align-items: center; gap: 24px; padding: 24px; background: var(--cream); border: 1px solid var(--border);">
+          <span style="font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; color: var(--navy);">NUVEXA</span>
+          <div style="width: 1px; height: 28px; background: var(--steel);"></div>
+          <span style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: var(--steel); letter-spacing: .05em;">PARTNER</span>
+        </div>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 48px 40px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 20px;">Size &amp; Rules</p>
+        <p style="font-size: 15px; color: var(--slate); line-height: 1.75; margin-bottom: 16px;">Nuvexa must never appear smaller than the partner logo. Ideal ratio: <strong style="color:var(--navy);">1:1 visual weight</strong>.</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Minimum 2N clearspace from divider rule to each logo</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Remove &ldquo;A Division of SGB Group&rdquo; line from co-branded lockups</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Nuvexa must be legible at the chosen placement size</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background: var(--navy); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div>
+        <p class="eyebrow" style="color: var(--gold); margin-bottom: 24px;">Approved Contexts</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> Joint venture proposals with institutional partners</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> Campus handover documents alongside client mark</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> SGB Group internal communications</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: 700;">&#x2192;</span> Award submissions and press releases</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color: var(--red); margin-bottom: 24px;">Forbidden</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> Never smaller or subordinate to a vendor mark</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> No co-branding with unverified partner brands</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> Never modify Nuvexa mark to match a partner style</li>
+          <li style="color: var(--cream); font-size: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--red); font-weight: 700;">&#x2192;</span> No consumer advertising co-branding without approval</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── C-02. DIGITAL APPLICATIONS ─────────────────────────── -->
+<section class="section" id="digital">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-02 &nbsp;/&nbsp; Digital Applications</span>
+      <h2>Screens &amp; Interfaces</h2>
+      <p>How the Nuvexa brand translates across websites, social platforms, presentations, and digital proposals.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 56px;">
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 40px 32px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Social Profiles</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 16px;">Profile picture: Logomark on Navy square, 1:1 crop. Cover: brand pattern at 10&ndash;15% opacity over Navy.</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li style="font-size: 13px; color: var(--slate); padding-left: 16px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> LinkedIn: 400&times;400px</li>
+          <li style="font-size: 13px; color: var(--slate); padding-left: 16px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Twitter/X: 400&times;400px</li>
+          <li style="font-size: 13px; color: var(--slate); padding-left: 16px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Instagram: 320&times;320px displayed</li>
+        </ul>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 40px 32px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Email Signature</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 16px;">Logo at 120px wide minimum. Navy text, Gold separator, Steel contacts. System fonts only.</p>
+        <div style="background: var(--cream); border: 1px solid var(--border); padding: 20px 16px; font-size: 13px; line-height: 1.8;">
+          <p style="font-weight: 700; color: var(--navy);">Name Surname</p>
+          <p style="color: var(--steel);">Title &nbsp;&middot;&nbsp; Nuvexa</p>
+          <p style="color: var(--steel); margin-top: 4px;">+91 00000 00000</p>
+        </div>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--teal); padding: 40px 32px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Presentations</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 16px;">16:9 at 1920&times;1080px. Title slides: Navy bg + Cream logo. Content slides: Cream bg + Navy type.</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li style="font-size: 13px; color: var(--slate); padding-left: 16px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Logo bottom-right at 80px wide</li>
+          <li style="font-size: 13px; color: var(--slate); padding-left: 16px; position: relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Slide numbers bottom-left in Steel</li>
+        </ul>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+      <div style="background: #fff; border: 1px solid var(--border); padding: 40px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Favicon &amp; App Icon</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 20px;">NU&rsaquo; logomark on Navy square. Required export sizes:</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end;">
+          <div style="text-align: center;"><div style="width:64px;height:64px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;"><span style="font-family:'Manrope',sans-serif;font-size:20px;font-weight:800;color:var(--cream);">N&rsaquo;</span></div><p style="font-size:11px;color:var(--steel);">64px</p></div>
+          <div style="text-align: center;"><div style="width:32px;height:32px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;"><span style="font-family:'Manrope',sans-serif;font-size:11px;font-weight:800;color:var(--cream);">N&rsaquo;</span></div><p style="font-size:11px;color:var(--steel);">32px</p></div>
+          <div style="text-align: center;"><div style="width:16px;height:16px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;"><span style="font-family:'Manrope',sans-serif;font-size:7px;font-weight:800;color:var(--cream);">N</span></div><p style="font-size:11px;color:var(--steel);">16px</p></div>
+        </div>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); padding: 40px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Digital Color Rules</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> All assets use sRGB &mdash; never CMYK for screen</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Interactive elements: Builder Orange-Red for hover/focus</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Focus rings: 2px solid #F24E24, 2px offset</li>
+          <li style="font-size: 14px; color: var(--slate); padding-left: 20px; position: relative;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Links: Teal on light, Gold on dark backgrounds</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── C-03. PRINT & PRODUCTION ────────────────────────────── -->
+<section class="section" id="print" style="background: var(--cream);">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-03 &nbsp;/&nbsp; Print &amp; Production</span>
+      <h2>Physical Brand</h2>
+      <p>Standards for business cards, letterheads, proposals, site hoardings, and environmental signage.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 48px;">
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 40px 32px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Business Card</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 12px;"><strong style="color:var(--navy);">88 &times; 55mm</strong> &middot; 400gsm &middot; matte laminate + spot UV on wordmark.</p>
+        <p style="font-size: 13px; color: var(--steel);">Front: Navy + Cream wordmark. Back: Cream + Navy/Steel contact details, gold rule separator.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 40px 32px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Letterhead</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 12px;"><strong style="color:var(--navy);">A4</strong> &middot; 100gsm bond &middot; Logo top-left at 40mm &middot; Gold rule below header.</p>
+        <p style="font-size: 13px; color: var(--steel);">Bleed: 3mm all sides. Safe margin: 15mm from trim. No full-bleed dark on letterhead.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--teal); padding: 40px 32px;">
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--steel); margin-bottom: 16px;">Proposals</p>
+        <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 12px;"><strong style="color:var(--navy);">A4 saddle stitch</strong> or PDF. Cover: Navy + Cream logo. Interior: Cream + Navy type.</p>
+        <p style="font-size: 13px; color: var(--steel);">Page numbers bottom center, Inter 10pt Steel. Section dividers: full-bleed Navy spread.</p>
+      </div>
+    </div>
+    <div style="background: #fff; border: 1px solid var(--border); overflow: hidden;">
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="background:var(--navy);">
+            <th style="padding:18px 24px;text-align:left;font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);">Collateral</th>
+            <th style="padding:18px 24px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cream);">Size</th>
+            <th style="padding:18px 24px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cream);">Stock</th>
+            <th style="padding:18px 24px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cream);">Finish</th>
+            <th style="padding:18px 24px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cream);">Color Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 24px;font-size:14px;color:var(--navy);font-weight:600;">Business Card</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">88&times;55mm</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">400gsm SBS</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">Matte + spot UV</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">CMYK</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 24px;font-size:14px;color:var(--navy);font-weight:600;">Letterhead</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">A4 / 210&times;297mm</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">100gsm bond</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">Uncoated</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">CMYK</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 24px;font-size:14px;color:var(--navy);font-weight:600;">Site Hoarding</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">Large format</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">Vinyl flex</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">Outdoor solvent</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">CMYK + Pantone</td></tr>
+          <tr><td style="padding:16px 24px;font-size:14px;color:var(--navy);font-weight:600;">Proposal Cover</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">A4 / 210&times;297mm</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">300gsm coated</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">Gloss laminate</td><td style="padding:16px 24px;font-size:14px;color:var(--slate);">CMYK</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── C-04. PHOTOGRAPHY & IMAGERY ────────────────────────── -->
+<section class="section" id="photography">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-04 &nbsp;/&nbsp; Photography &amp; Imagery</span>
+      <h2>Visual Language</h2>
+      <p>Photography is the proof of the promise. Every image communicates transformation, precision, and human impact &mdash; not stock-photo polish.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px;">
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--gold); padding: 40px;">
+        <p style="font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">&#x2713; &nbsp;Approved Style</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Real campuses, real transformations. Before/after comparisons, construction progress, completed spaces with natural light.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Human-centered: students in completed environments, leaders reviewing plans, site walk-throughs.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Cool highlights, slight de-saturation. Preserve Navy and Cream tones in architecture.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Wide-angle structural shots showing scale and precision craftsmanship.</li>
+        </ul>
+      </div>
+      <div style="background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--red); padding: 40px;">
+        <p style="font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:16px;">&#x2717; &nbsp;Prohibited</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Generic stock: smiling office people, handshakes, laptops on tables, abstract blue glows.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Heavily filtered images with dramatic saturation or Instagram-style grading.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Logo directly on photography &mdash; always use a solid color overlay first.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Third-party campus imagery without verified permission.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:var(--navy);padding:48px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;">
+      <div>
+        <p class="eyebrow" style="color:var(--gold);margin-bottom:16px;">Logo on Photography</p>
+        <p style="color:rgba(244,244,240,.7);font-size:15px;line-height:1.7;">The logo may never sit directly on a photographic background. Use one of the approved approaches below:</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="background:rgba(197,160,89,.1);border:1px solid rgba(197,160,89,.3);padding:24px;">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:12px;">&#x2713; Solid Color Block</p>
+          <p style="font-size:13px;color:var(--cream);line-height:1.6;">Navy or Cream solid rectangle over the photo. Min opacity: 90%.</p>
+        </div>
+        <div style="background:rgba(197,160,89,.1);border:1px solid rgba(197,160,89,.3);padding:24px;">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:12px;">&#x2713; Gradient Overlay</p>
+          <p style="font-size:13px;color:var(--cream);line-height:1.6;">Navy gradient from bottom (100%) to transparent. Logo placed in solid zone only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── C-05. ICONOGRAPHY ───────────────────────────────────── -->
+<section class="section" id="iconography" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-05 &nbsp;/&nbsp; Iconography</span>
+      <h2>System Icons</h2>
+      <p>The Nuvexa icon set is rooted in construction and campus infrastructure language &mdash; never decorative, always purposeful.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px;">
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--navy);padding:40px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:20px;">System Rules</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> <strong style="color:var(--navy);">Style:</strong> Outlined, 1.5px stroke, 24&times;24px grid, 2px corner radius.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> <strong style="color:var(--navy);">Color:</strong> Navy on light, Cream on dark. Gold for featured icons only.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> <strong style="color:var(--navy);">Source:</strong> Lucide / Phosphor families. No style mixing.</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> <strong style="color:var(--navy);">Export:</strong> SVG only. Min 24px rendered.</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--gold);padding:40px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:20px;">Core Categories</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="padding:16px;background:var(--cream);border:1px solid var(--border);text-align:center;"><p style="font-size:24px;margin-bottom:6px;">&#x1F3D7;</p><p style="font-size:12px;font-weight:600;color:var(--navy);">Construction</p></div>
+          <div style="padding:16px;background:var(--cream);border:1px solid var(--border);text-align:center;"><p style="font-size:24px;margin-bottom:6px;">&#x1F3DB;</p><p style="font-size:12px;font-weight:600;color:var(--navy);">Campus</p></div>
+          <div style="padding:16px;background:var(--cream);border:1px solid var(--border);text-align:center;"><p style="font-size:24px;margin-bottom:6px;">&#x1F4CB;</p><p style="font-size:12px;font-weight:600;color:var(--navy);">Documentation</p></div>
+          <div style="padding:16px;background:var(--cream);border:1px solid var(--border);text-align:center;"><p style="font-size:24px;margin-bottom:6px;">&#x2705;</p><p style="font-size:12px;font-weight:600;color:var(--navy);">Compliance</p></div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--navy);padding:40px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;">
+      <div>
+        <p class="eyebrow" style="color:var(--gold);margin-bottom:16px;">Do</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2713;</span> Use to label, not decorate</li>
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2713;</span> Always pair with text labels</li>
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2713;</span> SVG for all digital use</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:var(--red);margin-bottom:16px;">Don&rsquo;t</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--red);">&#x2717;</span> Mix icon styles</li>
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--red);">&#x2717;</span> Emoji in formal documents</li>
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--red);">&#x2717;</span> Render below 16px</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:var(--steel);margin-bottom:16px;">Sizes</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--steel);">&#x2192;</span> Feature: 48px</li>
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--steel);">&#x2192;</span> UI: 24px</li>
+          <li style="color:var(--cream);font-size:14px;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--steel);">&#x2192;</span> Inline: 16px</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── C-06. MOTION PRINCIPLES ────────────────────────────── -->
+<section class="section" id="motion">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-06 &nbsp;/&nbsp; Motion Principles</span>
+      <h2>Movement Language</h2>
+      <p>Nuvexa animations must feel precise and purposeful. Every transition should reflect the forward-momentum character of the brand.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:48px;">
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--navy);padding:40px 32px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:16px;">Easing</p>
+        <p style="font-family:monospace;font-size:13px;color:var(--navy);background:var(--cream);padding:12px 16px;margin-bottom:16px;">cubic-bezier(0.25, 0, 0, 1)</p>
+        <p style="font-size:14px;color:var(--slate);line-height:1.7;">Custom ease-out: elements &ldquo;lock into place.&rdquo; Reflects construction accuracy.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--gold);padding:40px 32px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:16px;">Duration Scale</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="font-size:13px;color:var(--slate);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Micro-interactions: <strong style="color:var(--navy);">150ms</strong></li>
+          <li style="font-size:13px;color:var(--slate);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> UI transitions: <strong style="color:var(--navy);">250ms</strong></li>
+          <li style="font-size:13px;color:var(--slate);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Page animations: <strong style="color:var(--navy);">400ms</strong></li>
+          <li style="font-size:13px;color:var(--slate);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">&#x2192;</span> Hero entrances: <strong style="color:var(--navy);">600ms</strong></li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--teal);padding:40px 32px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:16px;">Direction</p>
+        <p style="font-size:14px;color:var(--slate);line-height:1.7;margin-bottom:12px;">Elements enter bottom-to-top or left-to-right. Mirrors the upward arrow in the NU&rsaquo; mark.</p>
+        <p style="font-size:14px;color:var(--slate);line-height:1.7;">Entrance: <strong style="color:var(--navy);">translateY(24px) &rarr; 0</strong> + fade. Exit: fade only.</p>
+      </div>
+    </div>
+    <div style="background:var(--navy);padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <p class="eyebrow" style="color:var(--gold);margin-bottom:20px;">Approved Motion</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Fade-in + upward drift for content reveals</li>
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Counter animations for metric displays</li>
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Progress bar fills for timeline displays</li>
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);font-weight:700;">&#x2192;</span> Color transitions on hover (150ms)</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:var(--red);margin-bottom:20px;">Forbidden</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Bounce, spring, or elastic easing</li>
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Parallax scroll beyond subtle depth</li>
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Looping background animations</li>
+          <li style="color:var(--cream);font-size:15px;padding-left:24px;position:relative;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">&#x2192;</span> Any UI animation exceeding 700ms</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── C-07. ACCESSIBILITY STANDARDS ──────────────────────── -->
+<section class="section" id="accessibility">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">C-07 &nbsp;/&nbsp; Accessibility</span>
+      <h2>Inclusive by Design</h2>
+      <p>WCAG 2.1 AA compliance is the minimum standard for all Nuvexa digital outputs. Brand execution does not trade accessibility for aesthetics.</p>
+    </div>
+    <div style="margin-bottom:56px;">
+      <h3 style="font-size:20px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border);">Contrast Ratios &mdash; Brand Colors</h3>
+      <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--border);">
+        <thead>
+          <tr style="background:var(--cream);">
+            <th style="padding:16px 20px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--steel);border-bottom:1px solid var(--border);">Text Color</th>
+            <th style="padding:16px 20px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--steel);border-bottom:1px solid var(--border);">Background</th>
+            <th style="padding:16px 20px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--steel);border-bottom:1px solid var(--border);">Ratio</th>
+            <th style="padding:16px 20px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--steel);border-bottom:1px solid var(--border);">Normal Text</th>
+            <th style="padding:16px 20px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--steel);border-bottom:1px solid var(--border);">Large Text</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 20px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:12px;height:12px;border-radius:50%;background:#0A2540;"></div><span style="font-size:14px;color:var(--slate);">Deep Navy</span></div></td><td style="padding:16px 20px;font-size:14px;color:var(--slate);">Campus Cream</td><td style="padding:16px 20px;font-size:14px;font-weight:700;color:var(--navy);">17.8:1</td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AAA</span></td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AAA</span></td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 20px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:12px;height:12px;border-radius:50%;background:#334155;"></div><span style="font-size:14px;color:var(--slate);">Slate #334155</span></div></td><td style="padding:16px 20px;font-size:14px;color:var(--slate);">Campus Cream</td><td style="padding:16px 20px;font-size:14px;font-weight:700;color:var(--navy);">9.7:1</td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AAA</span></td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AAA</span></td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 20px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:12px;height:12px;border-radius:50%;background:#F24E24;"></div><span style="font-size:14px;color:var(--slate);">Orange-Red #F24E24</span></div></td><td style="padding:16px 20px;font-size:14px;color:var(--slate);">Campus Cream</td><td style="padding:16px 20px;font-size:14px;font-weight:700;color:var(--navy);">4.6:1</td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AA</span></td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AA</span></td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:16px 20px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:12px;height:12px;border-radius:50%;background:#C5A059;"></div><span style="font-size:14px;color:var(--slate);">Gold #C5A059</span></div></td><td style="padding:16px 20px;font-size:14px;color:var(--slate);">Campus Cream</td><td style="padding:16px 20px;font-size:14px;font-weight:700;color:var(--navy);">2.4:1</td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(242,78,36,.1);color:#c0392b;padding:3px 10px;">&#x2717; Fail</span></td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(197,160,89,.15);color:#8a6d2a;padding:3px 10px;">&#x26A0; Borderline</span></td></tr>
+          <tr><td style="padding:16px 20px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:12px;height:12px;border-radius:50%;background:#84929F;"></div><span style="font-size:14px;color:var(--slate);">Steel #84929F</span></div></td><td style="padding:16px 20px;font-size:14px;color:var(--slate);">Campus Cream</td><td style="padding:16px 20px;font-size:14px;font-weight:700;color:var(--navy);">3.7:1</td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(197,160,89,.15);color:#8a6d2a;padding:3px 10px;">&#x26A0; AA large only</span></td><td style="padding:16px 20px;"><span style="font-size:11px;font-weight:700;background:rgba(4,94,83,.1);color:#045E53;padding:3px 10px;">&#x2713; AA</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--teal);padding:40px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:20px;">Design Requirements</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">&#x2192;</span> All body text must meet WCAG AA (4.5:1) &mdash; Navy on Cream for certainty</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">&#x2192;</span> Gold must never be used as body text color on Cream</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">&#x2192;</span> Steel approved for labels at 14px+ size only</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">&#x2192;</span> Focus indicators: 2px solid Orange-Red with 2px offset &mdash; never removed</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--teal);font-weight:700;">&#x2192;</span> Never convey meaning through color alone &mdash; pair with text or icons</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-top:4px solid var(--navy);padding:40px;">
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--steel);margin-bottom:20px;">Motion &amp; Interaction</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Respect <code style="font-size:12px;background:var(--cream);padding:1px 6px;">prefers-reduced-motion</code> &mdash; disable all transitions when active</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> All images must have descriptive alt text</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Interactive elements: minimum 44&times;44px touch target</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Form inputs must have visible labels &mdash; never placeholder-only</li>
+          <li style="font-size:14px;color:var(--slate);padding-left:20px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:var(--navy);font-weight:700;">&#x2192;</span> Reading order must match visual order for screen readers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── FOOTER ────────────────────────────────────────────── -->
 <footer>
   <div class="wrap">
     <img src="Logo-transparent.png" alt="Nuvexa" />
-    <p>© 2026 Nuvexa Campus Transformation Partners. All Rights Reserved.<br>
+    <p>&copy; 2026 Nuvexa Campus Transformation Partners. All Rights Reserved.<br>
     Questions about brand application? Contact the brand team before proceeding.</p>
   </div>
 </footer>

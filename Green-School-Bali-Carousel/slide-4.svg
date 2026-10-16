@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">LESSON 02</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">INFRASTRUCTURE</tspan>
+    <tspan x="80" y="385">SHOULD TEACH</tspan>
+    <tspan x="80" y="460"><tspan fill="#C9A84C">SUSTAINABILITY.</tspan></tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Every element of the campus reflects environmental</tspan>
+    <tspan x="80" dy="42">responsibility - from renewable materials and natural</tspan>
+    <tspan x="80" dy="42">ventilation to water conservation and</tspan>
+    <tspan x="80" dy="42">energy-efficient design.</tspan>
+  </text>
+
+  <!-- Illustration: Sustainable Infrastructure Blueprint (Cross-Section) -->
+  <g transform="translate(140, 830)" fill="none">
+    
+    <!-- Ground Line -->
+    <line x1="-30" y1="100" x2="830" y2="100" stroke="#C9A84C" stroke-width="2"/>
+
+    <!-- Building Structure (Cross-section) -->
+    <!-- Renewable Bamboo Columns -->
+    <line x1="250" y1="100" x2="250" y2="-80" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+    <line x1="550" y1="100" x2="550" y2="-50" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+
+    <!-- Angled Roof (Energy Efficiency & Water Catchment) -->
+    <polygon points="200,-90 600,-40 600,-50 200,-100" fill="rgba(201,168,76,0.1)" stroke="#C9A84C" stroke-width="1.5"/>
+    
+    <!-- Water Conservation (Rainwater harvesting) -->
+    <!-- Gutter and pipe -->
+    <polyline points="600,-45 610,-45 610,130" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+    <!-- Underground tank -->
+    <rect x="580" y="110" width="60" height="40" rx="4" fill="none" stroke="#C9A84C" stroke-width="1"/>
+
+    <!-- Natural Ventilation (Airflow arrows) -->
+    <g stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="4 2" fill="none">
+      <!-- Cool air entering from bottom left -->
+      <path d="M 120 60 C 180 60, 220 80, 280 80"/>
+      <polygon points="280,80 270,75 270,85" fill="rgba(255,255,255,0.4)" stroke="none"/>
+      
+      <!-- Warm air rising and exiting top right -->
+      <path d="M 350 50 C 400 -20, 480 -30, 520 -30"/>
+      <polygon points="520,-30 510,-35 510,-25" fill="rgba(255,255,255,0.4)" stroke="none"/>
+    </g>
+
+    <!-- Annotation Lines & Labels -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#FFFFFF" letter-spacing="1">
+      
+      <!-- Renewable Materials -->
+      <line x1="250" y1="20" x2="140" y2="20" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="250" cy="20" r="3" fill="#C9A84C"/>
+      <text x="130" y="24" text-anchor="end">RENEWABLE MATERIALS</text>
+
+      <!-- Energy Efficiency (Solar) -->
+      <line x1="355" y1="-82" x2="355" y2="-120" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="355" cy="-82" r="3" fill="#C9A84C"/>
+      <line x1="355" y1="-120" x2="380" y2="-120" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="390" y="-116" text-anchor="start">ENERGY EFFICIENT DESIGN</text>
+
+      <!-- Natural Ventilation -->
+      <line x1="435" y1="-10" x2="620" y2="-10" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="435" cy="-10" r="3" fill="#C9A84C"/>
+      <text x="630" y="-6" text-anchor="start">NATURAL VENTILATION</text>
+
+      <!-- Water Conservation -->
+      <line x1="610" y1="130" x2="670" y2="130" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="610" cy="130" r="3" fill="#C9A84C"/>
+      <text x="680" y="134" text-anchor="start">WATER CONSERVATION</text>
+
+    </g>
+
+  </g>
+
+  <!-- Why it matters Box -->
+  <rect x="80" y="1020" width="920" height="150" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1080" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="2" font-weight="600">WHY IT MATTERS</text>
+  <text x="120" y="1120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    A sustainable campus becomes a living classroom, helping students
+  </text>
+  <text x="120" y="1155" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    experience environmental responsibility every day.
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">04 / 08</text>
+</svg>

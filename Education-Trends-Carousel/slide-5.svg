@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">TREND 04</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="62" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="305">LIBRARIES ARE</tspan>
+    <tspan x="80" y="375">BECOMING</tspan>
+    <tspan x="80" y="445" fill="#C9A84C">LEARNING COMMONS.</tspan>
+  </text>
+
+  <text x="80" y="510" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="rgba(255,255,255,0.7)">Modern libraries aren't just for books.</text>
+
+  <text x="80" y="575" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#FFFFFF" letter-spacing="1">They're becoming places to:</text>
+
+  <!-- Numbered Steps -->
+  <!-- 01: Collaborate -->
+  <g transform="translate(80, 610)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">01</text>
+    <text x="82" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">COLLABORATE</text>
+    <text x="82" y="56" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Group work zones and discussion areas.</text>
+  </g>
+
+  <!-- 02: Create -->
+  <g transform="translate(80, 695)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">02</text>
+    <text x="82" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">CREATE</text>
+    <text x="82" y="56" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Media labs, recording studios, design tools.</text>
+  </g>
+
+  <!-- 03: Prototype -->
+  <g transform="translate(80, 780)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">03</text>
+    <text x="82" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">PROTOTYPE</text>
+    <text x="82" y="56" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Build, test, and iterate on ideas.</text>
+  </g>
+
+  <!-- 04: Study Together -->
+  <g transform="translate(80, 865)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">04</text>
+    <text x="82" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">STUDY TOGETHER</text>
+    <text x="82" y="56" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Peer learning in flexible seating areas.</text>
+  </g>
+
+  <!-- 05: Access Technology -->
+  <g transform="translate(80, 950)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">05</text>
+    <text x="82" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">ACCESS TECHNOLOGY</text>
+    <text x="82" y="56" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Digital resources, devices, and connectivity.</text>
+  </g>
+
+  <!-- Gold Accent Box -->
+  <rect x="80" y="1060" width="920" height="90" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="540" y="1098" font-family="'Courier New', 'SF Mono', monospace" font-size="17" fill="#FFFFFF" text-anchor="middle" letter-spacing="2" font-weight="600">FLEXIBLE, TECHNOLOGY-RICH LEARNING COMMONS</text>
+  <text x="540" y="1128" font-family="'Courier New', 'SF Mono', monospace" font-size="17" fill="#C9A84C" text-anchor="middle" letter-spacing="2" font-weight="600">ARE BECOMING CENTRAL SPACES ON CAMPUS.</text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">05 / 08</text>
+</svg>

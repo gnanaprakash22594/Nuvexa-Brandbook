@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">INCIDENT 03</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">HAR MANDIR BOARDING</tspan>
+    <tspan x="80" y="385">SCHOOL <tspan fill="#C9A84C">FIRE (2025)</tspan></tspan>
+  </text>
+
+  <text x="80" y="480" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Many school fires start invisibly. Electrical</tspan>
+    <tspan x="80" dy="42">short circuits in aging or overloaded infrastructure</tspan>
+    <tspan x="80" dy="42">can smolder for hours before erupting, especially</tspan>
+    <tspan x="80" dy="42">in spaces like dormitories and server rooms.</tspan>
+  </text>
+
+  <!-- Illustration: Electrical Safety & Alarm Network Blueprint -->
+  <g transform="translate(150, 710) scale(1.1)" fill="none">
+    
+    <!-- Building Layout -->
+    <rect x="200" y="0" width="400" height="200" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="400" y1="0" x2="400" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    
+    <!-- Ground Line -->
+    <line x1="100" y1="200" x2="700" y2="200" stroke="#C9A84C" stroke-width="2"/>
+
+    <!-- Electrical Main Panel (Source of risk) -->
+    <rect x="230" y="100" width="40" height="60" rx="3" stroke="#C9A84C" stroke-width="1.5" fill="rgba(201,168,76,0.05)"/>
+    <!-- Warning symbol -->
+    <polygon points="250,110 240,125 260,125" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="250" y1="114" x2="250" y2="120" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="250" cy="123" r="0.5" fill="#C9A84C"/>
+    
+    <!-- Wiring Network (Overloaded/Aging representation) -->
+    <g stroke="rgba(255,255,255,0.15)" stroke-width="1.5">
+      <polyline points="250,100 250,40 350,40 350,80"/>
+      <polyline points="250,40 450,40 450,80"/>
+      <polyline points="450,40 550,40 550,80"/>
+    </g>
+
+    <!-- Fire Alarm Network (The solution) -->
+    <!-- Control Panel -->
+    <rect x="420" y="120" width="30" height="40" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+    <circle cx="435" cy="130" r="3" fill="#FFFFFF"/>
+    
+    <!-- Alarm Circuit (Gold) -->
+    <g stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="4 2">
+      <polyline points="435,120 435,20 300,20"/>
+      <polyline points="435,20 500,20"/>
+    </g>
+
+    <!-- Smoke Detectors -->
+    <g transform="translate(300, 20)">
+      <rect x="-10" y="0" width="20" height="6" rx="2" stroke="#C9A84C" stroke-width="1.5" fill="#0A1628"/>
+      <circle cx="0" cy="8" r="2" fill="#C9A84C"/>
+      <path d="M-15,15 A 15 15 0 0 0 15,15" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/>
+    </g>
+    <g transform="translate(500, 20)">
+      <rect x="-10" y="0" width="20" height="6" rx="2" stroke="#C9A84C" stroke-width="1.5" fill="#0A1628"/>
+      <circle cx="0" cy="8" r="2" fill="#C9A84C"/>
+      <path d="M-15,15 A 15 15 0 0 0 15,15" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/>
+    </g>
+
+    <!-- Manual Call Point -->
+    <rect x="560" y="130" width="12" height="16" rx="1" fill="rgba(201,168,76,0.3)" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="566" cy="138" r="2" fill="#FFFFFF"/>
+
+    <!-- Annotation Labels -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#C9A84C" font-weight="600" letter-spacing="2">
+      <line x1="300" y1="35" x2="300" y2="70" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="300" y="80" text-anchor="middle">SMOKE DETECTION</text>
+
+      <line x1="230" y1="130" x2="120" y2="130" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="110" y="134" text-anchor="end">MAIN DISTRIBUTION PANEL</text>
+
+      <line x1="572" y1="138" x2="630" y2="138" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="640" y="142">MANUAL CALL POINT</text>
+    </g>
+
+  </g>
+
+  <!-- Lesson Box -->
+  <rect x="80" y="1030" width="920" height="150" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1090" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="2" font-weight="600">THE LESSON</text>
+  <text x="120" y="1130" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    Routine electrical audits prevent fires. Networked, reliable
+  </text>
+  <text x="120" y="1165" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    fire alarm systems ensure that when one starts, lives are saved.
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">04 / 07</text>
+</svg>
+
+
+
+
+
+
+

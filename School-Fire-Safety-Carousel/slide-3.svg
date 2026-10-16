@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">INCIDENT 02</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">CHITRAKOOTA</tspan>
+    <tspan x="80" y="385">KAUSHALYA SCHOOL</tspan>
+    <tspan x="80" y="460"><tspan fill="#C9A84C">FIRE (2026)</tspan></tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">A massive fire broke out in the top-floor auditorium.</tspan>
+    <tspan x="80" dy="42">Fires in upper-level assembly areas present extreme</tspan>
+    <tspan x="80" dy="42">challenges for emergency access, requiring robust</tspan>
+    <tspan x="80" dy="42">on-site suppression systems.</tspan>
+  </text>
+
+  <!-- Illustration: High-Floor Assembly Area Blueprint -->
+  <g transform="translate(140, 800)" fill="none">
+    
+    <!-- Building Cross-Section (Vertical) -->
+    <rect x="300" y="-80" width="200" height="260" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="300" y1="50" x2="500" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="300" y1="115" x2="500" y2="115" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    
+    <!-- Ground Line -->
+    <line x1="150" y1="180" x2="650" y2="180" stroke="#C9A84C" stroke-width="2"/>
+
+    <!-- Auditorium (Top Floor) -->
+    <rect x="300" y="-80" width="200" height="130" fill="rgba(201,168,76,0.05)"/>
+    <!-- Stage and seating -->
+    <rect x="310" y="30" width="40" height="20" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <path d="M370,50 L400,20 M390,50 L420,20 M410,50 L440,20 M430,50 L460,20 M450,50 L480,20" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    
+    <!-- Sprinkler System Network -->
+    <polyline points="320,-40 320,-60 480,-60 480,-40" stroke="#C9A84C" stroke-width="1.5"/>
+    <line x1="400" y1="-60" x2="400" y2="-40" stroke="#C9A84C" stroke-width="1.5"/>
+    <!-- Sprinkler heads/water spray -->
+    <g stroke="rgba(255,255,255,0.4)" stroke-width="1">
+      <path d="M315,-30 L320,-40 L325,-30 M310,-20 L320,-40 L330,-20" stroke-dasharray="2 2"/>
+      <path d="M395,-30 L400,-40 L405,-30 M390,-20 L400,-40 L410,-20" stroke-dasharray="2 2"/>
+      <path d="M475,-30 L480,-40 L485,-30 M470,-20 L480,-40 L490,-20" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- Smoke Detector -->
+    <rect x="350" y="-80" width="10" height="5" fill="#FFFFFF"/>
+    <path d="M 345,-70 A 10,10 0 0 0 365,-70" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+    <path d="M 340,-65 A 15,15 0 0 0 370,-65" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+
+    <!-- Standpipe / Riser (Vertical Water Supply) -->
+    <line x1="280" y1="-60" x2="280" y2="180" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="280" y1="-60" x2="320" y2="-60" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="280" cy="160" r="4" fill="#C9A84C"/>
+    <!-- Fire Dept Connection -->
+    <path d="M 270,160 L 275,165 L 275,155 Z" fill="#FFFFFF"/>
+    
+    <!-- Exterior Emergency Access / Stairs -->
+    <g stroke="rgba(255,255,255,0.3)" stroke-width="1.5">
+      <line x1="500" y1="30" x2="540" y2="30"/>
+      <line x1="540" y1="30" x2="540" y2="180"/>
+      <line x1="500" y1="90" x2="540" y2="90"/>
+      <line x1="500" y1="150" x2="540" y2="150"/>
+      <!-- Zigzag stairs -->
+      <polyline points="500,50 540,90 500,115 540,150 500,180"/>
+    </g>
+
+    <!-- Annotation Labels -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#C9A84C" font-weight="600" letter-spacing="2">
+      <line x1="420" y1="-30" x2="560" y2="-30" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="420" cy="-30" r="2.5" fill="#C9A84C"/>
+      <text x="570" y="-26">SPRINKLER SYSTEM</text>
+
+      <line x1="280" y1="100" x2="180" y2="100" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="170" y="104" text-anchor="end">FIRE STANDPIPE</text>
+
+      <line x1="540" y1="120" x2="600" y2="120" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="610" y="124">EMERGENCY ACCESS</text>
+    </g>
+
+  </g>
+
+  <!-- Lesson Box -->
+  <rect x="80" y="1020" width="920" height="150" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1080" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="2" font-weight="600">THE LESSON</text>
+  <text x="120" y="1120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    Auditoriums and upper-floor assembly areas need active
+  </text>
+  <text x="120" y="1155" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    sprinkler systems, smoke detection, and clear exterior access.
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">03 / 07</text>
+</svg>
+
+
+
+
+
+
+

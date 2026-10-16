@@ -1,0 +1,115 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">DESIGN PRINCIPLE 03</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">THERMAL COMFORT</tspan>
+    <tspan x="80" y="385">ISN'T A LUXURY.</tspan>
+    <tspan x="80" y="460"><tspan fill="#C9A84C">IT'S A BASELINE.</tspan></tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">When classrooms overheat, attention drops.</tspan>
+    <tspan x="80" dy="42">Student performance declines measurably above</tspan>
+    <tspan x="80" dy="42">25°C. Passive cooling strategies keep classrooms</tspan>
+    <tspan x="80" dy="42">within the comfort zone - without heavy AC costs.</tspan>
+  </text>
+
+  <text x="80" y="740" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">EFFECTIVE THERMAL DESIGN INCLUDES:</text>
+
+  <!-- List Cards -->
+  <!-- Row 1 -->
+  <g transform="translate(80, 780)">
+    <rect width="290" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">01</text>
+    <text x="30" y="90" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Cross-</text>
+    <text x="30" y="118" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Ventilation</text>
+    <g transform="translate(220, 25) scale(1.5)" stroke="#C9A84C" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+    </g>
+  </g>
+
+  <g transform="translate(390, 780)">
+    <rect width="290" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">02</text>
+    <text x="30" y="90" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Insulated</text>
+    <text x="30" y="118" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Roofing</text>
+    <g transform="translate(220, 25) scale(1.5)" stroke="#C9A84C" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 10l10-7 10 7"/>
+      <path d="M6 12.8l6-4.2 6 4.2"/>
+      <path d="M12 11v6.5a2 2 0 1 0 2 0V11Z"/>
+    </g>
+  </g>
+
+  <g transform="translate(700, 780)">
+    <rect width="290" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">03</text>
+    <text x="30" y="90" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Thermal Mass</text>
+    <text x="30" y="118" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Walls</text>
+    <g transform="translate(220, 25) scale(1.5)" stroke="#C9A84C" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="18" height="18" x="3" y="3" rx="2"/>
+      <path d="M3 9h18"/>
+      <path d="M3 15h18"/>
+      <path d="M9 3v6"/>
+      <path d="M15 9v6"/>
+      <path d="M9 15v6"/>
+    </g>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(80, 940)">
+    <rect width="445" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">04</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Shaded Corridors</text>
+    <g transform="translate(370, 25) scale(1.5)" stroke="#C9A84C" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="6" r="3"/>
+      <path d="M3 10h12"/>
+      <path d="M6 10v12"/>
+      <path d="M12 10v12"/>
+      <path d="M3 22h12"/>
+    </g>
+  </g>
+
+  <g transform="translate(545, 940)">
+    <rect width="445" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">05</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Reflective Roof Surfaces</text>
+    <g transform="translate(370, 25) scale(1.5)" stroke="#C9A84C" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 16h18"/>
+      <path d="M7 6l5 6 5-6"/>
+      <path d="M17 10v-4h-4"/>
+      <circle cx="4" cy="4" r="2"/>
+    </g>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">05 / 08</text>
+</svg>
+
+
+
+
+
+
+
+

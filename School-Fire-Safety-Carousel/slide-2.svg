@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">INCIDENT 01</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">LUCKNOW COACHING</tspan>
+    <tspan x="80" y="385">CENTRE <tspan fill="#C9A84C">FIRE (2026)</tspan></tspan>
+  </text>
+
+  <text x="80" y="480" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">High occupancy in commercial buildings converted</tspan>
+    <tspan x="80" dy="42">for educational use often lack adequate egress.</tspan>
+    <tspan x="80" dy="42">When fire breaks out, panic and blocked pathways</tspan>
+    <tspan x="80" dy="42">turn minor incidents into major tragedies.</tspan>
+  </text>
+
+  <!-- Illustration: Evacuation & Occupancy Blueprint -->
+  <g transform="translate(105, 710) scale(1.1)" fill="none">
+    
+    <!-- Blueprint Grid -->
+    <g stroke="rgba(255,255,255,0.03)" stroke-width="1">
+      <line x1="0" y1="0" x2="800" y2="0"/>
+      <line x1="0" y1="50" x2="800" y2="50"/>
+      <line x1="0" y1="100" x2="800" y2="100"/>
+      <line x1="0" y1="150" x2="800" y2="150"/>
+      <line x1="0" y1="200" x2="800" y2="200"/>
+      <line x1="200" y1="-20" x2="200" y2="220"/>
+      <line x1="400" y1="-20" x2="400" y2="220"/>
+      <line x1="600" y1="-20" x2="600" y2="220"/>
+    </g>
+
+    <!-- Floor Plan Layout -->
+    <!-- Outer Walls -->
+    <rect x="100" y="20" width="600" height="180" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+    <!-- Corridor -->
+    <line x1="100" y1="130" x2="700" y2="130" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+    
+    <!-- Classrooms (High Occupancy Zones) -->
+    <rect x="100" y="20" width="180" height="110" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    <rect x="280" y="20" width="180" height="110" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    <rect x="460" y="20" width="240" height="110" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+    <!-- Occupancy Heatmap/Density (dots representing people) -->
+    <g fill="rgba(255,255,255,0.15)">
+      <!-- Room 1 -->
+      <circle cx="140" cy="50" r="2"/><circle cx="160" cy="50" r="2"/><circle cx="180" cy="50" r="2"/><circle cx="200" cy="50" r="2"/><circle cx="220" cy="50" r="2"/><circle cx="240" cy="50" r="2"/>
+      <circle cx="140" cy="70" r="2"/><circle cx="160" cy="70" r="2"/><circle cx="180" cy="70" r="2"/><circle cx="200" cy="70" r="2"/><circle cx="220" cy="70" r="2"/><circle cx="240" cy="70" r="2"/>
+      <circle cx="140" cy="90" r="2"/><circle cx="160" cy="90" r="2"/><circle cx="180" cy="90" r="2"/><circle cx="200" cy="90" r="2"/><circle cx="220" cy="90" r="2"/><circle cx="240" cy="90" r="2"/>
+      
+      <!-- Room 2 -->
+      <circle cx="320" cy="50" r="2"/><circle cx="340" cy="50" r="2"/><circle cx="360" cy="50" r="2"/><circle cx="380" cy="50" r="2"/><circle cx="400" cy="50" r="2"/><circle cx="420" cy="50" r="2"/>
+      <circle cx="320" cy="70" r="2"/><circle cx="340" cy="70" r="2"/><circle cx="360" cy="70" r="2"/><circle cx="380" cy="70" r="2"/><circle cx="400" cy="70" r="2"/><circle cx="420" cy="70" r="2"/>
+      <circle cx="320" cy="90" r="2"/><circle cx="340" cy="90" r="2"/><circle cx="360" cy="90" r="2"/><circle cx="380" cy="90" r="2"/><circle cx="400" cy="90" r="2"/><circle cx="420" cy="90" r="2"/>
+      
+      <!-- Room 3 -->
+      <circle cx="500" cy="50" r="2"/><circle cx="530" cy="50" r="2"/><circle cx="560" cy="50" r="2"/><circle cx="590" cy="50" r="2"/><circle cx="620" cy="50" r="2"/><circle cx="650" cy="50" r="2"/>
+      <circle cx="500" cy="80" r="2"/><circle cx="530" cy="80" r="2"/><circle cx="560" cy="80" r="2"/><circle cx="590" cy="80" r="2"/><circle cx="620" cy="80" r="2"/><circle cx="650" cy="80" r="2"/>
+      <circle cx="500" cy="110" r="2"/><circle cx="530" cy="110" r="2"/><circle cx="560" cy="110" r="2"/><circle cx="590" cy="110" r="2"/><circle cx="620" cy="110" r="2"/><circle cx="650" cy="110" r="2"/>
+    </g>
+
+    <!-- Exits / Doors (Safe Egress) -->
+    <!-- Room doors -->
+    <rect x="250" y="125" width="20" height="5" fill="#0A1628" stroke="#C9A84C" stroke-width="1.5"/>
+    <path d="M250,130 A 20 20 0 0 1 270,110" stroke="#C9A84C" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+    
+    <rect x="430" y="125" width="20" height="5" fill="#0A1628" stroke="#C9A84C" stroke-width="1.5"/>
+    <path d="M430,130 A 20 20 0 0 1 450,110" stroke="#C9A84C" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+    
+    <rect x="470" y="125" width="20" height="5" fill="#0A1628" stroke="#C9A84C" stroke-width="1.5"/>
+    <path d="M470,130 A 20 20 0 0 1 490,110" stroke="#C9A84C" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+
+    <!-- Main Exits (Left and Right ends of corridor) -->
+    <!-- Left Exit Stairs -->
+    <rect x="30" y="130" width="70" height="70" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="30" y1="145" x2="100" y2="145" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="30" y1="160" x2="100" y2="160" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="30" y1="175" x2="100" y2="175" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="30" y1="190" x2="100" y2="190" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    
+    <!-- Right Exit Stairs -->
+    <rect x="700" y="130" width="70" height="70" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="700" y1="145" x2="770" y2="145" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="700" y1="160" x2="770" y2="160" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="700" y1="175" x2="770" y2="175" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="700" y1="190" x2="770" y2="190" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+    <!-- Evacuation Routes (Gold Arrows) -->
+    <g stroke="#C9A84C" stroke-width="2" stroke-linejoin="round">
+      <!-- Room 1 to Left Exit -->
+      <polyline points="190,100 260,100 260,165 110,165" fill="none"/>
+      <polygon points="110,165 115,160 115,170" fill="#C9A84C" stroke="none"/>
+      
+      <!-- Room 2 to Left Exit -->
+      <polyline points="360,100 440,100 440,155 110,155" fill="none"/>
+      <polygon points="110,155 115,150 115,160" fill="#C9A84C" stroke="none"/>
+      
+      <!-- Room 3 to Right Exit -->
+      <polyline points="580,100 480,100 480,165 690,165" fill="none"/>
+      <polygon points="690,165 685,160 685,170" fill="#C9A84C" stroke="none"/>
+    </g>
+    
+    <!-- Route bifurcation / occupancy splitting indicator -->
+    <circle cx="460" cy="160" r="20" stroke="rgba(201,168,76,0.4)" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+    <text x="460" y="195" font-family="'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">EGRESS SPLIT</text>
+
+    <!-- Annotation Labels -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#C9A84C" font-weight="600" letter-spacing="2">
+      <line x1="65" y1="110" x2="65" y2="130" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="65" y="100" text-anchor="middle">PRIMARY EXIT</text>
+      
+      <line x1="735" y1="110" x2="735" y2="130" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="735" y="100" text-anchor="middle">SECONDARY EXIT</text>
+
+      <line x1="140" y1="35" x2="90" y2="35" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="140" cy="35" r="2.5" fill="#C9A84C"/>
+      <text x="80" y="39" text-anchor="end">DENSE OCCUPANCY</text>
+    </g>
+  </g>
+
+  <!-- Lesson Box -->
+  <rect x="80" y="1020" width="920" height="150" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1080" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="2" font-weight="600">THE LESSON</text>
+  <text x="120" y="1120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    Every educational building needs multiple safe exits, clear
+  </text>
+  <text x="120" y="1155" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    evacuation planning, and strictly enforced occupancy limits.
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">02 / 07</text>
+</svg>
+
+
+
+
+
+
+

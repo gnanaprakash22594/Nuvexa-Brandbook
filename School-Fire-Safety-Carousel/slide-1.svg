@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="200" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">CAMPUS SAFETY INSIGHTS</text>
+
+  <!-- Main Headline -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="72" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="290">SCHOOL FIRE</tspan>
+    <tspan x="80" y="370">INCIDENTS THAT</tspan>
+    <tspan x="80" y="450">CHANGED SAFETY</tspan>
+    <tspan x="80" y="530" fill="#C9A84C">STANDARDS.</tspan>
+  </text>
+
+  <!-- Accent Line -->
+  <rect x="80" y="560" width="80" height="5" rx="2" fill="#C9A84C"/>
+
+  <!-- Subtitle -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="620">The biggest lessons for designing safer,</tspan>
+    <tspan x="80" y="660">disaster-resilient campuses.</tspan>
+  </text>
+
+  <!-- ILLUSTRATION: Fire Safety Blueprint with Alarm & Exits -->
+  <g transform="translate(140, 780)" fill="none">
+
+    <!-- Subtle Background Circle -->
+    <circle cx="400" cy="220" r="340" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+    <!-- Building Framework -->
+    <!-- Foundation -->
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#C9A84C" stroke-width="2"/>
+        
+    <!-- Building Layout (Cross-section) -->
+    <rect x="150" y="50" width="500" height="350" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="260" y1="225" x2="540" y2="225" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    
+    <!-- Central Stairwell/Escape Route -->
+    <rect x="350" y="50" width="100" height="350" fill="rgba(201,168,76,0.03)" stroke="#C9A84C" stroke-width="1.5"/>
+    <g stroke="rgba(255,255,255,0.2)" stroke-width="1">
+      <!-- Stairs Top Floor -->
+      <line x1="350" y1="200" x2="450" y2="120"/>
+      <!-- Stairs Ground Floor -->
+      <line x1="350" y1="380" x2="450" y2="300"/>
+    </g>
+
+    <!-- Safe Exit Markers -->
+    <g transform="translate(400, 390)">
+      <circle cx="0" cy="0" r="15" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" stroke-width="1.5"/>
+      <path d="M-5,0 L5,0 M1,-4 L5,0 L1,4" stroke="#C9A84C" stroke-width="2"/>
+    </g>
+    <g transform="translate(150, 390)">
+      <circle cx="0" cy="0" r="15" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" stroke-width="1.5"/>
+      <path d="M5,0 L-5,0 M-1,-4 L-5,0 L-1,4" stroke="#C9A84C" stroke-width="2"/>
+    </g>
+    <g transform="translate(650, 390)">
+      <circle cx="0" cy="0" r="15" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" stroke-width="1.5"/>
+      <path d="M-5,0 L5,0 M1,-4 L5,0 L1,4" stroke="#C9A84C" stroke-width="2"/>
+    </g>
+
+    <!-- Fire Safety Symbols -->
+    <!-- Sprinkler System (Top Floor) -->
+    <line x1="200" y1="50" x2="200" y2="70" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+    <polygon points="195,70 205,70 200,75" fill="#FFFFFF"/>
+    <path d="M 190,85 A 15,15 0 0 1 210,85" stroke="rgba(201,168,76,0.5)" stroke-dasharray="2 2" fill="none"/>
+    <path d="M 185,90 A 25,25 0 0 1 215,90" stroke="rgba(201,168,76,0.5)" stroke-dasharray="2 2" fill="none"/>
+
+    <line x1="600" y1="50" x2="600" y2="70" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+    <polygon points="595,70 605,70 600,75" fill="#FFFFFF"/>
+    <path d="M 590,85 A 15,15 0 0 1 610,85" stroke="rgba(201,168,76,0.5)" stroke-dasharray="2 2" fill="none"/>
+    <path d="M 585,90 A 25,25 0 0 1 615,90" stroke="rgba(201,168,76,0.5)" stroke-dasharray="2 2" fill="none"/>
+
+    <!-- Smoke Detector / Alarm (Ground Floor) -->
+    <rect x="240" y="225" width="20" height="8" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="250" cy="235" r="2" fill="#C9A84C"/>
+    <!-- Alarm waves -->
+    <path d="M 230,240 A 15,15 0 0 0 230,250" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+    <path d="M 225,235 A 25,25 0 0 0 225,255" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+
+    <rect x="540" y="225" width="20" height="8" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="550" cy="235" r="2" fill="#C9A84C"/>
+    <path d="M 570,240 A 15,15 0 0 1 570,250" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+    <path d="M 575,235 A 25,25 0 0 1 575,255" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+
+    <!-- Evacuation Path Lines (Glowing) -->
+    <polyline points="250,150 250,200 350,200" stroke="#C9A84C" stroke-width="2" stroke-dasharray="6 4"/>
+    <polyline points="550,150 550,200 450,200" stroke="#C9A84C" stroke-width="2" stroke-dasharray="6 4"/>
+    <polyline points="250,320 250,380 150,380" stroke="#C9A84C" stroke-width="2" stroke-dasharray="6 4"/>
+    <polyline points="550,320 550,380 650,380" stroke="#C9A84C" stroke-width="2" stroke-dasharray="6 4"/>
+    
+    <!-- Evacuation Route Nodes -->
+    <circle cx="250" cy="200" r="3" fill="#FFFFFF"/>
+    <circle cx="550" cy="200" r="3" fill="#FFFFFF"/>
+    <circle cx="250" cy="380" r="3" fill="#FFFFFF"/>
+    <circle cx="550" cy="380" r="3" fill="#FFFFFF"/>
+
+    <!-- Blueprint Annotations -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#C9A84C" font-weight="600" letter-spacing="2">
+      <!-- Sprinkler label -->
+      <line x1="200" y1="50" x2="200" y2="20" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="200" y="10" text-anchor="middle">ACTIVE SUPPRESSION</text>
+      
+      <!-- Central Core label -->
+      <line x1="400" y1="50" x2="400" y2="20" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="400" y="10" text-anchor="middle">FIRE-RATED EGRESS CORE</text>
+      
+      <!-- Detector label -->
+      <line x1="245" y1="230" x2="160" y2="230" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="145" y="234" text-anchor="end">EARLY DETECTION</text>
+    </g>
+
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">01 / 07</text>
+</svg>
+
+
+
+
+
+
+

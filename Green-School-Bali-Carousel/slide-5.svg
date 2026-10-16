@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">LESSON 03</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">DESIGN SPACES AROUND</tspan>
+    <tspan x="80" y="385"><tspan fill="#C9A84C">EXPERIENCES,</tspan> NOT</tspan>
+    <tspan x="80" y="460">SUBJECTS.</tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Instead of isolated classrooms, Green School provides</tspan>
+    <tspan x="80" dy="42">spaces for making, building, experimenting, performing,</tspan>
+    <tspan x="80" dy="42">and collaborating.</tspan>
+  </text>
+
+  <text x="80" y="730" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">FUTURE-READY CAMPUSES INCLUDE:</text>
+
+  <!-- List Cards -->
+  <!-- Row 1 -->
+  <g transform="translate(80, 770)">
+    <rect width="290" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">01</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Maker Spaces</text>
+  </g>
+
+  <g transform="translate(390, 770)">
+    <rect width="290" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">02</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">STEAM Labs</text>
+  </g>
+
+  <g transform="translate(700, 770)">
+    <rect width="290" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">03</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Innovation Studios</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(80, 930)">
+    <rect width="445" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">04</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Outdoor Learning Areas</text>
+  </g>
+
+  <g transform="translate(545, 930)">
+    <rect width="445" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">05</text>
+    <text x="30" y="100" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Flexible Collaboration Zones</text>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">05 / 08</text>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">NUVEXA SOLUTION · EXECUTION</text>
+
+  <!-- Headline -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">ENGINEERING</tspan>
+    <tspan x="80" y="385">FOR TOMORROW'S</tspan>
+    <tspan x="80" y="460" fill="#C9A84C">CLIMATE.</tspan>
+  </text>
+
+  <!-- Body Text -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="530">We help institutions implement solutions so</tspan>
+    <tspan x="80" dy="40">education never stops - even on a red alert day.</tspan>
+  </text>
+
+  <!-- Section Header -->
+  <text x="80" y="650" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">KEY IMPLEMENTATIONS:</text>
+
+  <!-- Card Row 1 (2 equal cards, 450px each, 20px gap) -->
+  <!-- Card 1: Rainwater Harvesting -->
+  <g transform="translate(80, 690)">
+    <rect width="450" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <g transform="translate(40, 65)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 0 -15 C -12 5 -15 15 -15 20 C -15 28 -8 35 0 35 C 8 35 15 28 15 20 C 15 15 12 5 0 -15Z"/>
+      <line x1="-6" y1="22" x2="0" y2="16"/>
+      <line x1="0" y1="16" x2="6" y2="22"/>
+    </g>
+    <text x="85" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#FFFFFF">High-Capacity Rainwater</text>
+    <text x="85" y="82" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#C9A84C">Harvesting</text>
+    <text x="85" y="115" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">Turn monsoon excess into campus resource.</text>
+  </g>
+
+  <!-- Card 2: Elevated Power Grids -->
+  <g transform="translate(550, 690)">
+    <rect width="450" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <g transform="translate(40, 65)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="0" cy="0" r="18"/>
+      <polygon points="5,-18 -8,3 2,3 -5,18 8,-3 -2,-3" fill="#C9A84C" stroke="none"/>
+    </g>
+    <text x="85" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#FFFFFF">Elevated Power</text>
+    <text x="85" y="82" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#C9A84C">Grid Systems</text>
+    <text x="85" y="115" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">Flood-proof electrical infrastructure.</text>
+  </g>
+
+  <!-- Card Row 2 (2 equal cards) -->
+  <!-- Card 3: Hybrid Learning -->
+  <g transform="translate(80, 850)">
+    <rect width="450" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <g transform="translate(40, 65)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-18" y="-14" width="36" height="24" rx="3"/>
+      <line x1="-12" y1="14" x2="12" y2="14"/>
+      <circle cx="0" cy="-2" r="5"/>
+    </g>
+    <text x="85" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#FFFFFF">Seamless Hybrid-</text>
+    <text x="85" y="82" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#C9A84C">Learning Setups</text>
+    <text x="85" y="115" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">Zero-downtime digital continuity.</text>
+  </g>
+
+  <!-- Card 4: Drainage Engineering -->
+  <g transform="translate(550, 850)">
+    <rect width="450" height="140" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <g transform="translate(40, 65)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M -15 -10 Q 0 -20 15 -10"/>
+      <path d="M -15 0 Q 0 -10 15 0"/>
+      <path d="M -15 10 Q 0 0 15 10"/>
+      <line x1="0" y1="12" x2="0" y2="20"/>
+      <polygon points="-5,20 5,20 0,26" fill="#C9A84C" stroke="none"/>
+    </g>
+    <text x="85" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#FFFFFF">Advanced Drainage</text>
+    <text x="85" y="82" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#C9A84C">Engineering</text>
+    <text x="85" y="115" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">Prevent waterlogging before it starts.</text>
+  </g>
+
+  <!-- Gold Accent Box -->
+  <rect x="80" y="1060" width="920" height="90" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="540" y="1098" font-family="'Courier New', 'SF Mono', monospace" font-size="17" fill="#FFFFFF" text-anchor="middle" letter-spacing="2" font-weight="600">EDUCATION NEVER STOPS</text>
+  <text x="540" y="1128" font-family="'Courier New', 'SF Mono', monospace" font-size="17" fill="#C9A84C" text-anchor="middle" letter-spacing="2" font-weight="600">— EVEN ON A RED ALERT DAY.</text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">06 / 08</text>
+</svg>

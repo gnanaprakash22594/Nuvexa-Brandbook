@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">INCIDENT 04</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">KUMBAKONAM</tspan>
+    <tspan x="80" y="385">SCHOOL <tspan fill="#C9A84C">FIRE (2004)</tspan></tspan>
+  </text>
+
+  <text x="80" y="480" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Combustible construction materials, such as</tspan>
+    <tspan x="80" dy="42">thatched roofs, combined with extremely narrow</tspan>
+    <tspan x="80" dy="42">exits create an environment where escape becomes</tspan>
+    <tspan x="80" dy="42">impossible within seconds of ignition.</tspan>
+  </text>
+
+  <!-- Illustration: Fire Rated Material & Construction Blueprint -->
+  <g transform="translate(140, 770)" fill="none">
+    
+    <!-- Building Section showing Materials -->
+    <!-- Floor / Ceiling Assembly -->
+    <rect x="250" y="80" width="300" height="20" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+    <!-- Fire rated insulation fill inside the floor -->
+    <path d="M 255 85 L 265 95 M 265 85 L 275 95 M 275 85 L 285 95 M 285 85 L 295 95 
+             M 295 85 L 305 95 M 305 85 L 315 95 M 315 85 L 325 95 M 325 85 L 335 95
+             M 335 85 L 345 95 M 345 85 L 355 95 M 355 85 L 365 95 M 365 85 L 375 95
+             M 375 85 L 385 95 M 385 85 L 395 95 M 395 85 L 405 95 M 405 85 L 415 95
+             M 415 85 L 425 95 M 425 85 L 435 95 M 435 85 L 445 95 M 445 85 L 455 95
+             M 455 85 L 465 95 M 465 85 L 475 95 M 475 85 L 485 95 M 485 85 L 495 95
+             M 495 85 L 505 95 M 505 85 L 515 95 M 515 85 L 525 95 M 525 85 L 535 95" 
+          stroke="#C9A84C" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Walls -->
+    <rect x="250" y="100" width="20" height="150" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+    <rect x="530" y="100" width="20" height="150" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+
+    <!-- Fire Door Assembly -->
+    <rect x="350" y="150" width="100" height="100" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="430" y1="200" x2="440" y2="200" stroke="#C9A84C" stroke-width="2"/>
+    <!-- Fire door rating badge -->
+    <circle cx="400" cy="170" r="10" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" stroke-width="1"/>
+    <text x="400" y="173" font-family="'Courier New', monospace" font-size="8" fill="#C9A84C" text-anchor="middle">2 HR</text>
+
+    <!-- Structural Column (Fire Protected) -->
+    <rect x="390" y="-30" width="20" height="110" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+    <!-- Intumescent coating / fireproofing outline -->
+    <rect x="385" y="-35" width="30" height="115" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="4 2"/>
+
+    <!-- Roof Structure (Non-combustible) -->
+    <polygon points="230,-30 570,-30 400,-100" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+    <line x1="280" y1="-30" x2="400" y2="-80" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="520" y1="-30" x2="400" y2="-80" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+    <!-- Combustion Test Simulation (Visualizing protection) -->
+    <!-- Fire attempting to penetrate from outside -->
+    <path d="M 180,180 Q 220,150 200,120 T 230,80" stroke="rgba(255,100,100,0.5)" stroke-width="2" fill="none"/>
+    <path d="M 190,190 Q 230,160 210,130 T 240,90" stroke="rgba(255,100,100,0.3)" stroke-width="2" fill="none"/>
+    <!-- Deflection lines (shielding) -->
+    <path d="M 245,70 A 20 20 0 0 1 245,190" stroke="#C9A84C" stroke-width="2" fill="none"/>
+
+    <!-- Annotation Labels -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#C9A84C" font-weight="600" letter-spacing="2">
+      <line x1="330" y1="-80" x2="230" y2="-80" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="220" y="-76" text-anchor="end">NON-COMBUSTIBLE ROOF</text>
+
+      <line x1="415" y1="-10" x2="480" y2="-10" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <circle cx="415" cy="-10" r="2.5" fill="#C9A84C"/>
+      <text x="490" y="-6">FIREPROOFED STEEL</text>
+
+      <line x1="280" y1="90" x2="220" y2="90" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="210" y="94" text-anchor="end">FIRE-RATED ASSEMBLY</text>
+      
+      <line x1="400" y1="250" x2="400" y2="280" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+      <text x="400" y="295" text-anchor="middle">CERTIFIED FIRE DOOR</text>
+    </g>
+  </g>
+
+  <!-- Lesson Box -->
+  <rect x="80" y="1020" width="920" height="150" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1080" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="2" font-weight="600">THE LESSON</text>
+  <text x="120" y="1120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    Safe building materials and fire-compliant construction
+  </text>
+  <text x="120" y="1155" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    standards should never be compromised for cost or speed.
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">05 / 07</text>
+</svg>
+
+
+
+
+
+
+

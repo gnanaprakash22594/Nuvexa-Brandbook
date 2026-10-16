@@ -1,0 +1,67 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="230" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">FINAL TAKEAWAY</text>
+
+  <!-- Main Headline -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="72" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="320">THE CLASSROOM</tspan>
+    <tspan x="80" y="400">IS THE MOST</tspan>
+    <tspan x="80" y="480">IMPORTANT</tspan>
+    <tspan x="80" y="560"><tspan fill="#C9A84C">INFRASTRUCTURE</tspan></tspan>
+    <tspan x="80" y="640" fill="#C9A84C">A SCHOOL BUILDS.</tspan>
+  </text>
+
+  <!-- Accent Line -->
+  <rect x="80" y="670" width="80" height="5" rx="2" fill="#C9A84C"/>
+
+  <text x="80" y="730" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Better classrooms don't happen by chance.</tspan>
+    <tspan x="80" dy="42">They are planned, tested, and designed with</tspan>
+    <tspan x="80" dy="42">learning in mind. Because every design decision</tspan>
+    <tspan x="80" dy="42">shapes the student experience.</tspan>
+  </text>
+
+  <!-- Call to Action Box -->
+  <g transform="translate(80, 910)">
+    <rect width="920" height="240" rx="12" fill="rgba(201,168,76,0.05)" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="60" y="70" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="#FFFFFF">
+      At <tspan font-weight="700">NUVEXA</tspan>, we help institutions design classrooms
+    </text>
+    <text x="60" y="115" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="#FFFFFF">
+      backed by building science - not just aesthetics.
+    </text>
+    <text x="60" y="160" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="#FFFFFF">
+      Every decision is measurable. Every outcome is intentional.
+    </text>
+    <text x="60" y="215" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" letter-spacing="3" font-weight="600">CAMPUS TRANSFORMATION PARTNERS</text>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">08 / 08</text>
+</svg>
+
+
+
+
+
+
+
+

@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">LESSON 05</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">GREAT CAMPUSES ARE</tspan>
+    <tspan x="80" y="385">BUILT AROUND <tspan fill="#C9A84C">PEOPLE.</tspan></tspan>
+  </text>
+
+  <text x="80" y="480" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">The best educational environments are designed around</tspan>
+    <tspan x="80" dy="42">how students learn, teachers teach, and communities</tspan>
+    <tspan x="80" dy="42">interact - not simply around available land or</tspan>
+    <tspan x="80" dy="42">building capacity.</tspan>
+  </text>
+
+  <text x="80" y="720" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">INFRASTRUCTURE SHOULD SUPPORT:</text>
+
+  <!-- Illustration: Architectural Masterplan Blueprint -->
+  <g transform="translate(100, 780)" fill="none">
+    
+    <!-- Central Infrastructure Axis -->
+    <line x1="0" y1="180" x2="880" y2="180" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="0" y1="185" x2="880" y2="185" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+    
+    <!-- Axis Annotations -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">
+      <!-- Annotations removed per request -->
+      
+      <text x="440" y="205" text-anchor="middle" fill="#C9A84C">SHARED INFRASTRUCTURE CORE</text>
+    </g>
+
+    <!-- Axis Nodes -->
+    <circle cx="150" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="295" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="440" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="585" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="730" cy="180" r="4" fill="#C9A84C"/>
+
+    <!-- Pod 1: Collaboration (Top) -->
+    <g transform="translate(150, 80)">
+      <!-- Connector -->
+      <line x1="0" y1="100" x2="0" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="40" r="3" fill="#FFFFFF"/>
+      
+      <!-- Architectural Layout: Meeting Pod -->
+      <rect x="-40" y="-40" width="80" height="80" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <!-- Inner table -->
+      <rect x="-20" y="-15" width="40" height="30" rx="4" stroke="#C9A84C" stroke-width="1.5"/>
+      <!-- Chairs -->
+      <rect x="-10" y="-22" width="20" height="4" fill="rgba(255,255,255,0.4)"/>
+      <rect x="-10" y="18" width="20" height="4" fill="rgba(255,255,255,0.4)"/>
+      <rect x="-27" y="-5" width="4" height="10" fill="rgba(255,255,255,0.4)"/>
+      <rect x="23" y="-5" width="4" height="10" fill="rgba(255,255,255,0.4)"/>
+      
+      <!-- Label -->
+      <text x="0" y="-55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">COLLABORATION</text>
+    </g>
+
+    <!-- Pod 2: Community (Bottom) -->
+    <g transform="translate(295, 280)">
+      <!-- Connector -->
+      <line x1="0" y1="-100" x2="0" y2="-40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="-40" r="3" fill="#FFFFFF"/>
+      
+      <!-- Architectural Layout: Amphitheater -->
+      <circle cx="0" cy="0" r="40" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="25" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="10" stroke="#C9A84C" stroke-width="2"/>
+      <!-- Radial stairs/aisles -->
+      <line x1="-28" y1="-28" x2="-7" y2="-7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <line x1="28" y1="28" x2="7" y2="7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <line x1="-28" y1="28" x2="-7" y2="7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <line x1="28" y1="-28" x2="7" y2="-7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      
+      <!-- Label -->
+      <text x="0" y="65" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">COMMUNITY</text>
+    </g>
+
+    <!-- Pod 3: Well-being (Top) -->
+    <g transform="translate(440, 80)">
+      <!-- Connector -->
+      <line x1="0" y1="100" x2="0" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="40" r="3" fill="#FFFFFF"/>
+      
+      <!-- Architectural Layout: Garden Atrium -->
+      <polygon points="0,-40 40,0 0,40 -40,0" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <!-- Trees / organic elements -->
+      <circle cx="-10" cy="-10" r="8" stroke="#C9A84C" stroke-width="1.5"/>
+      <circle cx="15" cy="5" r="12" stroke="#C9A84C" stroke-width="1.5"/>
+      <circle cx="-5" cy="15" r="6" stroke="#C9A84C" stroke-width="1.5"/>
+      <!-- Pathways -->
+      <path d="M -20 20 Q 0 0 20 -20" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      
+      <!-- Label -->
+      <text x="0" y="-55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">WELL-BEING</text>
+    </g>
+
+    <!-- Pod 4: Adaptability (Bottom) -->
+    <g transform="translate(585, 280)">
+      <!-- Connector -->
+      <line x1="0" y1="-100" x2="0" y2="-40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="-40" r="3" fill="#FFFFFF"/>
+      
+      <!-- Architectural Layout: Modular Grid -->
+      <rect x="-40" y="-40" width="80" height="80" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <!-- Grid -->
+      <line x1="-20" y1="-40" x2="-20" y2="40" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="0" y1="-40" x2="0" y2="40" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="20" y1="-40" x2="20" y2="40" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="-40" y1="-20" x2="40" y2="-20" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="-40" y1="0" x2="40" y2="0" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="-40" y1="20" x2="40" y2="20" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2"/>
+      
+      <!-- Moveable partitions -->
+      <line x1="-20" y1="-20" x2="20" y2="-20" stroke="#C9A84C" stroke-width="2"/>
+      <line x1="20" y1="-20" x2="20" y2="20" stroke="#C9A84C" stroke-width="2"/>
+      <line x1="-20" y1="20" x2="-20" y2="0" stroke="#C9A84C" stroke-width="2"/>
+      
+      <!-- Label -->
+      <text x="0" y="65" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">ADAPTABILITY</text>
+    </g>
+
+    <!-- Pod 5: Innovation (Top) -->
+    <g transform="translate(730, 80)">
+      <!-- Connector -->
+      <line x1="0" y1="100" x2="0" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="40" r="3" fill="#FFFFFF"/>
+      
+      <!-- Architectural Layout: Tech Lab -->
+      <polygon points="-30,-40 30,-40 45,0 30,40 -30,40 -45,0" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <!-- Core processor / lab table -->
+      <circle cx="0" cy="0" r="12" stroke="#C9A84C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#C9A84C"/>
+      <!-- Data arcs -->
+      <path d="M -15 -15 A 25 25 0 0 1 15 -15" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+      <path d="M -22 -22 A 35 35 0 0 1 22 -22" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+      <!-- Workstations -->
+      <rect x="-35" y="-10" width="8" height="20" fill="rgba(255,255,255,0.3)"/>
+      <rect x="27" y="-10" width="8" height="20" fill="rgba(255,255,255,0.3)"/>
+      
+      <!-- Label -->
+      <text x="0" y="-55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">INNOVATION</text>
+    </g>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">07 / 08</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">NON-NEGOTIABLES</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">EVERY CAMPUS</tspan>
+    <tspan x="80" y="385"><tspan fill="#C9A84C">SHOULD HAVE.</tspan></tspan>
+  </text>
+
+  <!-- List Cards -->
+  <!-- Row 1 -->
+  <g transform="translate(80, 500)">
+    <rect width="445" height="120" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF">01</text>
+    <text x="30" y="95" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Fire safety audits</text>
+  </g>
+
+  <g transform="translate(545, 500)">
+    <rect width="445" height="120" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF">02</text>
+    <text x="30" y="95" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Multiple evacuation routes</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(80, 650)">
+    <rect width="445" height="120" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF">03</text>
+    <text x="30" y="95" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Fire rated construction</text>
+  </g>
+
+  <g transform="translate(545, 650)">
+    <rect width="445" height="120" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF">04</text>
+    <text x="30" y="95" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Safe electrical systems</text>
+  </g>
+
+  <!-- Row 3 (Centered) -->
+  <g transform="translate(312.5, 800)">
+    <rect width="445" height="120" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="30" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF">05</text>
+    <text x="30" y="95" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#C9A84C">Emergency preparedness plans</text>
+  </g>
+
+  <!-- Graphic Accents -->
+  <g transform="translate(540, 1050)" fill="none">
+    <circle cx="0" cy="0" r="100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="60" stroke="rgba(201,168,76,0.1)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="20" stroke="#C9A84C" stroke-width="1.5"/>
+    <!-- Checkmark inside -->
+    <path d="M-6,0 L-2,4 L8,-5" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="-100" y1="0" x2="-30" y2="0" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <line x1="30" y1="0" x2="100" y2="0" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">06 / 07</text>
+</svg>
+
+
+
+
+
+
+

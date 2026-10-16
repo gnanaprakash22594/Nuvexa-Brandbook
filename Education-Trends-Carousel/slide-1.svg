@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- ===== HEADER ===== -->
+  <!-- NUVEXA Logo (embedded PNG) -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- ===== CONTENT ===== -->
+  <text x="80" y="230" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">EDUCATION TRENDS · 2026</text>
+
+  <!-- Main Headline -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="72" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="320">6 EDUCATION</tspan>
+    <tspan x="80" y="400">INFRASTRUCTURE</tspan>
+    <tspan x="80" y="480">TRENDS EVERY</tspan>
+    <tspan x="80" y="560">INSTITUTION</tspan>
+    <tspan x="80" y="640" fill="#C9A84C">SHOULD PLAN FOR.</tspan>
+  </text>
+
+  <!-- Accent Line -->
+  <rect x="80" y="670" width="80" height="5" rx="2" fill="#C9A84C"/>
+
+  <!-- Subtitle -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="730">The campuses built over the next five years</tspan>
+    <tspan x="80" y="770">will look very different from the campuses</tspan>
+    <tspan x="80" y="810">built over the last twenty.</tspan>
+  </text>
+
+  <!-- ===== ILLUSTRATION: Clean Campus Buildings ===== -->
+  <g transform="translate(140, 870)" fill="none">
+    <!-- Ground Line -->
+    <line x1="0" y1="330" x2="800" y2="330" stroke="#C9A84C" stroke-width="2"/>
+
+    <!-- Left Building with pitched roof -->
+    <rect x="40" y="170" width="180" height="160" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <polygon points="40,170 130,100 220,170" stroke="#C9A84C" stroke-width="2"/>
+    <!-- Flag on roof -->
+    <line x1="130" y1="100" x2="130" y2="70" stroke="#C9A84C" stroke-width="2"/>
+    <polygon points="130,70 155,78 130,86" fill="#C9A84C" stroke="none"/>
+    <!-- Windows Row 1 -->
+    <rect x="65" y="195" width="35" height="28" rx="3" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="115" y="195" width="35" height="28" rx="3" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="165" y="195" width="35" height="28" rx="3" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Windows Row 2 -->
+    <rect x="65" y="245" width="35" height="28" rx="3" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="115" y="245" width="35" height="28" rx="3" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="165" y="245" width="35" height="28" rx="3" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Door -->
+    <rect x="110" y="295" width="40" height="35" rx="3" stroke="#C9A84C" stroke-width="2"/>
+
+    <!-- Center Building (main, taller) -->
+    <rect x="280" y="110" width="240" height="220" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <!-- Horizontal floor lines -->
+    <line x1="280" y1="165" x2="520" y2="165" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <line x1="280" y1="220" x2="520" y2="220" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <line x1="280" y1="275" x2="520" y2="275" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <!-- Windows top row -->
+    <rect x="300" y="125" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="345" y="125" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="390" y="125" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="435" y="125" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="480" y="125" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Windows middle row -->
+    <rect x="300" y="180" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="345" y="180" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="390" y="180" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="435" y="180" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="480" y="180" width="30" height="25" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Entrance -->
+    <rect x="370" y="288" width="60" height="42" rx="4" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="400" y1="288" x2="400" y2="330" stroke="#C9A84C" stroke-width="1.5"/>
+
+    <!-- Magnifier with checkmark (centered) -->
+    <circle cx="400" cy="230" r="50" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="435" y1="265" x2="465" y2="295" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <polyline points="378,230 393,248 425,212" stroke="#C9A84C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right Tower -->
+    <rect x="580" y="130" width="140" height="200" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <!-- Windows (3x3 grid, centered: 15px margin each side, 10px gaps, 30px wide windows) -->
+    <!-- Row 1 -->
+    <rect x="595" y="160" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="635" y="160" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="675" y="160" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Row 2 -->
+    <rect x="595" y="200" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="635" y="200" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="675" y="200" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Row 3 -->
+    <rect x="595" y="240" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="635" y="240" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="675" y="240" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+    <!-- Wi-Fi Signal on center building -->
+    <circle cx="400" cy="90" r="3" fill="#C9A84C"/>
+    <path d="M 389 82 A 15 15 0 0 1 411 82" stroke="#C9A84C" stroke-width="2" fill="none"/>
+    <path d="M 382 75 A 25 25 0 0 1 418 75" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+    <path d="M 375 68 A 35 35 0 0 1 425 68" stroke="#C9A84C" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- ===== FOOTER ===== -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">01 / 08</text>
+</svg>

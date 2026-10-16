@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">THE SHIFT</text>
+
+  <!-- Headline -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">FROM REACTIVE</tspan>
+    <tspan x="80" y="385">TO</tspan>
+    <tspan x="80" y="460" fill="#C9A84C">RESILIENT.</tspan>
+  </text>
+
+  <!-- Body Text -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="530">Future-ready campuses don't just react to</tspan>
+    <tspan x="80" y="570">weather; they engineer for it.</tspan>
+  </text>
+
+  <!-- Section Header -->
+  <text x="80" y="660" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">A MODERN CAMPUS NEEDS:</text>
+
+  <!-- Numbered Steps (matching Education Trends Slide 5 pattern) -->
+  <!-- 01: Robust Drainage -->
+  <g transform="translate(80, 700)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">01</text>
+    <text x="82" y="30" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">ROBUST DRAINAGE</text>
+    <text x="82" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">High-capacity stormwater management.</text>
+  </g>
+
+  <!-- 02: Smart Facility Management -->
+  <g transform="translate(80, 790)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">02</text>
+    <text x="82" y="30" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">SMART FACILITY MANAGEMENT</text>
+    <text x="82" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Real-time monitoring and predictive maintenance.</text>
+  </g>
+
+  <!-- 03: Digital Continuity -->
+  <g transform="translate(80, 880)">
+    <rect width="58" height="58" rx="10" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="29" y="42" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="24" fill="#C9A84C" text-anchor="middle">03</text>
+    <text x="82" y="30" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">ZERO-DOWNTIME DIGITAL</text>
+    <text x="82" y="55" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Seamless hybrid-learning on red alert days.</text>
+  </g>
+
+  <!-- Nuvexa Insight Box -->
+  <rect x="80" y="1030" width="920" height="145" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1075" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" letter-spacing="2" font-weight="600">NUVEXA INSIGHT</text>
+  <text x="120" y="1112" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#FFFFFF">A modern campus needs robust drainage, smart facility</text>
+  <text x="120" y="1145" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#FFFFFF">management, and zero-downtime digital continuity.</text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">04 / 08</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="goldGradBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#D4B85A"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <!-- Tag Badge -->
+  <g transform="translate(80, 190)">
+    <rect width="460" height="42" rx="8" fill="none" stroke="#C9A84C" stroke-width="1"/>
+    <text x="25" y="28" font-family="'Courier New', 'SF Mono', monospace" font-size="15" fill="#C9A84C" letter-spacing="3" font-weight="600">ONE TEAM  ·  END-TO-END SOLUTIONS</text>
+  </g>
+
+  <!-- Main Headline (4 lines, 75px spacing) -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="320">LET'S</tspan>
+    <tspan x="80" y="395">WEATHERPROOF</tspan>
+    <tspan x="80" y="470">YOUR</tspan>
+    <tspan x="80" y="545" fill="#C9A84C">INSTITUTION.</tspan>
+  </text>
+
+  <!-- Body Text -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="620">Partner with Nuvexa for an end-to-end</tspan>
+    <tspan x="80" y="660">Campus Climate Resilience Assessment.</tspan>
+  </text>
+
+  <!-- Service Icon Cards (3 columns) -->
+  <!-- Card 1: Climate Audit -->
+  <g transform="translate(80, 720)">
+    <rect width="290" height="145" rx="12" fill="none" stroke="#C9A84C" stroke-width="1"/>
+    <g transform="translate(125, 14)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="6" width="32" height="40" rx="3"/>
+      <rect x="14" y="3" width="12" height="6" rx="2"/>
+      <line x1="13" y1="20" x2="27" y2="20"/>
+      <line x1="13" y1="28" x2="27" y2="28"/>
+      <line x1="13" y1="36" x2="22" y2="36"/>
+    </g>
+    <text x="145" y="100" font-family="'Courier New', 'SF Mono', monospace" font-size="13" fill="#FFFFFF" letter-spacing="1.5" font-weight="600" text-anchor="middle">CLIMATE</text>
+    <text x="145" y="120" font-family="'Courier New', 'SF Mono', monospace" font-size="13" fill="#FFFFFF" letter-spacing="1.5" font-weight="600" text-anchor="middle">AUDIT</text>
+  </g>
+
+  <!-- Card 2: Resilience Engineering -->
+  <g transform="translate(395, 720)">
+    <rect width="290" height="145" rx="12" fill="none" stroke="#C9A84C" stroke-width="1"/>
+    <g transform="translate(125, 14)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 20 5 L 36 12 L 36 26 Q 36 38 20 44 Q 4 38 4 26 L 4 12 Z"/>
+      <polyline points="14,24 19,30 28,18"/>
+    </g>
+    <text x="145" y="100" font-family="'Courier New', 'SF Mono', monospace" font-size="13" fill="#FFFFFF" letter-spacing="1.5" font-weight="600" text-anchor="middle">RESILIENCE</text>
+    <text x="145" y="120" font-family="'Courier New', 'SF Mono', monospace" font-size="13" fill="#FFFFFF" letter-spacing="1.5" font-weight="600" text-anchor="middle">ENGINEERING</text>
+  </g>
+
+  <!-- Card 3: Digital Continuity -->
+  <g transform="translate(710, 720)">
+    <rect width="290" height="145" rx="12" fill="none" stroke="#C9A84C" stroke-width="1"/>
+    <g transform="translate(125, 14)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 12 30 Q 4 30 4 22 Q 4 16 10 14 Q 10 6 18 6 Q 24 6 28 10 Q 30 8 34 10 Q 38 12 38 18 Q 38 22 34 24 L 34 30 Z"/>
+      <polyline points="15,22 20,28 30,16"/>
+    </g>
+    <text x="145" y="100" font-family="'Courier New', 'SF Mono', monospace" font-size="13" fill="#FFFFFF" letter-spacing="1.5" font-weight="600" text-anchor="middle">DIGITAL</text>
+    <text x="145" y="120" font-family="'Courier New', 'SF Mono', monospace" font-size="13" fill="#FFFFFF" letter-spacing="1.5" font-weight="600" text-anchor="middle">CONTINUITY</text>
+  </g>
+
+  <!-- CTA Button -->
+  <rect x="80" y="920" width="920" height="80" rx="12" fill="url(#goldGradBtn)"/>
+  <text x="540" y="972" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#0D1B2A" text-anchor="middle" letter-spacing="1">BOOK YOUR CAMPUS CLIMATE ASSESSMENT</text>
+
+  <!-- Footer Question -->
+  <text x="540" y="1070" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-style="italic">Which of these upgrades is your institution planning for?</text>
+
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">08 / 08</text>
+</svg>

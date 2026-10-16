@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">THE COST OF INACTION</text>
+
+  <!-- Headline (3 lines) -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">CLOSURES COST</tspan>
+    <tspan x="80" y="385">MORE THAN</tspan>
+    <tspan x="80" y="460" fill="#C9A84C">JUST TIME.</tspan>
+  </text>
+
+  <!-- Body Text -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="530">From highways caving in to unpredictable</tspan>
+    <tspan x="80" y="570">transport delays, reactive infrastructure</tspan>
+    <tspan x="80" y="610">management destroys academic continuity</tspan>
+    <tspan x="80" y="650">and shatters parental trust.</tspan>
+  </text>
+
+  <!-- Disruption Chain (SVG line-art icons, no emojis) -->
+  <g transform="translate(80, 730)" fill="none">
+
+    <!-- Step 1: Extreme Weather -->
+    <g transform="translate(0, 0)">
+      <rect width="200" height="190" rx="12" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+      <!-- Cloud + Lightning Icon -->
+      <g transform="translate(100, 55)" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M -20 0 Q -28 0 -28 -8 Q -28 -14 -22 -16 Q -22 -24 -14 -24 Q -8 -24 -4 -20 Q -2 -22 2 -20 Q 6 -18 6 -12 Q 6 -8 2 -6 L 2 0 Z"/>
+        <polyline points="-4,4 -8,14 -2,14 -6,24" fill="none"/>
+      </g>
+      <text x="100" y="120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">EXTREME</text>
+      <text x="100" y="145" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">WEATHER</text>
+      <text x="100" y="175" font-family="'Courier New', 'SF Mono', monospace" font-size="11" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="1">264.8mm IN 6 DAYS</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <line x1="210" y1="95" x2="240" y2="95" stroke="#C9A84C" stroke-width="2"/>
+    <polygon points="240,95 232,89 232,101" fill="#C9A84C" stroke="none"/>
+
+    <!-- Step 2: Infrastructure Damage -->
+    <g transform="translate(250, 0)">
+      <rect width="200" height="190" rx="12" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+      <!-- Broken Road Icon -->
+      <g transform="translate(100, 55)" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="-20" y1="0" x2="-5" y2="0"/>
+        <line x1="5" y1="0" x2="20" y2="0"/>
+        <polyline points="-5,0 -2,-12 2,12 5,0" fill="none"/>
+        <line x1="-15" y1="-15" x2="15" y2="-15"/>
+        <line x1="-15" y1="15" x2="15" y2="15"/>
+      </g>
+      <text x="100" y="120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">INFRASTRUCTURE</text>
+      <text x="100" y="145" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">DAMAGE</text>
+      <text x="100" y="175" font-family="'Courier New', 'SF Mono', monospace" font-size="11" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="1">ROADS · DRAINS · POWER</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <line x1="460" y1="95" x2="490" y2="95" stroke="#C9A84C" stroke-width="2"/>
+    <polygon points="490,95 482,89 482,101" fill="#C9A84C" stroke="none"/>
+
+    <!-- Step 3: School Closure -->
+    <g transform="translate(500, 0)">
+      <rect width="200" height="190" rx="12" stroke="#C9A84C" stroke-width="1.5"/>
+      <!-- X in Circle Icon -->
+      <g transform="translate(100, 55)" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="0" cy="0" r="16"/>
+        <line x1="-8" y1="-8" x2="8" y2="8"/>
+        <line x1="8" y1="-8" x2="-8" y2="8"/>
+      </g>
+      <text x="100" y="120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">SCHOOL</text>
+      <text x="100" y="145" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">CLOSURE</text>
+      <text x="100" y="175" font-family="'Courier New', 'SF Mono', monospace" font-size="11" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="1">MASS SHUTDOWNS</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <line x1="710" y1="95" x2="740" y2="95" stroke="#C9A84C" stroke-width="2"/>
+    <polygon points="740,95 732,89 732,101" fill="#C9A84C" stroke="none"/>
+
+    <!-- Step 4: Trust Erosion -->
+    <g transform="translate(750, 0)">
+      <rect width="170" height="190" rx="12" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+      <!-- Downward Trend Icon -->
+      <g transform="translate(85, 50)" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="-16" y1="-16" x2="-16" y2="16"/>
+        <line x1="-16" y1="16" x2="16" y2="16"/>
+        <line x1="-8" y1="-8" x2="8" y2="8"/>
+        <polyline points="2,8 8,8 8,2" fill="none"/>
+      </g>
+      <text x="85" y="120" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">TRUST</text>
+      <text x="85" y="145" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">EROSION</text>
+      <text x="85" y="175" font-family="'Courier New', 'SF Mono', monospace" font-size="11" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="1">ENROLLMENT ↓</text>
+    </g>
+  </g>
+
+  <!-- Nuvexa Insight Box -->
+  <rect x="80" y="1030" width="920" height="145" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1075" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" letter-spacing="2" font-weight="600">THE REAL COST</text>
+  <text x="120" y="1112" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#FFFFFF">Every unplanned closure day costs academic hours, parental</text>
+  <text x="120" y="1145" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="22" fill="#FFFFFF">confidence, and long-term institutional reputation.</text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">03 / 08</text>
+</svg>

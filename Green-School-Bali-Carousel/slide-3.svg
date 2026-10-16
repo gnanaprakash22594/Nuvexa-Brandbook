@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">LESSON 01</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">LEARNING DOESN'T</tspan>
+    <tspan x="80" y="385">HAVE TO STAY INSIDE</tspan>
+    <tspan x="80" y="460"><tspan fill="#C9A84C">FOUR WALLS.</tspan></tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Green School replaces conventional enclosed</tspan>
+    <tspan x="80" dy="42">classrooms with open, flexible learning</tspan>
+    <tspan x="80" dy="42">environments that encourage collaboration,</tspan>
+    <tspan x="80" dy="42">creativity, and student engagement.</tspan>
+  </text>
+
+  <!-- Illustration: Clean Minimalist Architectural Layout -->
+  <g transform="translate(140, 720)" fill="none">
+    
+    <!-- Engineering Grid -->
+    <g stroke="rgba(255,255,255,0.03)" stroke-width="1">
+      <line x1="0" y1="20" x2="800" y2="20"/>
+      <line x1="0" y1="60" x2="800" y2="60"/>
+      <line x1="0" y1="100" x2="800" y2="100"/>
+      <line x1="0" y1="140" x2="800" y2="140"/>
+      <line x1="0" y1="180" x2="800" y2="180"/>
+      <line x1="0" y1="220" x2="800" y2="220"/>
+      
+      <line x1="220" y1="-20" x2="220" y2="220"/>
+      <line x1="400" y1="-20" x2="400" y2="220"/>
+      <line x1="580" y1="-20" x2="580" y2="220"/>
+    </g>
+
+    <!-- "Removed" Walls (Left and Right Boundaries) -->
+    <g stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="6 6">
+      <rect x="35" y="40" width="100" height="180" fill="none"/>
+      <rect x="665" y="40" width="100" height="180" fill="none"/>
+      <!-- Arrows pointing outwards -->
+      <line x1="30" y1="130" x2="10" y2="130"/>
+      <polygon points="10,130 15,125 15,135" fill="rgba(255,255,255,0.3)" stroke="none"/>
+      
+      <line x1="770" y1="130" x2="790" y2="130"/>
+      <polygon points="790,130 785,125 785,135" fill="rgba(255,255,255,0.3)" stroke="none"/>
+    </g>
+
+    <!-- Structural Columns -->
+    <line x1="220" y1="220" x2="220" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+    <line x1="320" y1="220" x2="320" y2="20" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="480" y1="220" x2="480" y2="20" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="580" y1="220" x2="580" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+
+    <!-- Roof Structure (1-point perspective) -->
+    <!-- Base front edge (Thick gold) -->
+    <line x1="160" y1="20" x2="640" y2="20" stroke="#C9A84C" stroke-width="2"/>
+    <!-- Middle edge (Thin gold) -->
+    <line x1="180" y1="10" x2="620" y2="10" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+    <!-- Top/Back edge (Short thin gold) -->
+    <line x1="260" y1="-10" x2="540" y2="-10" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+    
+    <!-- Diagonal Receding Roof Lines -->
+    <line x1="180" y1="10" x2="260" y2="-10" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+    <line x1="620" y1="10" x2="540" y2="-10" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+    
+    <!-- Inner receding lines (matching columns) -->
+    <line x1="320" y1="20" x2="360" y2="-10" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+    <line x1="480" y1="20" x2="440" y2="-10" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+
+    <!-- Base / Ground -->
+    <line x1="-30" y1="220" x2="830" y2="220" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="-30" y1="225" x2="830" y2="225" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+    
+    <!-- Foundation Nodes -->
+    <circle cx="220" cy="220" r="3" fill="#C9A84C"/>
+    <circle cx="320" cy="220" r="2" fill="#FFFFFF"/>
+    <circle cx="480" cy="220" r="2" fill="#FFFFFF"/>
+    <circle cx="580" cy="220" r="3" fill="#C9A84C"/>
+    
+    <!-- Open Layout Connectivity Map (Inside the space) -->
+    <!-- Central Hub -->
+    <circle cx="400" cy="140" r="25" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <circle cx="400" cy="140" r="15" fill="rgba(201,168,76,0.05)" stroke="rgba(201,168,76,0.5)" stroke-width="1"/>
+    <circle cx="400" cy="140" r="4" fill="#C9A84C"/>
+
+    <!-- Collaborative Nodes -->
+    <circle cx="270" cy="100" r="15" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <circle cx="270" cy="100" r="3" fill="#FFFFFF"/>
+    
+    <circle cx="500" cy="170" r="15" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <circle cx="500" cy="170" r="3" fill="#FFFFFF"/>
+
+    <circle cx="320" cy="180" r="10" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <circle cx="320" cy="180" r="2" fill="#FFFFFF"/>
+
+    <circle cx="470" cy="80" r="12" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <circle cx="470" cy="80" r="2" fill="#FFFFFF"/>
+
+    <!-- Networking / Collaboration Lines -->
+    <g stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="2 4">
+      <line x1="400" y1="140" x2="270" y2="100"/>
+      <line x1="400" y1="140" x2="500" y2="170"/>
+      <line x1="400" y1="140" x2="320" y2="180"/>
+      <line x1="400" y1="140" x2="470" y2="80"/>
+      <!-- Inter-node connections -->
+      <line x1="270" y1="100" x2="320" y2="180"/>
+      <line x1="500" y1="170" x2="470" y2="80"/>
+    </g>
+  </g>
+
+  <!-- Why it matters Box -->
+  <rect x="80" y="970" width="920" height="150" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="120" y="1030" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="2" font-weight="600">WHY IT MATTERS</text>
+  <text x="120" y="1070" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    Students learn better in spaces that promote interaction,
+  </text>
+  <text x="120" y="1105" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="400" font-size="24" fill="#FFFFFF">
+    movement, and connection with their surroundings.
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">03 / 08</text>
+</svg>

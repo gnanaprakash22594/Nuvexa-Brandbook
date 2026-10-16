@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">TREND 05</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="72" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="315">FLEXIBLE</tspan>
+    <tspan x="80" y="395" fill="#C9A84C">CLASSROOMS.</tspan>
+  </text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="460">One classroom.</tspan>
+    <tspan x="80" y="500">Multiple teaching styles.</tspan>
+  </text>
+
+  <text x="80" y="575" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="600" font-size="22" fill="#FFFFFF" letter-spacing="1">Today's learning spaces are designed for:</text>
+
+  <!-- Checklist Items -->
+  <!-- Item 1: Group Discussions -->
+  <g transform="translate(80, 615)">
+    <rect width="70" height="70" rx="12" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <g transform="translate(14, 14)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Left person (head + shoulders) -->
+      <circle cx="12" cy="14" r="5"/>
+      <path d="M 3 34 C 3 26 12 24 12 24 C 12 24 21 26 21 34"/>
+      <!-- Right person (head + shoulders) -->
+      <circle cx="32" cy="14" r="5"/>
+      <path d="M 23 34 C 23 26 32 24 32 24 C 32 24 41 26 41 34"/>
+      <!-- Speech bubble -->
+      <rect x="15" y="0" width="14" height="10" rx="3"/>
+      <polyline points="19,10 22,14 25,10"/>
+    </g>
+    <text x="90" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">Group Discussions</text>
+    <text x="90" y="58" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Round-table and seminar configurations.</text>
+  </g>
+
+  <!-- Item 2: Workshops -->
+  <g transform="translate(80, 710)">
+    <rect width="70" height="70" rx="12" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <g transform="translate(14, 14)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Wrench icon -->
+      <path d="M 8 32 L 26 14"/>
+      <circle cx="30" cy="10" r="8"/>
+      <circle cx="30" cy="10" r="3"/>
+      <rect x="3" y="30" width="8" height="8" rx="1" transform="rotate(-45,7,34)"/>
+    </g>
+    <text x="90" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">Workshops</text>
+    <text x="90" y="58" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Hands-on, activity-based arrangements.</text>
+  </g>
+
+  <!-- Item 3: Lectures -->
+  <g transform="translate(80, 805)">
+    <rect width="70" height="70" rx="12" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <g transform="translate(14, 12)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Podium / presentation -->
+      <rect x="8" y="16" width="26" height="24" rx="3"/>
+      <line x1="15" y1="24" x2="27" y2="24"/>
+      <line x1="15" y1="30" x2="24" y2="30"/>
+      <!-- Person head -->
+      <circle cx="21" cy="8" r="6"/>
+    </g>
+    <text x="90" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">Lectures</text>
+    <text x="90" y="58" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Traditional front-facing, when needed.</text>
+  </g>
+
+  <!-- Item 4: Project-Based Learning -->
+  <g transform="translate(80, 900)">
+    <rect width="70" height="70" rx="12" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <g transform="translate(14, 12)" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Clipboard with checkmark -->
+      <rect x="6" y="5" width="28" height="35" rx="3"/>
+      <rect x="14" y="2" width="12" height="6" rx="2"/>
+      <polyline points="14,24 19,30 28,18" stroke-width="2.5"/>
+    </g>
+    <text x="90" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="700" font-size="26" fill="#FFFFFF">Project-Based Learning</text>
+    <text x="90" y="58" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="20" fill="rgba(255,255,255,0.55)">Collaborative, maker-friendly setups.</text>
+  </g>
+
+  <!-- Gold Accent Box -->
+  <rect x="80" y="1040" width="920" height="100" rx="8" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="1"/>
+  <text x="540" y="1078" font-family="'Courier New', 'SF Mono', monospace" font-size="17" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5" font-weight="600">MOVABLE FURNITURE AND ADAPTABLE LAYOUTS</text>
+  <text x="540" y="1110" font-family="'Courier New', 'SF Mono', monospace" font-size="17" fill="#C9A84C" text-anchor="middle" letter-spacing="1.5" font-weight="600">INSTEAD OF FIXED ROWS.</text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">06 / 08</text>
+</svg>

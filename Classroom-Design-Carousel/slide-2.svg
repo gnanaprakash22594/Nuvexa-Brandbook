@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">THE PROBLEM</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">MOST CLASSROOMS</tspan>
+    <tspan x="80" y="385">FIGHT AGAINST</tspan>
+    <tspan x="80" y="460"><tspan fill="#C9A84C">THE CLIMATE.</tspan></tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Indian classrooms regularly exceed 35°C by</tspan>
+    <tspan x="80" dy="42">midday. Direct sunlight creates glare on boards,</tspan>
+    <tspan x="80" dy="42">screens overheat, and students lose focus long</tspan>
+    <tspan x="80" dy="42">before the school day ends.</tspan>
+  </text>
+
+  <!-- Key Highlights Cards -->
+  <text x="80" y="760" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">WHAT GOES WRONG</text>
+
+  <!-- Highlight 1 -->
+  <g transform="translate(80, 800)">
+    <rect width="430" height="110" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="35" cy="55" r="5" fill="#C9A84C"/>
+    <text x="60" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="20" fill="#FFFFFF">Unchecked heat</text>
+    <text x="60" y="75" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">buildup by midday</text>
+  </g>
+
+  <!-- Highlight 2 -->
+  <g transform="translate(530, 800)">
+    <rect width="430" height="110" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="35" cy="55" r="5" fill="#C9A84C"/>
+    <text x="60" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="20" fill="#FFFFFF">Harsh glare on</text>
+    <text x="60" y="75" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">boards and screens</text>
+  </g>
+
+  <!-- Highlight 3 -->
+  <g transform="translate(80, 930)">
+    <rect width="430" height="110" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="35" cy="55" r="5" fill="#C9A84C"/>
+    <text x="60" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="20" fill="#FFFFFF">Uneven daylight</text>
+    <text x="60" y="75" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">distribution across rows</text>
+  </g>
+
+  <!-- Highlight 4 -->
+  <g transform="translate(530, 930)">
+    <rect width="430" height="110" rx="12" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="35" cy="55" r="5" fill="#C9A84C"/>
+    <text x="60" y="50" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="20" fill="#FFFFFF">Student fatigue</text>
+    <text x="60" y="75" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="18" fill="rgba(255,255,255,0.55)">and attention drop</text>
+  </g>
+
+  <!-- Nuvexa Insight -->
+  <g transform="translate(80, 1080)">
+    <rect width="200" height="32" rx="6" fill="rgba(201,168,76,0.12)" stroke="#C9A84C" stroke-width="0.5"/>
+    <text x="18" y="22" font-family="'Courier New', 'SF Mono', monospace" font-size="12" fill="#C9A84C" letter-spacing="2" font-weight="600">NUVEXA INSIGHT</text>
+  </g>
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="22" fill="rgba(255,255,255,0.65)">
+    <tspan x="80" y="1150">The problem isn't discipline. It's design.</tspan>
+  </text>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">02 / 08</text>
+</svg>
+
+
+
+
+
+
+

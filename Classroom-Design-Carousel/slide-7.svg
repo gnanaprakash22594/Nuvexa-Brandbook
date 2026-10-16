@@ -1,0 +1,134 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="logo.svg" x="690" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="220" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">DESIGN PRINCIPLE 05</text>
+
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="310">GREAT CLASSROOMS</tspan>
+    <tspan x="80" y="385">ARE <tspan fill="#C9A84C">ENGINEERED,</tspan></tspan>
+    <tspan x="80" y="460">NOT DECORATED.</tspan>
+  </text>
+
+  <text x="80" y="550" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.7)" line-height="1.5">
+    <tspan x="80" dy="0">Acoustic insulation, optimized ceiling heights,</tspan>
+    <tspan x="80" dy="42">calibrated colour temperatures, and evidence-based</tspan>
+    <tspan x="80" dy="42">layouts - every element works together to create</tspan>
+    <tspan x="80" dy="42">spaces where learning happens with fewer distractions.</tspan>
+  </text>
+
+  <text x="80" y="740" font-family="'Courier New', 'SF Mono', monospace" font-size="20" fill="#C9A84C" letter-spacing="3" font-weight="600">CLASSROOM INFRASTRUCTURE SHOULD SUPPORT:</text>
+
+  <!-- Illustration: Architectural Masterplan - 5 interconnected pods -->
+  <g transform="translate(100, 800)" fill="none">
+
+    <!-- Central Infrastructure Axis -->
+    <line x1="0" y1="180" x2="880" y2="180" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="0" y1="185" x2="880" y2="185" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+
+    <!-- Axis Label -->
+    <g font-family="'Courier New', 'SF Mono', monospace" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">
+      <text x="440" y="205" text-anchor="middle" fill="#C9A84C">INTEGRATED CLASSROOM SYSTEMS</text>
+    </g>
+
+    <!-- Axis Nodes -->
+    <circle cx="100" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="270" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="440" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="610" cy="180" r="4" fill="#C9A84C"/>
+    <circle cx="780" cy="180" r="4" fill="#C9A84C"/>
+
+    <!-- Pod 1: Acoustics (Top) -->
+    <g transform="translate(100, 80)">
+      <line x1="0" y1="100" x2="0" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="40" r="3" fill="#FFFFFF"/>
+      <!-- Sound waves -->
+      <rect x="-35" y="-35" width="70" height="70" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <path d="M -15 -10 A 15 15 0 0 1 -15 10" stroke="#C9A84C" stroke-width="1.5"/>
+      <path d="M -10 -18 A 25 25 0 0 1 -10 18" stroke="rgba(201,168,76,0.5)" stroke-width="1"/>
+      <path d="M -5 -25 A 35 35 0 0 1 -5 25" stroke="rgba(201,168,76,0.3)" stroke-width="1" stroke-dasharray="2 2"/>
+      <circle cx="-18" cy="0" r="3" fill="#C9A84C"/>
+      <text x="0" y="-60" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">ACOUSTICS</text>
+    </g>
+
+    <!-- Pod 2: Visual Comfort (Bottom) -->
+    <g transform="translate(270, 280)">
+      <line x1="0" y1="-100" x2="0" y2="-40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="-40" r="3" fill="#FFFFFF"/>
+      <!-- Eye/vision symbol -->
+      <circle cx="0" cy="0" r="35" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <ellipse cx="0" cy="0" rx="22" ry="14" stroke="#C9A84C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="8" stroke="#C9A84C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#C9A84C"/>
+      <text x="0" y="65" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">VISUAL COMFORT</text>
+    </g>
+
+    <!-- Pod 3: Thermal Balance (Top) -->
+    <g transform="translate(440, 80)">
+      <line x1="0" y1="100" x2="0" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="40" r="3" fill="#FFFFFF"/>
+      <!-- Thermometer / temperature symbol -->
+      <polygon points="0,-40 35,0 0,40 -35,0" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <!-- Temperature gradient bars -->
+      <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#C9A84C" stroke-width="2"/>
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="rgba(201,168,76,0.6)" stroke-width="1.5"/>
+      <line x1="-15" y1="10" x2="15" y2="10" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+      <circle cx="0" cy="-10" r="2" fill="#C9A84C"/>
+      <text x="0" y="-60" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">THERMAL BALANCE</text>
+    </g>
+
+    <!-- Pod 4: Ergonomics (Bottom) -->
+    <g transform="translate(610, 280)">
+      <line x1="0" y1="-100" x2="0" y2="-40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="-40" r="3" fill="#FFFFFF"/>
+      <!-- Chair/desk layout -->
+      <rect x="-35" y="-35" width="70" height="70" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <!-- Desk -->
+      <rect x="-18" y="-12" width="36" height="24" rx="3" stroke="#C9A84C" stroke-width="1.5"/>
+      <!-- Chair arc -->
+      <path d="M -12 16 Q 0 26 12 16" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+      <text x="0" y="65" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">ERGONOMICS</text>
+    </g>
+
+    <!-- Pod 5: Lighting Quality (Top) -->
+    <g transform="translate(780, 80)">
+      <line x1="0" y1="100" x2="0" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <circle cx="0" cy="40" r="3" fill="#FFFFFF"/>
+      <!-- Light symbol (hexagonal with rays) -->
+      <polygon points="-30,-18 0,-35 30,-18 30,18 0,35 -30,18" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="12" stroke="#C9A84C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#C9A84C"/>
+      <!-- Light rays -->
+      <path d="M -10 -20 A 20 20 0 0 1 10 -20" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+      <path d="M -18 -25 A 30 30 0 0 1 18 -25" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+      <text x="0" y="-60" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="500" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">LIGHTING QUALITY</text>
+    </g>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">07 / 08</text>
+</svg>
+
+
+
+
+
+
+
+

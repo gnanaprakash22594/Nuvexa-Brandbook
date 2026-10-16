@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF5A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2035"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+
+  <!-- HEADER -->
+  <image href="nuvexa-logo.png" x="700" y="45" width="310" height="85" preserveAspectRatio="xMaxYMid meet"/>
+
+  <!-- CONTENT -->
+  <text x="80" y="200" font-family="'Courier New', 'SF Mono', monospace" font-size="18" fill="#C9A84C" letter-spacing="5" font-weight="600">THE MONSOON REALITY CHECK</text>
+
+  <!-- Main Headline (4 lines, 80px line-height) -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="800" font-size="72" fill="#FFFFFF" letter-spacing="-1">
+    <tspan x="80" y="295">YOUR SMART</tspan>
+    <tspan x="80" y="375">CAMPUS JUST</tspan>
+    <tspan x="80" y="455">FAILED A 2-HOUR</tspan>
+    <tspan x="80" y="535" fill="#C9A84C">MONSOON TEST</tspan>
+  </text>
+
+  <!-- Accent Line -->
+  <rect x="80" y="565" width="80" height="5" rx="2" fill="#C9A84C"/>
+
+  <!-- Subtitle (4 lines, 40px line-height) -->
+  <text x="80" font-family="'Inter', 'Helvetica Neue', sans-serif" font-weight="300" font-size="26" fill="rgba(255,255,255,0.7)">
+    <tspan x="80" y="615">Pune just recorded 264.8 mm of rain in</tspan>
+    <tspan x="80" y="655">6 days, forcing mass school closures. Is</tspan>
+    <tspan x="80" y="695">your campus actually climate-proof, or</tspan>
+    <tspan x="80" y="735">just waiting for the next red alert?</tspan>
+  </text>
+
+  <!-- ILLUSTRATION: Monsoon Storm Over Campus -->
+  <g transform="translate(140, 800)" fill="none">
+
+    <!-- Storm Clouds -->
+    <g stroke="rgba(255,255,255,0.25)" stroke-width="1.5">
+      <ellipse cx="200" cy="30" rx="120" ry="35"/>
+      <ellipse cx="350" cy="20" rx="100" ry="30"/>
+      <ellipse cx="500" cy="35" rx="130" ry="38"/>
+      <ellipse cx="280" cy="15" rx="80" ry="25"/>
+    </g>
+
+    <!-- Lightning Bolt -->
+    <polygon points="380,65 360,120 375,120 350,170 400,110 385,110 405,65" fill="#C9A84C" stroke="#C9A84C" stroke-width="1"/>
+
+    <!-- Rain Lines -->
+    <g stroke="rgba(255,255,255,0.2)" stroke-width="1">
+      <line x1="100" y1="70" x2="90" y2="130"/>
+      <line x1="150" y1="65" x2="140" y2="145"/>
+      <line x1="220" y1="60" x2="210" y2="140"/>
+      <line x1="290" y1="55" x2="280" y2="135"/>
+      <line x1="450" y1="65" x2="440" y2="145"/>
+      <line x1="520" y1="60" x2="510" y2="130"/>
+      <line x1="580" y1="70" x2="570" y2="140"/>
+      <line x1="640" y1="65" x2="630" y2="135"/>
+      <line x1="700" y1="60" x2="690" y2="130"/>
+    </g>
+    <g stroke="rgba(255,255,255,0.12)" stroke-width="1">
+      <line x1="130" y1="80" x2="120" y2="160"/>
+      <line x1="180" y1="75" x2="170" y2="165"/>
+      <line x1="250" y1="70" x2="240" y2="160"/>
+      <line x1="330" y1="65" x2="320" y2="160"/>
+      <line x1="480" y1="70" x2="470" y2="160"/>
+      <line x1="550" y1="75" x2="540" y2="160"/>
+      <line x1="620" y1="70" x2="610" y2="155"/>
+      <line x1="670" y1="75" x2="660" y2="160"/>
+    </g>
+
+    <!-- Campus Building Silhouette -->
+    <!-- Left building with pitched roof -->
+    <rect x="100" y="230" width="180" height="120" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <polygon points="100,230 190,175 280,230" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <line x1="190" y1="175" x2="190" y2="150" stroke="#C9A84C" stroke-width="2"/>
+    <polygon points="190,150 210,158 190,166" fill="#C9A84C" stroke="none"/>
+    <!-- Windows -->
+    <rect x="125" y="260" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="170" y="260" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="220" y="260" width="30" height="22" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+    <!-- Center building (taller) -->
+    <rect x="330" y="190" width="200" height="160" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <rect x="355" y="215" width="25" height="20" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="395" y="215" width="25" height="20" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="435" y="215" width="25" height="20" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="475" y="215" width="25" height="20" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Door -->
+    <rect x="405" y="315" width="50" height="35" rx="3" stroke="#C9A84C" stroke-width="2"/>
+
+    <!-- Right tower -->
+    <rect x="580" y="210" width="120" height="140" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <rect x="600" y="240" width="25" height="18" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="655" y="240" width="25" height="18" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="600" y="275" width="25" height="18" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <rect x="655" y="275" width="25" height="18" rx="2" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+    <!-- Flood Water Level -->
+    <rect x="-30" y="310" width="860" height="40" fill="rgba(201,168,76,0.06)" stroke="none"/>
+    <line x1="-30" y1="310" x2="830" y2="310" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="750" y="338" font-family="'Courier New', 'SF Mono', monospace" font-size="11" fill="#C9A84C" letter-spacing="1">FLOOD LINE</text>
+
+    <!-- Ground Line -->
+    <line x1="-30" y1="350" x2="830" y2="350" stroke="#C9A84C" stroke-width="2"/>
+    <line x1="-30" y1="355" x2="830" y2="355" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+  </g>
+
+  <!-- FOOTER -->
+  <line x1="70" y1="1245" x2="1010" y2="1245" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="70" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="rgba(255,255,255,0.45)" letter-spacing="2">NUVEXA  |  CAMPUS TRANSFORMATION PARTNERS</text>
+  <text x="1010" y="1300" font-family="'Courier New', 'SF Mono', monospace" font-size="16" fill="#C9A84C" text-anchor="end" letter-spacing="2">01 / 08</text>
+</svg>
