@@ -8,3 +8,6 @@ Nuvexa-Marketing-Video.mp4
 **/.next/
 **/.wrangler/
 **/*.tsbuildinfo
+
+# Local archive inventories, contact sheets and browser review captures.
+/scratch/portfolio-review/
